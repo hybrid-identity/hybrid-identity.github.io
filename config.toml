@@ -1,5 +1,5 @@
 baseURL = "https://praxis.nyc/v4"
 languageCode = "en-us"
 title = "Praxis"
-theme = "Introduction"
+description = "Decolonize your attention"
 publishDir = "docs"

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+<div class="container">
+		<header class="header">
+		<nav>	<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> / {{ partial "categories.html" . }} / 
+			</h2></nav>
+				<h1>{{ .Title }}</h1>
+				<h3 class="date">published {{ .Date.Format "january 2006" }}</h3>
+
+		<hr>
+		</header>
+<article>
+	{{ .Content }}
+</article>
+</div>
+{{ partial "scripts.html" . }}
+</body>
+</html>

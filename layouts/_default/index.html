@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+<div class="container">
+		<header class="header">
+				<h1><a href="{{ .Permalink }}">{{ .Site.Title }}</a></h1>
+		<h4>The anagram of my name is anarchist fool</h4>
+		<hr>
+		</header>
+
+<div class="categories">
+	<div class="category">
+		<h2>about</h2>
+		<ol>
+<li><a href="https://mastodon.social/@nonlinear">mastodon</a></li>
+<li><a href="https://twitter.com/nonlinear">twitter</a></li>
+<li><a href="https://savee.it/nonlinear">savee</a></li>
+<li><a href="https://instagram.com/nonlinear">instagram</a></li>
+<li><a href="https://github.com/nonlinear">github</a></li>
+
+</ol>
+	</div>
+	<div class="category">
+		<h2>books</h2>
+		<ul>
+	{{ range where .Site.Pages "Params.category" "books" }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+</ul>
+	</div>
+	<!-- <div class="category">
+		<h2>Play</h2>
+		<ul>
+	{{ range where .Site.Pages "Params.category" "play" }}
+		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+</ul>
+	</div> -->
+	<div class="category">
+		<h2>projects</h2>
+		<ul>
+			<li><a target="_blank" href="https://praxis.nyc">praxis.nyc</a></li>
+			<li><a target="_blank" href="https://janeraka.org/">janeraka</a></li>
+			<li><a target="_blank" href="http://technoqueers.com/">technoqueers</a></li>
+				<li><a target="_blank" href="https://github.com/nonlinear/play#nonlinear-play">nonlinear play</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+{{ partial "scripts.html" . }} 
+</body>
+</html>
