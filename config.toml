@@ -1,4 +1,5 @@
 baseURL = "https://praxis.nyc/v4"
 languageCode = "en-us"
 title = "Praxis"
-theme = "introduction"
+theme = "Introduction"
+publishDir = "docs"
