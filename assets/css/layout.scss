@@ -18,171 +18,25 @@
 
 .container {
 	width: 100%;
-	max-width: 750px;
-	padding: $gap3 $gap;
+	max-width: 700px;
 	padding-top: 0;
-
+	padding: 0 $gap2;
+	margin: 0 auto;
 }
-
-
-
 
 
 body {
 	font-family: Space Grotesk;
-	background-color: $color-bg;
 	padding: 0;
 	margin: 0;
-	@include transition;
-	font-size: 110%;
+	@include tile(lines-down-a, lighter-gray, 10px);
 }
 
+h1, h2, h3, h4 {
 
-
-
-
-
-hr {
-	margin: $gap2 0;
-}
-
-
-h1, h2, h3, h4, h5 {
+	font-family: Space Grotesk;
 	font-weight: bold;
-}
-h1, h2, h3, h4, h5, p {
-	margin-bottom: $gap;
-}
-
-
-
-
-
-
-
-
-
-
-a {
-	color: black;
-	background-color: $link;
-	@include transition;
-	&:hover {
-		color: black;
-		text-decoration: none;
-		background-color: $hover;
-	}
-}
-
-
-
-$menu: 250px;
-$peek: 30px;
-
-.menu { 
-	width: $menu;
-	padding-right: $peek;
-	height: 98vh;
-	@include transition;
-	position: absolute;
-	top: 0;
-	body.article & {
-		@include fadeInLeft($duration: 1s, $delay: 300ms);
-		.scroll {
-			@include shadow(box, 3px 0 0px rgba(0, 0, 0, 0.07));
-		}
-	}
-	body:not(.article) & {
-		left: ($menu - $peek) * -1;
-		@include opacity(30);
-		&:hover, &:focus, &:focus-within {
-			left: 0;
-			@include opacity(100);
-			.scroll {
-				@include shadow(box, 3px 0 0px rgba(0, 0, 0, 0.07));
-			}
-		}
-		&:after {
-			content:"ⓘ";
-			margin-top: -$peek;
-			margin-right: -$peek;
-			font-size: 20px;
-			padding: 5px;
-			width: $peek;
-			height: $peek;
-			float: right;
-			display: inline-block;
-		}
-	}
-
-	box-sizing: border-box;
-
-	margin: 1vh 0;
-	header {
-		margin-bottom: 20px;
-		p {
-			margin-bottom: 0;
-			font-size: 80%;
-		}
-
-	}
-	.title {
-		margin: 0;
-		padding:0;
-	}
-	
-	
-	.scroll {
-		overflow: auto;
-		padding: 20px;
-		background-color: white;
-		@include radius(0, 10px, 10px, 0, irregular);
-		box-sizing: border-box;
-		height: 98vh;
-
-	}
-}
-
-
-
-.categories {
-	display: grid;
-	grid-gap: $gap2;
-
-		text-transform: lowercase;
-	grid-template-columns: repeat(4, 1fr);
-	.category {
-		ul, ol {
-			padding-left: $gap;
-		}
-	}
-}
-
-
-
-header.header {
-	padding-top:  $gap2;
-	margin-bottom:  $gap2;
-		text-transform: lowercase;
-			position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  background-color: $color-bg;
-  hr {
-  	margin-bottom: 0;
-  }
-	h1, h2, h3 {
-		margin-bottom: 0;
-	}
-	nav {
-
-		h2 {
-			font-size: 120%;
-		}
-	}
-	.date {
-		color: #666;
-		font-size: 120%;
-	}
 
 }
+
+
