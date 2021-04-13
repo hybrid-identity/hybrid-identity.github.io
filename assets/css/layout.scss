@@ -27,9 +27,8 @@
 	grid-gap: var(--gap-2);
 }
 
-html, body {
-	height: 100%;
-}
+
+
 
 body {
 	font-family: Space Grotesk;
@@ -38,14 +37,25 @@ body {
 	background-image: url("../images/dot-bg.svg");
 	font-weight: normal;
 	background-attachment: fixed;
-
+	background-color: var(--color-bg);
 	font-size: 15px;
+	color: var(--color-fg);
 }
 
+html.dark-mode {
+		  --color-bg: black;
+  --color-fg: white;
+  --color-accent: yellow;
+  body {
+	background-image: url("../images/dot-bg-dark-mode.svg");
+}
+	}
+
+
 a {
-	color: black;
+	color: var(--color-fg);
 	&:hover {
-		color: purple;
+		color: var(--color-accent);
 	}
 }
 
@@ -61,10 +71,10 @@ header.header {
 	margin-bottom: var(--gap-2);
 	h1 {
 		@include highlight(
-			$bg: black, 
+			$bg: var(--color-fg), 
 			$spacing: 30px
 			);
-		color: white;
+		color: var(--color-bg);
 		text-transform: uppercase;
 		font-size: 40px;
 
@@ -74,10 +84,10 @@ header.header {
 		@include reset(all);
 		li {
 			@include highlight(
-				$bg: black, 
+				$bg: var(--color-fg), 
 				$spacing: 5px
 				);
-			color: white;
+			color: var(--color-bg);
 			font-weight: normal;
 			font-size: 22px;
 		}
@@ -90,15 +100,15 @@ header.header {
 a.btn {
 	padding: var(--gap) calc(var(--gap) + var(--gap-half));
 	display: inline-block;
-	background-color: black;
-	color: white;
+	background-color: var(--color-fg);
+	color: var(--color-bg);
 	text-decoration: none;
 	font-weight: bold;
 	@include transition;
 	line-height: 70%;
 	&:hover {
-		background-color: purple;
-		color: white;
+		background-color: var(--color-accent);
+		color: var(--color-bg);
 	}
 	&:after {
 		content: " +";
@@ -118,20 +128,20 @@ section.category {
 	margin-bottom: var(--gap-2);
 	&:before {
 		content: "";
-		background-color: black;
+		background-color: var(--color-fg);
 		height: 3px;
 		display: block;
 		box-shadow: 
-		-10px 0 0 black;
+		-10px 0 0 var(--color-fg);
 		margin-bottom: var(--gap-2);
 	}
 	&:last-of-type:after {
 		content: "";
-		background-color: black;
+		background-color: var(--color-fg);
 		height: 3px;
 		display: block;
 		box-shadow: 
-		-10px 0 0 black;
+		-10px 0 0 var(--color-fg);
 		margin-top: var(--gap-2);
 
 	}
