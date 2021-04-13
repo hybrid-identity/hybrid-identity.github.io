@@ -1,0 +1,19 @@
+<section class="category">
+	<div class="category-trigger">
+		<header>
+			<h3 class="title">{{ .Get "title" }}</h3>
+			<a href="#" class="btn">View More</a>
+		</header>
+		<div class="title-description">
+			{{ .Get "description" }}
+		</div>
+	</div>
+	<div class="category-menu">
+		{{ range where .Site.Pages "Params.category" .Get "title" }}
+		<a href="{{ .Permalink }}">
+			<p>{{ .Title }}</p>
+			<p>{{ .Description }}</p>
+		</a>
+		{{ end }}
+	</div>
+</section>

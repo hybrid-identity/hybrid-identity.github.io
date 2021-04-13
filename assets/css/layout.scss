@@ -9,34 +9,179 @@
 
 @include font-face(Space Grotesk, 
 	$path: "../fonts/", 
-	$file: SpaceGrotesk-Regular, 
+	$file: SpaceGrotesk-Medium, 
 	$weight: bold, 
 	$style: normal, 
 	$stretch: normal, 
 	$transform: normal
 	);
 
+
 .container {
 	width: 100%;
-	max-width: 700px;
-	padding-top: 0;
-	padding: 0 $gap2;
+	max-width: 600px;
+	padding: var(--gap-2);
 	margin: 0 auto;
+	display: grid;
+	grid-template-columns: var(--logo-big) 1fr;
+	grid-gap: var(--gap-2);
 }
 
+html, body {
+	height: 100%;
+}
 
 body {
 	font-family: Space Grotesk;
-	padding: 0;
+	padding: 20px;
 	margin: 0;
-	@include tile(lines-down-a, lighter-gray, 10px);
+	background-image: url("../images/dot-bg.svg");
+	font-weight: normal;
+	background-attachment: fixed;
+
+	font-size: 15px;
+}
+
+a {
+	color: black;
+	&:hover {
+		color: purple;
+	}
 }
 
 h1, h2, h3, h4 {
 
-	font-family: Space Grotesk;
 	font-weight: bold;
 
+}
+
+
+header.header {
+	margin-top: 8px;
+	margin-bottom: var(--gap-2);
+	h1 {
+		@include highlight(
+			$bg: black, 
+			$spacing: 30px
+			);
+		color: white;
+		text-transform: uppercase;
+		font-size: 40px;
+
+	}
+	ul.slogan {
+		@include reset(list);
+		@include reset(all);
+		li {
+			@include highlight(
+				$bg: black, 
+				$spacing: 5px
+				);
+			color: white;
+			font-weight: normal;
+			font-size: 22px;
+		}
+		
+	}
+
+	
+}
+
+a.btn {
+	padding: var(--gap) calc(var(--gap) + var(--gap-half));
+	display: inline-block;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	@include transition;
+	line-height: 70%;
+	&:hover {
+		background-color: purple;
+		color: white;
+	}
+	&:after {
+		content: " +";
+	}
+}
+
+a.logo {
+	width: var(--logo-big);
+	height: var(--logo-big);
+	display: block;
+	background-image: url("../images/logo-big.svg");
+	background-size: var(--logo-big) var(--logo-big);
+	position: fixed;
+}
+
+section.category {
+	margin-bottom: var(--gap-2);
+	&:before {
+		content: "";
+		background-color: black;
+		height: 3px;
+		display: block;
+		box-shadow: 
+		-10px 0 0 black;
+		margin-bottom: var(--gap-2);
+	}
+	&:last-of-type:after {
+		content: "";
+		background-color: black;
+		height: 3px;
+		display: block;
+		box-shadow: 
+		-10px 0 0 black;
+		margin-top: var(--gap-2);
+
+	}
+	a.btn {
+		float: right;
+		margin-top: -65px;
+	}
+	.category-description {
+		margin-top: var(--gap);
+		p {
+			line-height: 160%;
+			@include highlight(
+				$spacing: 0);
+			color: #666;
+		}
+	}
+	h3.title {
+		@include highlight;
+		font-size: 35px;
+		&:before {
+			content: "/";
+
+			background-image: url("../images/logo-small.svg");
+			width: 36px + 20px;
+			background-repeat: no-repeat;
+			height: 36px;
+			display: inline-block;
+			text-align: right;
+		}
+	}
+	.category-menu {
+		@include transition;
+		height: 0px;
+		overflow: hidden;
+	}
+	&:hover .category-menu {
+		height: 150px;
+	}
+	.category-post {
+		height: 150px;
+		overflow: auto;
+		
+	}
+}
+
+footer.footer {
+	@include highlight;
+	a:not(:last-of-type) {
+		padding-right: var(--gap-2);
+	}
 }
 
 

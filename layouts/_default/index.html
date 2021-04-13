@@ -2,14 +2,90 @@
 <html lang="en">
 {{ partial "head.html" . }}
 <body>
-<div class="container">
-		<header class="header">
-				<h1><a href="{{ .Permalink }}">{{ .Site.Title }}</a></h1>
-		<h4>The anagram of my name is anarchist fool</h4>
-		<hr>
-		</header>
+	<div class="container">
+		<aside>
+			<a href="/" class="logo"></a>
+		</aside>
+		<article class="main">
+			<header class="header">
+				<h1>{{ .Site.Title }}</h1>
+			<ul class="slogan">
+				<li>Decolonize</li>
+				<li>Your</li>
+				<li>Attention</li>
+			</ul>
+			</header>
+			<nav>
+				<section class="category">
+					<div class="category-trigger">
+							<h3 class="title">study</h3>
+							<a href="#" class="btn">View More</a>
+						<div class="category-description">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde voluptatum beatae maxime ea itaque, nemo repellat corrupti repellendus quod, neque?</p>
+						</div>
+					</div>
+					<div class="category-menu">
+						<div class="category-post">
+						{{ range where .Site.Pages "Params.category" "study" }}
+						<a href="{{ .Permalink }}">
+							<p>{{ .Title }}</p>
+							<p>{{ .Description }}</p>
+						</a>
+						{{ end }}
+					</div>
+					</div>
+				</section>
+				<section class="category">
+					<div class="category-trigger">
+							<h3 class="title">commons</h3>
+							<a href="#" class="btn">View More</a>
+						<div class="category-description">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti in sunt eligendi officiis debitis aspernatur quam soluta, reprehenderit, illo!</p>
+						</div>
+					</div>
+					<div class="category-menu">
+						<div class="category-post">
+						{{ range where .Site.Pages "Params.category" "commons" }}
+						<a href="{{ .Permalink }}">
+							<p>{{ .Title }}</p>
+							<p>{{ .Description }}</p>
+						</a>
+						{{ end }}
+					</div>
+					</div>
+				</section>
+				<section class="category">
+					<div class="category-trigger">
+							<h3 class="title">play</h3>
+							<a href="#" class="btn">View More</a>
+						<div class="category-description">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptatibus quos labore iusto nobis ratione, mollitia saepe eligendi? Dignissimos, sint, vitae.</p>
+						</div>
+					</div>
+					<div class="category-menu">
+						<div class="category-post">
+						{{ range where .Site.Pages "Params.category" "play" }}
+						<a href="{{ .Permalink }}">
+							<p>{{ .Title }}</p>
+							<p>{{ .Description }}</p>
+						</a>
+						{{ end }}
+					</div>
+					</div>
+				</section>
+			</nav>
 
-<div class="categories">
+
+			<footer class="footer">
+				<a href="#">team</a>
+				<a href="#">contact us</a>
+				<a href="#">press kit</a>
+			</footer>
+		</article>
+
+		
+
+<!-- <div class="categories">
 	<div class="category">
 		<h2>about</h2>
 		<ol>
@@ -29,14 +105,14 @@
 		{{ end }}
 </ul>
 	</div>
-	<!-- <div class="category">
+	<div class="category">
 		<h2>Play</h2>
 		<ul>
 	{{ range where .Site.Pages "Params.category" "play" }}
 		<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
 		{{ end }}
 </ul>
-	</div> -->
+	</div>
 	<div class="category">
 		<h2>projects</h2>
 		<ul>
@@ -46,7 +122,7 @@
 				<li><a target="_blank" href="https://github.com/nonlinear/play#nonlinear-play">nonlinear play</a></li>
 		</ul>
 	</div>
-</div>
+</div> -->
 </div>
 {{ partial "scripts.html" . }} 
 </body>

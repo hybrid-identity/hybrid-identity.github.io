@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.f224d71e9852d3fdbec2182e9a25ea04050845201cc6d4dfa9c8435d23c50ab1.css">
+
+	<title>Praxis</title>
+</head>
+<body>
+<div class="container">
+		<header class="header">
+		<nav>	<h2><a href="https://praxis.nyc/v4">Praxis</a> /
+			</h2></nav>
+				<h1>Studies</h1>
+				
+
+		<hr>
+		</header>
+		    <ul>
+    
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/panopticon/">Radical Care</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/enslavement/">enslavement</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/bureaucracy/">bureaucracy</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/radical-care/">Radical Care</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/collapsism/">Collapsism</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/redux-1/">redux</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/hyperreal/">Hyperreal</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/nomadism/">nomadism</a>
+        </li>
+    
+        <li>
+            <a href="https://praxis.nyc/v4/study/queer-families/">Queer Families</a>
+        </li>
+    
+    </ul>
+</div>
+
+<script src="https://praxis.nyc/v4/js/jquery.min.js"></script>
+<script src="https://praxis.nyc/v4/js/popper.min.js"></script>
+<script src="https://praxis.nyc/v4/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover('hide');
+      });
+    }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 300);
+    });
+  </script> 
+</body>
+</html>

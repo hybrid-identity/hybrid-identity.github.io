@@ -3,11 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://praxis.nyc/v4/categories/</loc>
+    <loc>https://praxis.nyc/v4/</loc>
+    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://praxis.nyc/v4/</loc>
+    <loc>https://praxis.nyc/v4/study/panopticon/</loc>
+    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/</loc>
+    <lastmod>2021-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/enslavement/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/bureaucracy/</loc>
+    <lastmod>2020-07-06T02:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/radical-care/</loc>
+    <lastmod>2020-07-06T02:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/collapsism/</loc>
+    <lastmod>2019-12-17T02:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/redux-1/</loc>
+    <lastmod>2019-06-02T02:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/hyperreal/</loc>
+    <lastmod>2019-01-21T18:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/nomadism/</loc>
+    <lastmod>2019-01-21T18:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/study/queer-families/</loc>
+    <lastmod>2019-01-21T18:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/commons/</loc>
+    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/commons/janeraka/</loc>
+    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/commons/office-hours/</loc>
+    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/play/</loc>
+    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/play/hugo/</loc>
+    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/categories/</loc>
   </url>
   
   <url>
