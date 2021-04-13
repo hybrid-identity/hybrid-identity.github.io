@@ -45,6 +45,7 @@ body {
 html.dark-mode {
 		  --color-bg: black;
   --color-fg: white;
+   --color-medium: white;
   --color-accent: yellow;
   body {
 	background-image: url("../images/dot-bg-dark-mode.svg");
@@ -118,10 +119,28 @@ a.btn {
 a.logo {
 	width: var(--logo-big);
 	height: var(--logo-big);
-	display: block;
-	background-image: url("../images/logo-big.svg");
-	background-size: var(--logo-big) var(--logo-big);
-	position: fixed;
+	svg {
+
+	width: var(--logo-big);
+	height: var(--logo-big);
+		#background, #logo {
+			fill: var(--color-fg);
+			
+	@include transition;
+		
+	}
+	#border {
+			fill: var(--color-bg);
+		
+	}
+
+	}
+	&:hover {
+			#background, #logo {
+			fill: var(--color-accent);
+		
+	}
+	}
 }
 
 section.category {
@@ -153,23 +172,32 @@ section.category {
 		margin-top: var(--gap);
 		p {
 			line-height: 160%;
-			@include highlight(
+			@include highlight(var(--color-bg),
 				$spacing: 0);
-			color: #666;
+			color: var(--color-medium);
 		}
 	}
 	h3.title {
-		@include highlight;
+		@include highlight(var(--color-bg));
 		font-size: 35px;
+		svg {
+				height: 36px;
+				width: 36px;
+
+			}
 		&:before {
 			content: "/";
 
 			background-image: url("../images/logo-small.svg");
-			width: 36px + 20px;
+			html.dark-mode & {
+				background-image: url("../images/logo-small-white.svg");
+			}
+			width: calc(var(--logo-small) + 20px);
 			background-repeat: no-repeat;
-			height: 36px;
+			height: var(--logo-small);
 			display: inline-block;
 			text-align: right;
+
 		}
 	}
 	.category-menu {
@@ -188,7 +216,7 @@ section.category {
 }
 
 footer.footer {
-	@include highlight;
+	@include highlight(var(--color-bg));
 	a:not(:last-of-type) {
 		padding-right: var(--gap-2);
 	}
