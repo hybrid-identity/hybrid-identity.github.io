@@ -1,11 +1,15 @@
 .nav {
-	.active-only {
+	
+	li {
+		.active-only {
 		display: none;
 		padding-left: var(--gap);
 		color: var(--color-bg);
 	}
-	.active {
+	:not(.active), .active {
 		@include radius(20px);
+	}
+		.active {
 		background-color: var(--color-fg) !important;
 		color: var(--color-bg)!important;
 		font-weight: bold;
@@ -16,18 +20,29 @@
 				display: inline-block;
 	}
 	}
+	}
+	
 	li a {
 		text-decoration: none;
 	}
-	li:not(.active) {
-
-}
 }
 
 .tab-pane, .nav {
 	margin: var(--gap-2) 0;
 
 }
+
+.tab-pane .nav {
+	margin: var(--gap-2) 0;
+li {
+	margin-right: 5px;
+	:not(.active) {
+	@include radius(20px);
+	background-color: var(--color-fg) !important;
+}
+}
+}
+
 
 table.table {
 	tr {

@@ -15382,12 +15382,45 @@ footer.footer .links::after {
 footer.footer a:not(:last-of-type) {
   padding-right: var(--gap-2); }
 
-.nav .active-only {
+.nav li .active-only {
   display: none;
   padding-left: var(--gap);
   color: var(--color-bg); }
 
-.nav .active {
+.nav li :not(.active), .nav li .active {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+
+.nav li .active {
+  background-color: var(--color-fg) !important;
+  color: var(--color-bg) !important;
+  font-weight: bold;
+  font-size: 120%;
+  padding-top: var(--gap-quart);
+  padding-bottom: var(--gap-quart); }
+
+.nav li .active .active-only {
+  display: inline-block; }
+
+.nav li a {
+  text-decoration: none; }
+
+.tab-pane, .nav {
+  margin: var(--gap-2) 0; }
+
+.tab-pane .nav {
+  margin: var(--gap-2) 0; }
+
+.tab-pane .nav li {
+  margin-right: 5px; }
+
+.tab-pane .nav li :not(.active) {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -15396,21 +15429,7 @@ footer.footer a:not(:last-of-type) {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background-color: var(--color-fg) !important;
-  color: var(--color-bg) !important;
-  font-weight: bold;
-  font-size: 120%;
-  padding-top: var(--gap-quart);
-  padding-bottom: var(--gap-quart); }
-
-.nav .active .active-only {
-  display: inline-block; }
-
-.nav li a {
-  text-decoration: none; }
-
-.tab-pane, .nav {
-  margin: var(--gap-2) 0; }
+  background-color: var(--color-fg) !important; }
 
 table.table tr {
   -webkit-transition: all 300ms ease-out;
