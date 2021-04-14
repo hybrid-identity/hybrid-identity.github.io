@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" class='{{ if in .Params.play "no-scope" }}{{ else }}
+{{ .File.BaseFileName }} {{ if .Params.style  }}{{ .Params.style }}{{ end }}
+    {{ end }}'>
+{{ partial "head.html" . }}
+<body>
+  {{ partial "scripts.html" . }}
+  {{ if in .Params.play "revealjs" }}
+  <div class="reveal">
+	<div class="slides">
+  {{ .Content }}
+</div>
+</div>
+  {{ else }}
+  {{ .Content }}
+  {{ end }}
+  
+  {{ partial "credits.html" . }}
+      {{ if in .Params.play "revealjs" }}
+ {{ partial "revealjs-js.html" . }}
+		  {{ end }}
+</body>
+</html>

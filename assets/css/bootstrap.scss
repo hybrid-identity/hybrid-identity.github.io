@@ -1,0 +1,37 @@
+.nav {
+	.active {
+		@include radius(20px);
+		background-color: var(--color-fg) !important;
+		color: var(--color-bg)!important;
+		font-weight: bold;
+		font-size: 120%;
+		padding-top: var(--gap-quart);
+		padding-bottom: var(--gap-quart);
+	}
+	li a {
+		text-decoration: none;
+		@include transition;
+	}
+	li:not(.active) {
+
+}
+}
+
+.tab-pane, .nav {
+	margin-top: var(--gap-2);
+}
+
+table.table {
+	td {
+		&:first-of-type {
+			padding-left: 0;
+		}
+		&:last-of-type {
+			padding-right: 0;
+		}
+	}
+	code {
+		white-space: nowrap;
+	}
+
+}

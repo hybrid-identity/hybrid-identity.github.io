@@ -40,6 +40,10 @@ p {
 	@include highlight;
 	line-height: 160%;
 	color: var(--color-medium);
+	&:last-of-type {
+		@include highlight($spacing: 0px);
+
+	}
 }
 
 .list {
@@ -88,7 +92,7 @@ body {
 }
 
 html.dark-mode {
-	--color-bg: black;
+	--color-bg: #333;
 	--color-fg: white;
 	--color-medium: white;
 	--color-accent: yellow;
@@ -119,18 +123,7 @@ code {
 	color: var(--color-bg);
 }
 
-// ul, ol {
-// 	background-color: var(--color-bg);
-// 	margin-bottom: var(--gap-2);
-// 	padding: var(--gap-2); 
-// 	& & {
-// 		padding: 0;
-// 	}
 
-// }
-ul {
-	@include reset(list);
-}
 
 h1, h2, h3, h4 {
 	&:not(.title) {

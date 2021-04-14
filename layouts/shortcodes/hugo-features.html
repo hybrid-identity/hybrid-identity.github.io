@@ -1,73 +1,78 @@
-<p><strong>praxis / play</strong> provides an ever-growing list of ready-to-use features to speed up your creative code: Want text not to be selectable? Want to prevent zoom? ml5? smooth scroll?</p>
-<p>Features are per page so you only load what you need, to ensure performance.</p>
-<p><span class="emoji">👍</span> is ready to use, <span class="emoji">🧪</span> is in testing, <span class="emoji">⏳</span> is soon</p>
+Ready-to-use features to speed up your creative code: Want text not to be selectable? Want to prevent zoom? ml5? smooth scroll?</p>
+	<p>On frontmatter, add the features you need with <code>play: feature1, feature2</code>, etc (Make sure post is .html)</p>
+	<p>Features are per page so you only load what you need, to ensure performance.</p>
+
+
+<ul class="nav nav-pills" id="features" role="tablist">
+
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" href="#ready" data-toggle="tab">👍</a>
+</li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" href="#testing" data-toggle="tab">🧪</a>
+</li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" href="#soon" data-toggle="tab">⏳</a>
+</li>
+
+</ul>
+<div class="tab-content">
+  <div class="tab-pane fade show in active" id="ready">
+ <table class="table">
+	<tr>
+		<td><code>no-scroll</code></td>
+		<td><p>prevents scroll</p></td>
+	</tr>
+	<tr>
+		<td><code>no-zoom</code></td>
+		<td><p>prevents zoom</p></td>
+	</tr>
+	<tr>
+		<td><code>modernizr</code></td>
+		<td><p>installs <a href="https://modernizr.com/" rel="nofollow">modernizr</a> and <a href="https://github.com/barisaydinoglu/Detectizr#detectizr">detectizr</a> libraries</p></td>
+	</tr>
+	<tr>
+		<td><code>ml5js</code></td>
+		<td><p>installs <a href="https://ml5js.org/" rel="nofollow">ml5js library</a></p></td>
+	</tr>
+	<tr>
+		<td><code>jquery</code></td>
+		<td><p>installs <a href="https://jquery.com/" rel="nofollow">jquery library</a></p></td>
+	</tr>
+	<tr>
+		<td><code>style</code></td>
+		<td><p>accepts your <a href="https://gohugo.io/hugo-pipes/scss-sass/" rel="nofollow">hugo main.scss</a>. Make sure you have <code>main.scss</code> ready</p>
+			</td>
+</tr>
+	<tr>
+		<td><code>no-credits</code></td>
+		<td><p>removes <strong>praxis / play</strong> credits</p></td>
+	</tr>
+	<tr>
+		<td><code>no-scope</code></td>
+		<td><p>removes CSS scope html classes</p></td>
+	</tr>
+	<tr>
+		<td><code>no-text-select</code></td>
+		<td><p>prevents text selection (globally)</p>
+		</td>
+</tr>
+	<tr>
+		<td><code>revealjs</code></td>
+		<td><p>installs <a href="https://revealjs.com/" rel="nofollow">revealjs library</a>. Wrap each slide in <code>&lt;section&gt;</code> for it to work, use <code>revealjs[theme]</code> for themes (<a href="https://revealjs.com/themes/" rel="nofollow">view complete list</a>)</p></td></tr>
+ </table>
+  </div>
+  <div class="tab-pane fade" id="testing">
+ <table class="table">
+	<tr>
+		<td><code>magazine</code></td>
+		<td><p>a variation of revealjs with magazine ratios (view <a href="https://github.com/praxisnyc/play/blob/main/assets/css/revealjs/theme/magazine.css">css variables</a> to edit). Use <code>play: revealjs[magazine]</code> to activate it</p></td>
+	</tr>
+</table>
+  </div>
+  <div class="tab-pane fade" id="soon">
 <ul>
-	<li><span class="emoji">👍</span> <code>p5js</code>
-		<ul>
-			<li>installs <a href="https://p5js.org/" rel="nofollow">p5js library</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-scroll</code>
-		<ul>
-			<li>prevents scroll</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-zoom</code>
-		<ul>
-			<li>prevents zoom</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>modernizr</code>
-		<ul>
-			<li>installs <a href="https://modernizr.com/" rel="nofollow">modernizr</a> and <a href="https://github.com/barisaydinoglu/Detectizr#detectizr">detectizr</a> libraries</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>ml5js</code>
-		<ul>
-			<li>installs <a href="https://ml5js.org/" rel="nofollow">ml5js library</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>jquery</code>
-		<ul>
-			<li>installs <a href="https://jquery.com/" rel="nofollow">jquery library</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>style</code>
-		<ul>
-			<li>accepts your <a href="https://gohugo.io/hugo-pipes/scss-sass/" rel="nofollow">hugo main.scss</a></li>
-			<li>make sure you have <code>main.scss</code> ready</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-credits</code>
-		<ul>
-			<li>removes <strong>praxis / play</strong> credits</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-scope</code>
-		<ul>
-			<li>removes CSS scope html classes (<a href="https://github.com/praxisnyc/play#css-scope">view below</a>)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-text-select</code>
-		<ul>
-			<li>prevents text selection (globally)</li>
-			<li><g-emoji class="g-emoji" alias="bug" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji>: doesn't work with <a href="https://revealjs.com/" rel="nofollow">revealjs</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>revealjs</code>
-		<ul>
-			<li>installs <a href="https://revealjs.com/" rel="nofollow">revealjs library</a></li>
-			<li>wrap each slide in <code>&lt;section&gt;</code> for it to work</li>
-			<li>use <code>revealjs[theme]</code> for themes (<a href="https://revealjs.com/themes/" rel="nofollow">view complete list</a>)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">🧪</span> <code>magazine</code>
-		<ul>
-			<li>a variation of revealjs with magazine ratios</li>
-			<li>use <code>play: revealjs[magazine]</code> to activate it</li>
-			<li><g-emoji class="g-emoji" alias="book" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d6.png">📖</g-emoji>: check <a href="https://github.com/praxisnyc/play/blob/main/assets/css/revealjs/theme/magazine.css">css variables</a> to intercept and make your own.</li>
-		</ul>
-	</li>
+	
 	<li><span class="emoji">⏳</span> <code>bootstrap</code>
 		<ul>
 			<li>installs bootstrap CSS and JS, plus popper and tooltip/popover activation</li>
@@ -119,3 +124,8 @@
 		</ul>
 	</li>
 </ul>
+  </div>
+</div>
+
+
+

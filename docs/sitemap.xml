@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://praxis.nyc/v4/play/resources/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://praxis.nyc/v4/play/hugo/</loc>
     <lastmod>2021-04-13T00:00:00+00:00</lastmod>
   </url>

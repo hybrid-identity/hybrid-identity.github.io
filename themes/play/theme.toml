@@ -1,0 +1,23 @@
+name = "praxis play"
+license = "Apache-2.0"
+licenselink = "https://github.com/praxisnyc/play/blob/main/LICENSE"
+description = "An environment for stand-alone creative code experiments, reducing the learning curve so you can enjoy being in the zone faster."
+homepage = "https://github.com/praxisnyc/play"
+tags = [
+"creative code", 
+"ML5", 
+"P5", 
+"P5js", 
+"processing"
+]
+features = [
+"coding", 
+"creative coding",
+"experiments"
+]
+version = "1.3"
+
+[author]
+  name = "Nicholas Frota"
+  email = "info@nicholasfrota.com"
+  homepage = "https://praxis.nyc"

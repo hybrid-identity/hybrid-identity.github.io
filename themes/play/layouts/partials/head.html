@@ -1,0 +1,22 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ if in .Params.play "revealjs" }}
+{{ partial "revealjs-css.html" . }}
+    {{ end }}
+
+  {{ if in .Params.play "style" }}
+  {{ $sass := resources.Get "css/main.scss"  | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" true) | fingerprint  }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{ end }}
+  <title>{{ .Site.Title }}</title>
+  <style>
+    {{ if in .Params.play "no-scroll" }}
+    {{ partial "no-scroll.css" . }}
+    {{ end }}
+    {{ if in .Params.play "no-text-select" }}
+    {{ partial "no-text-select.css" . }}
+    {{ end }} 
+  </style>
+</head>
