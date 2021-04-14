@@ -1,4 +1,4 @@
-@include font-face(var(--font-1), 
+@include font-face(Space Grotesk, 
 	$path: "../fonts/", 
 	$file: SpaceGrotesk-Light, 
 	$weight: normal, 
@@ -8,7 +8,7 @@
 	);
 
 
-@include font-face(var(--font-1), 
+@include font-face(Space Grotesk, 
 	$path: "../fonts/", 
 	$file: SpaceGrotesk-Medium, 
 	$weight: bold, 
@@ -17,7 +17,7 @@
 	$transform: normal
 	);
 
-@include font-face(var(--font-mono), 
+@include font-face(Hasklig, 
 	$path: "../fonts/", 
 	$file: hasklig-light, 
 	$weight: normal, 
@@ -80,7 +80,7 @@ p {
 
 
 body {
-	font-family: var(--font-1);
+	font-family: Space Grotesk;
 	padding: 20px;
 	margin: 0;
 	background-image: url("../images/dot-bg.svg");
@@ -117,7 +117,7 @@ code {
 	background-color: #666;
 	padding: 0 var(--gap-half);
 	margin: 0 var(--gap-quart);
-	font-family: var(--font-mono);
+	font-family: Hasklig;
 }
 
 ul, ol {
