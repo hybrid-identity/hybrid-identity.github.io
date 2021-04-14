@@ -40,6 +40,9 @@ p {
 	@include highlight;
 	line-height: 160%;
 	color: var(--color-medium);
+&:last-of-type {
+	@include highlight($spacing: 0px);
+		}
 
 }
 
