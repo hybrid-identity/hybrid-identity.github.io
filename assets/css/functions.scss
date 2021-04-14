@@ -36,6 +36,7 @@ $break: true
   background: $bg;
   box-shadow: $gap 0 0 $bg,
     -$gap 0 0 $bg;
+    position: relative;
   padding-bottom: $bottom;
   padding-top: $top;
   box-decoration-break: clone;
