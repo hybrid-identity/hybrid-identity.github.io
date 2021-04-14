@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.be62998414e6e7589803c94a1b0ec215d3c0cd0f5a98a2aca24df3986d14e58f.css">
+<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.7c7c0819641f1cfb63706941d9bf955569534fb50f6f5fe1ec82fb66f7a147a6.css">
 
 	<title>Praxis</title>
 </head>
@@ -37,21 +37,20 @@
 	<li>ml5js</li>
 	<li>PWA (so it works well on mobile browsers)</li>
 </ul>
-<h2><a id="installation" class="anchor" aria-hidden="true"></a>Installation</h2>
-<ol>
-	<li>Download <a href="https://github.com/praxisnyc/play/archive/1.4.zip">latest release</a></li>
-	<li>Unzip it and rename as <code>play</code></li>
-	<li>Move entire folder inside your huge <code>themes</code> folder</li>
-	<li>On <code>config.toml</code> add <code>theme = "play"</code></li>
-	<li>Run your hugo normally</li>
-</ol>
-<h2><a id="new-post" class="anchor" aria-hidden="true"></a>Creating a new post</h2>
-<ol>
-	<li>Make sure post is <code>.html</code></li>
-	<li>On frontmatter, add the features you need with <code>play: feature1, feature2</code> (<a href="https://github.com/praxisnyc/play/#features">View all features</a>)</li>
-</ol>
-<h2><a id="features" class="anchor" aria-hidden="true"></a>Features</h2>
-<p><strong>praxis / play</strong> provides an ever-growing list of ready-to-use features to speed up your creative code: Want text not to be selectable? Want to prevent zoom? ml5? smooth scroll?</p>
+
+
+
+<ul id="tab" class="nav nav-tabs">
+  <li class="active"><a href="#features" data-toggle="tab">Features</a></li>
+  <li><a href="#scope" data-toggle="tab">CSS Scope</a></li>
+  <li><a href="#credits" data-toggle="tab">Credits</a></li>
+  <li><a href="#installation" data-toggle="tab">Installation</a></li>
+  <li><a href="#shortcodes" data-toggle="tab">Shortcodes</a></li>
+  <li><a href="#community" data-toggle="tab">Community</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade in active" id="features">
+    <p><strong>praxis / play</strong> provides an ever-growing list of ready-to-use features to speed up your creative code: Want text not to be selectable? Want to prevent zoom? ml5? smooth scroll?</p>
 <p>Features are per page so you only load what you need, to ensure performance.</p>
 <p><span class="emoji">👍</span> is ready to use, <span class="emoji">🧪</span> is in testing, <span class="emoji">⏳</span> is soon</p>
 <ul>
@@ -172,8 +171,14 @@
 		</ul>
 	</li>
 </ul>
-<h2><a id="credits" class="anchor" aria-hidden="true"></a>Credits</h2>
-<p>By default, all <strong>praxis / play</strong> creations have a hidden <strong>credits</strong> modal, accessed by clicking a top-right hidden area. It has:</p>
+  </div>
+  <div class="tab-pane fade" id="scope">
+ <p><strong>praxis / play</strong> automatically adds post slug as an <code>html</code> class, so if your post url is <code>domain/category/post/</code> your <code>html</code> also has a class <code>play-post</code> (it starts with <code>play-</code> to prevent any conflict).</p>
+<p>You can also create a more generic style (for multiple pages) by adding <code>style: style-name</code> on frontmatter. It will also appear as a class on <code>html</code>.</p>
+<p>Don't want CSS scope? Use <code>no-scope</code> feature</p>
+  </div>
+  <div class="tab-pane fade" id="credits">
+ <p>By default, all <strong>praxis / play</strong> creations have a hidden <strong>credits</strong> modal, accessed by clicking a top-right hidden area. It has:</p>
 <ul>
 	<li><span class="emoji">👍</span> title, description (from frontmatter)</li>
 	<li><span class="emoji">👍</span> wanna describe in details your notes? use <code>about:</code> frontmatter. It's markdown-ready (use "" if multi-line)</li>
@@ -181,16 +186,37 @@
 	<li><span class="emoji">⏳</span> author list (as <a href="https://github.com/gohugoio/hugo/pull/1850">per this standardization</a>)</li>
 	<li><span class="emoji">👍</span> Don't want credits on your creation? Use <code>no-credits</code> feature</li>
 </ul>
-<h2><a id="css-scope" class="anchor" aria-hidden="true"></a>CSS scope</h2>
-<p><strong>praxis / play</strong> automatically adds post slug as an <code>html</code> class, so if your post url is <code>domain/category/post/</code> your <code>html</code> also has a class <code>play-post</code> (it starts with <code>play-</code> to prevent any conflict).</p>
-<p>You can also create a more generic style (for multiple pages) by adding <code>style: style-name</code> on frontmatter. It will also appear as a class on <code>html</code>.</p>
-<p>Don't want CSS scope? Use <code>no-scope</code> feature</p>
-<h2><a id="get-informed" class="anchor" aria-hidden="true"></a>Get Informed</h2>
-<ul>
-	<li><a href="https://tinyletter.com/praxis-play/" rel="nofollow">Subscribe to our newsletter</a> for updates</li>
-	<li>Contact us for suggestions: <a href="mailto:info@nicholasfrota.com?subject=praxis%20play%20feature%20suggestion">email</a>, <a href="https://twitter.com/nonlinear" rel="nofollow">twitter</a>, <a href="https://mastodon.social/@nonlinear" rel="nofollow">mastodon</a></li>
-	<li><a href="https://t.me/joinchat/IZcW2U4HflaCQj1G" rel="nofollow">Join our telegram group</a> for questions, troubleshooting, etc</li>
-</ul>
+  </div>
+  <div class="tab-pane fade" id="installation">
+ <ol>
+	<li>Download <a href="https://github.com/praxisnyc/play/archive/1.4.zip">latest release</a></li>
+	<li>Unzip it and rename as <code>play</code></li>
+	<li>Move entire folder inside your huge <code>themes</code> folder</li>
+	<li>On <code>config.toml</code> add <code>theme = "play"</code></li>
+	<li>Run your hugo normally</li>
+</ol>
+
+<h2>Creating a new post</h2>
+<ol>
+	<li>Make sure post is <code>.html</code></li>
+	<li>On frontmatter, add the features you need with <code>play: feature1, feature2</code> (<a href="https://github.com/praxisnyc/play/#features">View all features</a>)</li>
+</ol>
+  </div>
+  <div class="tab-pane fade" id="shortcodes">
+ <p>pending</p>
+  </div>
+   <div class="tab-pane fade" id="community">
+ 
+	<p><a href="https://tinyletter.com/praxis-play/" rel="nofollow">Subscribe to our newsletter</a> for updates</p>
+	<p>Contact us for suggestions: <a href="mailto:info@nicholasfrota.com?subject=praxis%20play%20feature%20suggestion">email</a>, <a href="https://twitter.com/nonlinear" rel="nofollow">twitter</a>, <a href="https://mastodon.social/@nonlinear" rel="nofollow">mastodon</a></p>
+	<p><a href="https://t.me/joinchat/IZcW2U4HflaCQj1G" rel="nofollow">Join our telegram group</a> for questions, troubleshooting, etc</p>
+
+  </div>
+</div>
+
+
+
+
 			<footer class="footer">
 			<div class="links">
 				<a href="https://praxis.nyc/v4/team">team</a>

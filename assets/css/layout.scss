@@ -29,9 +29,8 @@
 
 .container {
 	width: 100%;
-	max-width: 600px;
+	max-width: 700px;
 	padding: var(--gap-2);
-	margin: 0 auto;
 	display: grid;
 	grid-template-columns: var(--logo-big) 1fr;
 	grid-gap: var(--gap-2);
@@ -69,9 +68,6 @@ p {
 		height: var(--pdf);
 		width: calc(var(--pdf) * var(--pdf-ratio));
 	}
-	.btn {
-		margin-bottom: var(--gap-2);
-	}
 
 }
 
@@ -102,8 +98,10 @@ html.dark-mode {
 }
 
 
-a {
+a:not(.btn) {
 	color: var(--color-fg);
+	text-decoration: underline;
+	@include transition;
 	&:hover {
 		color: var(--color-accent);
 	}
@@ -114,21 +112,22 @@ span.emoji {
 	padding: 0 var(--gap-half);
 }
 code {
-	background-color: #666;
+	background-color: var(--color-medium);
 	padding: 0 var(--gap-half);
 	margin: 0 var(--gap-quart);
 	font-family: Hasklig;
+	color: var(--color-bg);
 }
 
-ul, ol {
-	background-color: var(--color-bg);
-	margin-bottom: var(--gap-2);
-	padding: var(--gap-2); 
-	& & {
-		padding: 0;
-	}
+// ul, ol {
+// 	background-color: var(--color-bg);
+// 	margin-bottom: var(--gap-2);
+// 	padding: var(--gap-2); 
+// 	& & {
+// 		padding: 0;
+// 	}
 
-}
+// }
 ul {
 	@include reset(list);
 }
@@ -136,10 +135,10 @@ ul {
 h1, h2, h3, h4 {
 	&:not(.title) {
 		@include highlight($bg: var(--color-fg), 
-				$spacing: 30px);
-color: var(--color-bg);
-text-transform: uppercase;
-	font-weight: bold;
+			$spacing: 30px);
+		color: var(--color-bg);
+		text-transform: uppercase;
+		font-weight: bold;
 	}
 
 
@@ -162,7 +161,7 @@ header.header {
 	h1, h2 {
 		@include highlight(
 			$bg: var(--color-fg), 
-			$spacing: 10px
+			$spacing: 5px
 			);
 		color: var(--color-bg);
 		text-transform: uppercase;
@@ -182,7 +181,7 @@ header.header {
 		li {
 			@include highlight(
 				$bg: var(--color-fg),
-				$spacing: 5px
+				$spacing: 0px
 				);
 			color: var(--color-bg);
 			font-weight: normal;
@@ -195,15 +194,13 @@ header.header {
 }
 
 a.btn {
-	padding: var(--gap) calc(var(--gap) + var(--gap-half));
-	padding-bottom: calc(var(--gap-half) + var(--gap-quart));
-	display: inline-block;
+
 	background-color: var(--color-fg);
 	color: var(--color-bg);
-	text-decoration: none;
+	text-align: left;
+	@include radius(0);
 	font-weight: bold;
 	@include transition;
-
 	&:hover {
 		background-color: var(--color-accent);
 		color: var(--color-bg);
@@ -276,6 +273,7 @@ section.category {
 	h3.title {
 		@include highlight;
 		font-size: 35px;
+		font-weight: bold;
 		svg {
 			height: 36px;
 			width: 36px;

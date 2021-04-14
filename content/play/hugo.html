@@ -18,157 +18,37 @@ style: dark-mode
 	<li>ml5js</li>
 	<li>PWA (so it works well on mobile browsers)</li>
 </ul>
-<h2><a id="installation" class="anchor" aria-hidden="true"></a>Installation</h2>
-<ol>
-	<li>Download <a href="https://github.com/praxisnyc/play/archive/1.4.zip">latest release</a></li>
-	<li>Unzip it and rename as <code>play</code></li>
-	<li>Move entire folder inside your huge <code>themes</code> folder</li>
-	<li>On <code>config.toml</code> add <code>theme = "play"</code></li>
-	<li>Run your hugo normally</li>
-</ol>
-<h2><a id="new-post" class="anchor" aria-hidden="true"></a>Creating a new post</h2>
-<ol>
-	<li>Make sure post is <code>.html</code></li>
-	<li>On frontmatter, add the features you need with <code>play: feature1, feature2</code> (<a href="https://github.com/praxisnyc/play/#features">View all features</a>)</li>
-</ol>
-<h2><a id="features" class="anchor" aria-hidden="true"></a>Features</h2>
-<p><strong>praxis / play</strong> provides an ever-growing list of ready-to-use features to speed up your creative code: Want text not to be selectable? Want to prevent zoom? ml5? smooth scroll?</p>
-<p>Features are per page so you only load what you need, to ensure performance.</p>
-<p><span class="emoji">👍</span> is ready to use, <span class="emoji">🧪</span> is in testing, <span class="emoji">⏳</span> is soon</p>
-<ul>
-	<li><span class="emoji">👍</span> <code>p5js</code>
-		<ul>
-			<li>installs <a href="https://p5js.org/" rel="nofollow">p5js library</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-scroll</code>
-		<ul>
-			<li>prevents scroll</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-zoom</code>
-		<ul>
-			<li>prevents zoom</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>modernizr</code>
-		<ul>
-			<li>installs <a href="https://modernizr.com/" rel="nofollow">modernizr</a> and <a href="https://github.com/barisaydinoglu/Detectizr#detectizr">detectizr</a> libraries</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>ml5js</code>
-		<ul>
-			<li>installs <a href="https://ml5js.org/" rel="nofollow">ml5js library</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>jquery</code>
-		<ul>
-			<li>installs <a href="https://jquery.com/" rel="nofollow">jquery library</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>style</code>
-		<ul>
-			<li>accepts your <a href="https://gohugo.io/hugo-pipes/scss-sass/" rel="nofollow">hugo main.scss</a></li>
-			<li>make sure you have <code>main.scss</code> ready</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-credits</code>
-		<ul>
-			<li>removes <strong>praxis / play</strong> credits</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-scope</code>
-		<ul>
-			<li>removes CSS scope html classes (<a href="https://github.com/praxisnyc/play#css-scope">view below</a>)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>no-text-select</code>
-		<ul>
-			<li>prevents text selection (globally)</li>
-			<li><g-emoji class="g-emoji" alias="bug" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f41b.png">🐛</g-emoji>: doesn't work with <a href="https://revealjs.com/" rel="nofollow">revealjs</a></li>
-		</ul>
-	</li>
-	<li><span class="emoji">👍</span> <code>revealjs</code>
-		<ul>
-			<li>installs <a href="https://revealjs.com/" rel="nofollow">revealjs library</a></li>
-			<li>wrap each slide in <code>&lt;section&gt;</code> for it to work</li>
-			<li>use <code>revealjs[theme]</code> for themes (<a href="https://revealjs.com/themes/" rel="nofollow">view complete list</a>)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">🧪</span> <code>magazine</code>
-		<ul>
-			<li>a variation of revealjs with magazine ratios</li>
-			<li>use <code>play: revealjs[magazine]</code> to activate it</li>
-			<li><g-emoji class="g-emoji" alias="book" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d6.png">📖</g-emoji>: check <a href="https://github.com/praxisnyc/play/blob/main/assets/css/revealjs/theme/magazine.css">css variables</a> to intercept and make your own.</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>bootstrap</code>
-		<ul>
-			<li>installs bootstrap CSS and JS, plus popper and tooltip/popover activation</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>redirect</code>
-		<ul>
-			<li>redirects page  (maybe a shortcode?)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>favicon</code>
-		<ul>
-			<li>adds favicon for all browsers and devices</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>open-graph</code>
-		<ul>
-			<li>adds all open-graph features (for facebook ,twitter, etc)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>request-motion</code>
-		<ul>
-			<li>modal intercept requesting gyroscope permissions (should only appear if browser HAS this function)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>smooth-scroll</code>
-		<ul>
-			<li>forces smooth scrolling when internal navigation</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>no-nav</code>
-		<ul>
-			<li>removes top browser navigation (maybe PWA is better?)</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>request-location</code>
-		<ul>
-			<li>modal intercept requesting location permissions</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>request-camera</code>
-		<ul>
-			<li>modal intercept requesting camera permissions</li>
-		</ul>
-	</li>
-	<li><span class="emoji">⏳</span> <code>fullbleed</code>
-		<ul>
-			<li>moves canvas to bg, below HTML</li>
-		</ul>
-	</li>
+
+
+
+<ul id="tab" class="nav nav-tabs">
+  <li class="active"><a href="#features" data-toggle="tab">Features</a></li>
+  <li><a href="#scope" data-toggle="tab">CSS Scope</a></li>
+  <li><a href="#credits" data-toggle="tab">Credits</a></li>
+  <li><a href="#installation" data-toggle="tab">Installation</a></li>
+  <li><a href="#shortcodes" data-toggle="tab">Shortcodes</a></li>
+  <li><a href="#community" data-toggle="tab">Community</a></li>
 </ul>
-<h2><a id="credits" class="anchor" aria-hidden="true"></a>Credits</h2>
-<p>By default, all <strong>praxis / play</strong> creations have a hidden <strong>credits</strong> modal, accessed by clicking a top-right hidden area. It has:</p>
-<ul>
-	<li><span class="emoji">👍</span> title, description (from frontmatter)</li>
-	<li><span class="emoji">👍</span> wanna describe in details your notes? use <code>about:</code> frontmatter. It's markdown-ready (use "" if multi-line)</li>
-	<li><span class="emoji">⏳</span> if you have other relevant creations (sorted by features), it's listed here too (use <code>no-relevant-links</code> feature to disable)</li>
-	<li><span class="emoji">⏳</span> author list (as <a href="https://github.com/gohugoio/hugo/pull/1850">per this standardization</a>)</li>
-	<li><span class="emoji">👍</span> Don't want credits on your creation? Use <code>no-credits</code> feature</li>
-</ul>
-<h2><a id="css-scope" class="anchor" aria-hidden="true"></a>CSS scope</h2>
-<p><strong>praxis / play</strong> automatically adds post slug as an <code>html</code> class, so if your post url is <code>domain/category/post/</code> your <code>html</code> also has a class <code>play-post</code> (it starts with <code>play-</code> to prevent any conflict).</p>
-<p>You can also create a more generic style (for multiple pages) by adding <code>style: style-name</code> on frontmatter. It will also appear as a class on <code>html</code>.</p>
-<p>Don't want CSS scope? Use <code>no-scope</code> feature</p>
-<h2><a id="get-informed" class="anchor" aria-hidden="true"></a>Get Informed</h2>
-<ul>
-	<li><a href="https://tinyletter.com/praxis-play/" rel="nofollow">Subscribe to our newsletter</a> for updates</li>
-	<li>Contact us for suggestions: <a href="mailto:info@nicholasfrota.com?subject=praxis%20play%20feature%20suggestion">email</a>, <a href="https://twitter.com/nonlinear" rel="nofollow">twitter</a>, <a href="https://mastodon.social/@nonlinear" rel="nofollow">mastodon</a></li>
-	<li><a href="https://t.me/joinchat/IZcW2U4HflaCQj1G" rel="nofollow">Join our telegram group</a> for questions, troubleshooting, etc</li>
-</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade in active" id="features">
+    {{<  hugo-features >}}
+  </div>
+  <div class="tab-pane fade" id="scope">
+ {{<  hugo-scope >}}
+  </div>
+  <div class="tab-pane fade" id="credits">
+ {{<  hugo-credits >}}
+  </div>
+  <div class="tab-pane fade" id="installation">
+ {{<  hugo-installation >}}
+  </div>
+  <div class="tab-pane fade" id="shortcodes">
+ {{<  hugo-shortcodes >}}
+  </div>
+   <div class="tab-pane fade" id="community">
+ {{<  hugo-community >}}
+  </div>
+</div>
+
+
+
