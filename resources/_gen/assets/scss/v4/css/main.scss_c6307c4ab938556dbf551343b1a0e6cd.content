@@ -14892,7 +14892,7 @@ a.text-dark:hover, a.text-dark:focus {
   --color-accent: purple;
   --logo-big: 90px;
   --logo-small: 36px;
-  --pdf: 750px;
+  --pdf: 700px;
   --pdf-ratio: 0.5;
   --delay: 300ms;
   --gap: 15px;
@@ -14972,20 +14972,6 @@ p::after {
   content: "";
   display: block;
   height: 20px;
-  background: none !important; }
-
-p:last-of-type {
-  display: inline;
-  background: var(--color-bg);
-  box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
-  padding-bottom: 5px;
-  padding-top: 10px;
-  box-decoration-break: clone; }
-
-p:last-of-type::after {
-  content: "";
-  display: block;
-  height: 0px;
   background: none !important; }
 
 .list header.header h1 {
