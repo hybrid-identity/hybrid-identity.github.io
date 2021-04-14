@@ -1,5 +1,0 @@
-{{ $revealjs := resources.Get "css/revealjs/reveal.css" }}
-  <link rel="stylesheet" href="{{ $revealjs.Permalink }}">
-  {{ $highlight := resources.Get "css/revealjs/plugin/highlight/monokai.css" }}
-  <link rel="stylesheet" href="{{ $highlight.Permalink }}" id="highlight-theme">
-{{ partial "revealjs-themes.html" . }}

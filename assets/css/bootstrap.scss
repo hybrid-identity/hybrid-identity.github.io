@@ -1,4 +1,9 @@
 .nav {
+	.active-only {
+		display: none;
+		padding-left: var(--gap);
+		color: var(--color-bg);
+	}
 	.active {
 		@include radius(20px);
 		background-color: var(--color-fg) !important;
@@ -7,10 +12,12 @@
 		font-size: 120%;
 		padding-top: var(--gap-quart);
 		padding-bottom: var(--gap-quart);
+			.active-only {
+				display: inline-block;
+	}
 	}
 	li a {
 		text-decoration: none;
-		@include transition;
 	}
 	li:not(.active) {
 
@@ -19,10 +26,18 @@
 
 .tab-pane, .nav {
 	margin-top: var(--gap-2);
+
 }
 
 table.table {
+	tr {
+		@include transition;
+		&:hover {
+		background-color: rgba(yellow, .4);
+	}
+	}
 	td {
+		border-color: #666;
 		&:first-of-type {
 			padding-left: 0;
 		}
