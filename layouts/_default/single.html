@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class='{{ if in .Params.play "no-scope" }}{{ else }}
-{{ .File.BaseFileName }} {{ if .Params.style  }}{{ .Params.style }}{{ end }}
-    {{ end }}'>
+{{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
-<div class="container">
-		<header class="header">
-		<nav>	<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> / {{ partial "categories.html" . }} / 
-			</h2></nav>
+	<div class="container">
+		{{ partial "logo.html" . }}
+		<article class="main">
+			<header class="header">
 				<h1>{{ .Title }}</h1>
-				<h3 class="date">published {{ .Date.Format "january 2006" }}</h3>
-
-		<hr>
-		</header>
-<article>
-	{{ .Content }}
-</article>
-</div>
-{{ partial "scripts.html" . }}
+				<h2>{{ .Description }}</h2>
+			</header>
+			{{ .Content }}
+			{{ partial "footer.html" . }}
+		</article>
+	</div>
+	{{ partial "scripts.html" . }} 
 </body>
 </html>
+

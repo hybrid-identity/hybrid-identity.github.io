@@ -6,14 +6,16 @@
     <description>Recent content in Plays on Praxis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Jan 2019 04:03:16 -0500</lastBuildDate><atom:link href="https://praxis.nyc/v4/play/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://praxis.nyc/v4/play/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Praxis consulting</title>
+      <title>Hugo</title>
       <link>https://praxis.nyc/v4/play/hugo/</link>
-      <pubDate>Mon, 21 Jan 2019 04:03:16 -0500</pubDate>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://praxis.nyc/v4/play/hugo/</guid>
-      <description></description>
+      <description>A hugo theme environment for stand-alone creative code experiments, reducing the learning curve so you can enjoy being in the zone.
+ Download 1.4  Our goal to curate best practices (integrating, testing, documenting) to play with:
+ processing p5js ml5js PWA (so it works well on mobile browsers)  Installation  Download latest release Unzip it and rename as play Move entire folder inside your huge themes folder On config.</description>
     </item>
     
   </channel>

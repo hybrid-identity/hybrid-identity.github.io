@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+{{ partial "html.html" . }}
 {{ partial "head.html" . }}
-<body>
-<div class="container">
-		<header class="header">
-		<nav>	<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> /
-			</h2></nav>
-				<h1>{{ .Title }}</h1>
-				
-
-		<hr>
-		</header>
-		    <ul>
-    <!-- Ranges through content/posts/*.md -->
-    {{ range .Pages }}
+<body class="list">
+	<div class="container">
+		{{ partial "logo.html" . }}
+		<article class="main">
+			<header class="header">
+				<h1>{{ .Site.Title }}</h1>
+				<h2>/{{ .Title }}</h2>
+			</header>
+			 {{ range .Pages }}
         <li>
             <a href="{{.Permalink}}">{{.Title}}</a>
         </li>
     {{ end }}
-    </ul>
-</div>
-{{ partial "scripts.html" . }} 
+			{{ partial "footer.html" . }}
+		</article>
+	</div>
+	{{ partial "scripts.html" . }} 
 </body>
 </html>

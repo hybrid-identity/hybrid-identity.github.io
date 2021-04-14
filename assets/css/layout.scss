@@ -1,4 +1,4 @@
-@include font-face(Space Grotesk, 
+@include font-face(var(--font-1), 
 	$path: "../fonts/", 
 	$file: SpaceGrotesk-Light, 
 	$weight: normal, 
@@ -7,10 +7,20 @@
 	$transform: normal
 	);
 
-@include font-face(Space Grotesk, 
+
+@include font-face(var(--font-1), 
 	$path: "../fonts/", 
 	$file: SpaceGrotesk-Medium, 
 	$weight: bold, 
+	$style: normal, 
+	$stretch: normal, 
+	$transform: normal
+	);
+
+@include font-face(var(--font-mono), 
+	$path: "../fonts/", 
+	$file: hasklig-light, 
+	$weight: normal, 
 	$style: normal, 
 	$stretch: normal, 
 	$transform: normal
@@ -27,30 +37,69 @@
 	grid-gap: var(--gap-2);
 }
 
+p {
+	@include highlight;
+	line-height: 160%;
+	color: var(--color-medium);
+}
+
+.list {
+	header.header {
+		h1 {
+			@include highlight(
+				$bg: var(--color-fg), 
+				$spacing: 0px
+				);
+		}
+		h2 {
+			text-transform: lowercase;
+			font-weight: normal;
+		}
+	}
+}
+
+.redux {
+	@extend .dark-mode;
+	.grid {
+		display: grid;
+		grid-gap: var(--gap-2);
+		grid-template-columns: calc(var(--pdf) * var(--pdf-ratio)) 1fr;
+	}
+	embed.pdf {
+		height: var(--pdf);
+		width: calc(var(--pdf) * var(--pdf-ratio));
+	}
+	.btn {
+		margin-bottom: var(--gap-2);
+	}
+
+}
+
+
 
 
 
 body {
-	font-family: Space Grotesk;
+	font-family: var(--font-1);
 	padding: 20px;
 	margin: 0;
 	background-image: url("../images/dot-bg.svg");
 	font-weight: normal;
 	background-attachment: fixed;
 	background-color: var(--color-bg);
-	font-size: 15px;
+	font-size: 18px;
 	color: var(--color-fg);
 }
 
 html.dark-mode {
-		  --color-bg: black;
-  --color-fg: white;
-   --color-medium: white;
-  --color-accent: yellow;
-  body {
-	background-image: url("../images/dot-bg-dark-mode.svg");
-}
+	--color-bg: black;
+	--color-fg: white;
+	--color-medium: white;
+	--color-accent: yellow;
+	body {
+		background-image: url("../images/dot-bg-dark-mode.svg");
 	}
+}
 
 
 a {
@@ -60,24 +109,68 @@ a {
 	}
 }
 
-h1, h2, h3, h4 {
+span.emoji {
+	font-size: 150%;
+	padding: 0 var(--gap-half);
+}
+code {
+	background-color: #666;
+	padding: 0 var(--gap-half);
+	margin: 0 var(--gap-quart);
+	font-family: var(--font-mono);
+}
 
+ul, ol {
+	background-color: var(--color-bg);
+	margin-bottom: var(--gap-2);
+	padding: var(--gap-2); 
+	& & {
+		padding: 0;
+	}
+
+}
+ul {
+	@include reset(list);
+}
+
+h1, h2, h3, h4 {
+@include highlight($bg: var(--color-fg), 
+				$spacing: 30px);
+color: var(--color-bg);
+text-transform: uppercase;
 	font-weight: bold;
 
 }
 
+body.home {
+	header.header {
+		h1 {
+			@include highlight(
+				$bg: var(--color-fg), 
+				$spacing: 30px
+				);
+		}
+	}
+}
 
 header.header {
 	margin-top: 8px;
 	margin-bottom: var(--gap-2);
-	h1 {
+	h1, h2 {
 		@include highlight(
 			$bg: var(--color-fg), 
-			$spacing: 30px
+			$spacing: 10px
 			);
 		color: var(--color-bg);
 		text-transform: uppercase;
+
+	}
+	h1 {
 		font-size: 40px;
+
+	}
+	h2 {
+		font-size: 25px;
 
 	}
 	ul.slogan {
@@ -85,7 +178,7 @@ header.header {
 		@include reset(all);
 		li {
 			@include highlight(
-				$bg: var(--color-fg), 
+				$bg: var(--color-fg),
 				$spacing: 5px
 				);
 			color: var(--color-bg);
@@ -100,13 +193,14 @@ header.header {
 
 a.btn {
 	padding: var(--gap) calc(var(--gap) + var(--gap-half));
+	padding-bottom: calc(var(--gap-half) + var(--gap-quart));
 	display: inline-block;
 	background-color: var(--color-fg);
 	color: var(--color-bg);
 	text-decoration: none;
 	font-weight: bold;
 	@include transition;
-	line-height: 70%;
+
 	&:hover {
 		background-color: var(--color-accent);
 		color: var(--color-bg);
@@ -119,27 +213,28 @@ a.btn {
 a.logo {
 	width: var(--logo-big);
 	height: var(--logo-big);
+	position: fixed;
 	svg {
 
-	width: var(--logo-big);
-	height: var(--logo-big);
+		width: var(--logo-big);
+		height: var(--logo-big);
 		#background, #logo {
 			fill: var(--color-fg);
-			
-	@include transition;
-		
-	}
-	#border {
+
+			@include transition;
+
+		}
+		#border {
 			fill: var(--color-bg);
-		
-	}
+
+		}
 
 	}
 	&:hover {
-			#background, #logo {
+		#background, #logo {
 			fill: var(--color-accent);
-		
-	}
+
+		}
 	}
 }
 
@@ -171,20 +266,18 @@ section.category {
 	.category-description {
 		margin-top: var(--gap);
 		p {
-			line-height: 160%;
 			@include highlight(var(--color-bg),
 				$spacing: 0);
-			color: var(--color-medium);
 		}
 	}
 	h3.title {
-		@include highlight(var(--color-bg));
+		@include highlight;
 		font-size: 35px;
 		svg {
-				height: 36px;
-				width: 36px;
+			height: 36px;
+			width: 36px;
 
-			}
+		}
 		&:before {
 			content: "/";
 
@@ -216,7 +309,10 @@ section.category {
 }
 
 footer.footer {
-	@include highlight(var(--color-bg));
+	margin-top: var(--gap-2);
+	.links {
+		@include highlight;
+	}
 	a:not(:last-of-type) {
 		padding-right: var(--gap-2);
 	}

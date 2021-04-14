@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://praxis.nyc/v4/play/hugo/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://praxis.nyc/v4/play/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://praxis.nyc/v4/</loc>
     <lastmod>2021-04-13T00:00:00+00:00</lastmod>
   </url>
@@ -69,16 +79,6 @@
   
   <url>
     <loc>https://praxis.nyc/v4/commons/office-hours/</loc>
-    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://praxis.nyc/v4/play/</loc>
-    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://praxis.nyc/v4/play/hugo/</loc>
     <lastmod>2019-01-21T04:03:16-05:00</lastmod>
   </url>
   

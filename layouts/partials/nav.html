@@ -1,0 +1,59 @@
+		<nav>
+				<section class="category">
+					<div class="category-trigger">
+							<h3 class="title">study</h3>
+							<a href="{{ .Site.BaseURL }}/study" class="btn">View More</a>
+						<div class="category-description">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde voluptatum beatae maxime ea itaque, nemo repellat corrupti repellendus quod, neque?</p>
+						</div>
+					</div>
+					<div class="category-menu">
+						<div class="category-post">
+						{{ range where .Site.Pages "Params.category" "study" }}
+						<a href="{{ .Permalink }}">
+							<p>{{ .Title }}</p>
+							<p>{{ .Description }}</p>
+						</a>
+						{{ end }}
+					</div>
+					</div>
+				</section>
+				<section class="category">
+					<div class="category-trigger">
+							<h3 class="title">commons</h3>
+							<a href="{{ .Site.BaseURL }}/commons" class="btn">View More</a>
+						<div class="category-description">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti in sunt eligendi officiis debitis aspernatur quam soluta, reprehenderit, illo!</p>
+						</div>
+					</div>
+					<div class="category-menu">
+						<div class="category-post">
+						{{ range where .Site.Pages "Params.category" "commons" }}
+						<a href="{{ .Permalink }}">
+							<p>{{ .Title }}</p>
+							<p>{{ .Description }}</p>
+						</a>
+						{{ end }}
+					</div>
+					</div>
+				</section>
+				<section class="category">
+					<div class="category-trigger">
+							<h3 class="title">play</h3>
+							<a href="{{ .Site.BaseURL }}/play" class="btn">View More</a>
+						<div class="category-description">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptatibus quos labore iusto nobis ratione, mollitia saepe eligendi? Dignissimos, sint, vitae.</p>
+						</div>
+					</div>
+					<div class="category-menu">
+						<div class="category-post">
+						{{ range where .Site.Pages "Params.category" "play" }}
+						<a href="{{ .Permalink }}">
+							<p>{{ .Title }}</p>
+							<p>{{ .Description }}</p>
+						</a>
+						{{ end }}
+					</div>
+					</div>
+				</section>
+			</nav>

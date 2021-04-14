@@ -2,11 +2,15 @@
 
 :root {
   --color-bg: white;
+  --font-1: Space Grotesk;
+  --font-mono: Hasklig;
   --color-fg: black;
   --color-medium: #666;
   --color-accent: purple;
 	--logo-big: 90px;
   --logo-small: 36px;
+  --pdf: 800px;
+  --pdf-ratio: 0.4;
 	--delay: 300ms;
 --gap: 15px;
 --gap-2: calc(var(--gap) * 2);
@@ -18,11 +22,12 @@
 --gap-8: calc(var(--gap) * 8);
 --gap-9: calc(var(--gap) * 9);
 --gap-10: calc(var(--gap) * 10);
---gap-half: calc(var(--gap) * .5);
+--gap-half: calc(var(--gap) / 2);
+--gap-quart: calc(var(--gap) / 4);
 }
 
 @mixin highlight(
-  $bg: white, 
+  $bg: var(--color-bg), 
   $gap: 10px, 
 $spacing: 20px, 
 $top: 10px, 
