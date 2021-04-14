@@ -87,7 +87,7 @@ body {
 	font-weight: normal;
 	background-attachment: fixed;
 	background-color: var(--color-bg);
-	font-size: 18px;
+	font-size: 15px;
 	color: var(--color-fg);
 }
 
@@ -134,11 +134,14 @@ ul {
 }
 
 h1, h2, h3, h4 {
-@include highlight($bg: var(--color-fg), 
+	&:not(.title) {
+		@include highlight($bg: var(--color-fg), 
 				$spacing: 30px);
 color: var(--color-bg);
 text-transform: uppercase;
 	font-weight: bold;
+	}
+
 
 }
 
