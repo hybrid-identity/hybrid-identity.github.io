@@ -1,5 +1,3 @@
-
-
 :root {
   --color-bg: white;
   --color-fg: black;
@@ -23,7 +21,18 @@
   --gap-10: calc(var(--gap) * 10);
   --gap-half: calc(var(--gap) / 2);
   --gap-quart: calc(var(--gap) / 4);
+  &.dark-mode {
+  --color-bg: #281831;
+  --color-fg: white;
+  --color-medium: white;
+  --color-accent: #EDB6D3;
+  body {
+    background-image: url("../images/dot-bg-dark-mode.svg");
+  }
 }
+}
+
+
 
 @mixin highlight(
   $bg: var(--color-bg), 

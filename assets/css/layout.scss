@@ -39,7 +39,6 @@
 p {
 	@include highlight;
 	line-height: 160%;
-	color: var(--color-medium);
 	&:last-of-type {
 		@include highlight($spacing: 0px);
 	}
@@ -87,19 +86,11 @@ body {
 	font-weight: normal;
 	background-attachment: fixed;
 	background-color: var(--color-bg);
-	font-size: 15px;
+	font-size: 18px;
 	color: var(--color-fg);
 }
 
-html.dark-mode {
-	--color-bg: #333;
-	--color-fg: white;
-	--color-medium: white;
-	--color-accent: yellow;
-	body {
-		background-image: url("../images/dot-bg-dark-mode.svg");
-	}
-}
+
 
 
 a:not(.btn) {
@@ -206,6 +197,7 @@ a.btn {
 		margin-top: -170px;
 		text-align: center;
 		line-height: 120%;
+		background-color: #FAFCB8;
 		@include bounceIn($delay: var(--delay));
 		  display: flex;
   justify-content: center;
@@ -213,7 +205,7 @@ a.btn {
 		float: right;
 		@include radius(50%);
 		.text {
-			@include rotate(-7);
+			@include rotate(5);
 			display: block;
 			@include transition;
 		}
@@ -228,8 +220,9 @@ a.btn {
 		width: var(--CTA-size);
 		height: var(--CTA-size);
 		&:hover {
+			background-color: var(--color-fg);
 			.text {
-				@include rotate(0);
+				@include rotate(-5);
 			}
 		}
 		&:after {
