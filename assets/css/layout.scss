@@ -40,9 +40,9 @@ p {
 	@include highlight;
 	line-height: 160%;
 	color: var(--color-medium);
-&:last-of-type {
-	@include highlight($spacing: 0px);
-		}
+	&:last-of-type {
+		@include highlight($spacing: 0px);
+	}
 
 }
 
@@ -204,20 +204,37 @@ a.btn {
 	&.CTA {
 		text-transform: uppercase;
 		margin-top: -170px;
-text-align: center;
-line-height: 120%;
-@include bounceIn($delay: var(--delay));
-padding-top: 30px;
-	float: right;
-@include radius(50%);
-	width: 110px;
-	height: 110px;
-	&:hover {
-		@include rotate(5deg);
-	}
+		text-align: center;
+		line-height: 120%;
+		@include bounceIn($delay: var(--delay));
+		  display: flex;
+  justify-content: center;
+  flex-direction: column;
+		float: right;
+		@include radius(50%);
+		.text {
+			@include rotate(-7);
+			display: block;
+			@include transition;
+		}
+		.sig {
+			display: block;
+			border-top: solid 1px var(--color-bg);
+			margin-top: var(--gap-half);
+			padding-top: var(--gap-half);
+			font-size: 90%;
+		}
+
+		width: var(--CTA-size);
+		height: var(--CTA-size);
+		&:hover {
+			.text {
+				@include rotate(0);
+			}
+		}
 		&:after {
-		content: "";
-	}
+			content: "";
+		}
 	}
 }
 
@@ -253,7 +270,7 @@ section.feature-list {
 	border-top: solid 3px var(--color-fg);
 	margin-top: var(--gap-2);
 	&:last-of-type {	
-	border-bottom: solid 3px var(--color-fg);
+		border-bottom: solid 3px var(--color-fg);
 	}
 }
 
