@@ -10,11 +10,13 @@
 				<h1>{{ .Site.Title }}</h1>
 				<h2>/{{ .Title }}</h2>
 			</header>
+			<ul class="list">
 			 {{ range .Pages }}
         <li>
             <a href="{{.Permalink}}">{{.Title}}</a>
         </li>
     {{ end }}
+</ul>
 			{{ partial "footer.html" . }}
 		</article>
 	</div>

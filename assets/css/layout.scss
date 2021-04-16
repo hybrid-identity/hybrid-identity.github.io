@@ -75,6 +75,38 @@ p {
 }
 
 
+.cover {
+	@include fadeInDown;
+}
+
+article.main, a.logo {
+	@include fadeInDown($delay: calc(var(--delay) * 1))
+}
+
+section.category, section.session, ul.list {
+	&:nth-of-type(1) {
+	@include fadeInDown($delay: calc(var(--delay) * 2));
+	}
+		&:nth-of-type(2) {
+	@include fadeInDown($delay: calc(var(--delay) * 3));
+	}
+		&:nth-of-type(3) {
+	@include fadeInDown($delay: calc(var(--delay) * 4));
+	}
+	&:nth-of-type(4) {
+	@include fadeInDown($delay: calc(var(--delay) * 5));
+	}
+		&:nth-of-type(5) {
+	@include fadeInDown($delay: calc(var(--delay) * 6));
+	}
+		&:nth-of-type(6) {
+	@include fadeInDown($delay: calc(var(--delay) * 7));
+	}
+
+}
+	footer.footer  {
+		@include fadeInDown($delay: calc(var(--delay) * 3));
+	}
 
 
 
