@@ -15408,6 +15408,17 @@ footer.footer .links::after {
 footer.footer a:not(:last-of-type) {
   padding-right: var(--gap-2); }
 
+.cover {
+  position: fixed;
+  border-bottom: dashed 2px white;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: left center;
+  top: 0;
+  width: 100%;
+  height: 200px; }
+
 .nav li .active-only {
   display: none;
   padding-left: var(--gap);

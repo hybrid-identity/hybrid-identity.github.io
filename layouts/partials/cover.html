@@ -1,0 +1,13 @@
+{{ if .Params.cover  }}
+<style type="text/css">
+	header.header, a.logo {
+		--color-bg: black;
+		--color-fg: white;
+		--color-accent: #EDB6D3;
+	}
+</style>
+<div class="cover" style="background-image: url(../../images/{{ .Params.cover  }})">
+	
+</div>
+
+{{ end }}
