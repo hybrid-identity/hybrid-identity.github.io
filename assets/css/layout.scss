@@ -398,9 +398,11 @@ footer.footer {
 		counter-reset: section;
 
 	}
-	&.past {
-		a:not(.download) {
+	&:not(.current) {
+		.syllabus {
+			.calendar, .room {
 			display: none;
+		}
 		}
 	}
 	section {
@@ -438,6 +440,12 @@ footer.footer {
 					font-size: 80%;
 					text-transform: uppercase;
 				}
+				a {
+			@extend .btn;
+			text-transform: uppercase;
+			text-decoration: none;
+
+		}
 			}
 		}
 		
