@@ -15752,6 +15752,83 @@ footer.footer a:not(:last-of-type) {
   width: 100%;
   height: 200px; }
 
+.study article {
+  counter-reset: section; }
+
+.study.past a:not(.download) {
+  display: none; }
+
+.study section {
+  margin-top: var(--gap-7);
+  display: grid;
+  grid-template-columns: var(--logo-big) 1fr;
+  grid-gap: var(--gap-2); }
+
+.study section .counter:before {
+  displaY: inline-block;
+  width: var(--logo-big);
+  height: var(--logo-big);
+  background-color: var(--color-medium);
+  counter-increment: section;
+  content: counter(section);
+  color: var(--color-bg);
+  font-size: 300%;
+  padding-top: 10px;
+  text-align: center; }
+
+.study section:last-of-type {
+  margin-bottom: var(--gap-7); }
+
+.study section .syllabus {
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none;
+  background: transparent;
+  list-style: none; }
+
+.study section .syllabus:focus {
+  outline-width: 0;
+  outline: none;
+  outline-color: transparent;
+  outline-style: none; }
+
+.study section .syllabus li {
+  display: inline;
+  background: var(--color-bg);
+  box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
+  position: relative;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  box-decoration-break: clone; }
+
+.study section .syllabus li::after {
+  content: "";
+  display: block;
+  height: 20px;
+  background: none !important; }
+
+.study section .syllabus li.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 150%;
+  display: inline;
+  background: var(--color-bg);
+  box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
+  position: relative;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  box-decoration-break: clone; }
+
+.study section .syllabus li.title::after {
+  content: "";
+  display: block;
+  height: 0px;
+  background: none !important; }
+
+.study section .syllabus li.meeting {
+  font-size: 80%;
+  text-transform: uppercase; }
+
 .nav li .active-only {
   display: none;
   padding-left: var(--gap);
