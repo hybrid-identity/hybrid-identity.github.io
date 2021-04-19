@@ -75,9 +75,7 @@ p {
 }
 
 
-.cover {
-	@include fadeInDown;
-}
+
 
 article.main, a.logo {
 	@include fadeInDown($delay: calc(var(--delay) * 1))
@@ -382,14 +380,15 @@ footer.footer {
 
 .cover {
 	position: fixed;
-	border-bottom: dashed 2px white;
+	border-bottom: dashed 3px var(--color-bg);
 	left: 0;
 	z-index: -1;
 	background-size: cover;
 	background-position: left center;
 	top: 0;
 	width: 100%;
-	height: 200px;
+	height: 205px;
+	@include fadeInDown;
 }
 
 
@@ -405,22 +404,25 @@ footer.footer {
 		}
 		}
 	}
-	section {
+	section.session {
 		margin-top: var(--gap-7);
 		display: grid;
 		grid-template-columns: var(--logo-big) 1fr;
 		grid-gap: var(--gap-2);
+		margin-left: -10px;
 		.counter:before {
 			displaY: inline-block;
 			width: var(--logo-big);
 			height: var(--logo-big);
-			background-color: var(--color-medium);
+			background-color: rgba(black, .3);
+margin-top: -5px;
 			counter-increment: section;                   /* Increment the value of section counter by 1 */
 			content: counter(section); 
-			color: var(--color-bg); 
+			color: var(--color-fg); 
 			font-size: 300%;
 			padding-top: 10px; 
-			text-align: center;        
+			text-align: center;   
+			@include radius(50%); 
 		}
 		&:last-of-type {
 			margin-bottom: var(--gap-7);
@@ -441,10 +443,8 @@ footer.footer {
 					text-transform: uppercase;
 				}
 				a {
-			@extend .btn;
 			text-transform: uppercase;
-			text-decoration: none;
-
+font-weight: bold;
 		}
 			}
 		}

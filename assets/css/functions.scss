@@ -29,6 +29,9 @@
   body {
     background-image: url("../images/dot-bg-dark-mode.svg");
   }
+  section.session  .counter:before {
+background-color: rgba(white, .3);
+    }
 }
 }
 
