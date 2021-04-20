@@ -1,0 +1,8 @@
+name      = "Luandro"
+surname     = "Vieira"
+emoji       	= "🍃"
+bio       = "lorem"
+email           = "luandro@digital-democracy.org"
+
+[social]
+	"digital democracy" = "https://digital-democracy.org"

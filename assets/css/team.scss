@@ -1,0 +1,49 @@
+.team {
+.members {
+		// display: grid;
+		// grid-template-columns: repeat(2, 50%);
+		// grid-gap: var(--gap-2);
+}
+	.member {
+
+		&:last-of-type {
+			margin-bottom: var(--gap-5);
+		}
+		margin-top: var(--gap-5);
+		display: grid;
+		grid-template-columns: var(--logo-big) 1fr;
+		grid-gap: var(--gap-2);
+		margin-left: -10px;
+		.emoji {
+			width: var(--logo-big);
+			font-size: 300%;
+			height: var(--logo-big);
+			background-color: rgba(black, .2);
+			margin-top: -5px;
+			color: var(--color-fg); 
+			padding-top: 10px; 
+			text-align: center;   
+			@include radius(50%); 
+		}
+		ul {
+			@include reset(all);
+			@include reset(list);
+			li {
+				@include highlight($spacing: 0);
+
+				&.title {
+					text-transform: uppercase;
+					font-weight: bold;
+					font-size: 150%;
+				}
+				&.links {
+					a:not(:last-of-type) {
+							margin-right: var(--gap);
+							display: inline-block;
+					}
+				}
+
+			}
+		}
+	}
+}

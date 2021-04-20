@@ -1,0 +1,9 @@
+name      = "Camille"
+surname     = "E. Acey"
+emoji       	= "🗿"
+bio       = "lorem"
+email           = "connect@camilleacey.com"
+
+[social]
+	"colet" = "https://colet.space/"
+	"mastodon" = "https://eweg.be/@olamina"

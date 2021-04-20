@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
+<body>
+	{{ partial "cover.html" . }}
+	<div class="container">
+		{{ partial "logo.html" . }}
+		<article class="main">
+			<header class="header">
+				<h1>{{ .Title }}</h1>
+				<h2>{{ .Description }}</h2>
+			</header>
+			{{ .Content }}
+<!-- 			{{ range $parentKey, $parent := .Site.Data }}
+    {{ range $member, $child := . }}
+      <li> {{ $member }}</li>
+    {{ end }}
+{{ end }} -->
+<div class="members">
+{{ range .Site.Data.team }}
+<section class="member">
+	<div class="emoji">{{ .emoji }}</div>
+	<ul>
+	<li class="title">{{ .name }} {{ .surname }}</li>
+	<li class="bio">{{ .bio }}</li>
+	{{ if .social }}<li class="links">{{ range .social }}<a href="#">link</a>{{end}}</li>{{end}}
+</ul>
+	</section>
+{{end}}
+</div>
+			{{ partial "footer.html" . }}
+		</article>
+	</div>
+	{{ partial "scripts.html" . }} 
+</body>
+</html>
+

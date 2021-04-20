@@ -81,7 +81,7 @@ article.main, a.logo {
 	@include fadeInDown($delay: calc(var(--delay) * 1))
 }
 
-section.category, section.session, ul.list {
+section.category, section.session, section.member, ul.list {
 	&:nth-of-type(1) {
 		@include fadeInDown($delay: calc(var(--delay) * 2));
 	}
@@ -99,6 +99,12 @@ section.category, section.session, ul.list {
 	}
 	&:nth-of-type(6) {
 		@include fadeInDown($delay: calc(var(--delay) * 7));
+	}
+	&:nth-of-type(7) {
+		@include fadeInDown($delay: calc(var(--delay) * 8));
+	}
+	&:nth-of-type(8) {
+		@include fadeInDown($delay: calc(var(--delay) * 9));
 	}
 
 }

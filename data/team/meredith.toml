@@ -1,0 +1,8 @@
+name      = "Meredith"
+surname     = "?"
+emoji       	= "🕶"
+bio       = "lorem"
+email           = "hellomere@protonmail.com"
+
+[social]
+	"mastodon" = "?"
