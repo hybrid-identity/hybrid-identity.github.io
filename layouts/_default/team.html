@@ -10,23 +10,31 @@
 				<h1>{{ .Title }}</h1>
 				<h2>{{ .Description }}</h2>
 			</header>
-			{{ .Content }}
-<!-- 			{{ range $parentKey, $parent := .Site.Data }}
-    {{ range $member, $child := . }}
-      <li> {{ $member }}</li>
-    {{ end }}
-{{ end }} -->
 <div class="members">
-{{ range .Site.Data.team }}
-<section class="member">
-	<div class="emoji">{{ .emoji }}</div>
-	<ul>
-	<li class="title">{{ .name }} {{ .surname }}</li>
-	<li class="bio">{{ .bio }}</li>
-	{{ if .social }}<li class="links">{{ range .social }}<a href="#">link</a>{{end}}</li>{{end}}
-</ul>
-	</section>
+	<section class="group">
+		<p class="paths">core</p>
+{{ range .Site.Data.team.core }}
+{{ partial "team.html" . }}
 {{end}}
+	</section>
+	<section class="group">
+		<p class="paths">study</p>
+{{ range .Site.Data.team.study }}
+{{ partial "team.html" . }}
+{{end}}
+	</section>
+		<section class="group">
+		<p class="paths">commons</p>
+{{ range .Site.Data.team.commons }}
+{{ partial "team.html" . }}
+{{end}}
+	</section>
+			<section class="group">
+		<p class="paths">play</p>
+{{ range .Site.Data.team.play }}
+{{ partial "team.html" . }}
+{{end}}
+	</section>
 </div>
 			{{ partial "footer.html" . }}
 		</article>

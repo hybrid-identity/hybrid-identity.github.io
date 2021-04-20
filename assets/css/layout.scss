@@ -81,7 +81,7 @@ article.main, a.logo {
 	@include fadeInDown($delay: calc(var(--delay) * 1))
 }
 
-section.category, section.session, section.member, ul.list {
+section.category, section.session, section.group, ul.list {
 	&:nth-of-type(1) {
 		@include fadeInDown($delay: calc(var(--delay) * 2));
 	}
@@ -138,6 +138,25 @@ a:not(.btn) {
 	}
 }
 
+.paths {
+		@include highlight;
+		font-size: 35px;
+		font-weight: bold;
+		&:before {
+			content: "/";
+			background-image: url("../images/logo-small.svg");
+			html.dark-mode & {
+				background-image: url("../images/logo-small-white.svg");
+			}
+			width: calc(var(--logo-small) + 20px);
+			background-repeat: no-repeat;
+			background-position: left 10px;
+			display: inline-block;
+			text-align: right;
+
+		}
+	}
+
 span.emoji {
 	font-size: 150%;
 	padding: 0 var(--gap-half);
@@ -153,15 +172,11 @@ code {
 
 
 h1, h2, h3, h4 {
-	&:not(.title) {
 		@include highlight($bg: var(--color-fg), 
 			$spacing: 30px);
 		color: var(--color-bg);
 		text-transform: uppercase;
 		font-weight: bold;
-	}
-
-
 }
 
 body.home {
@@ -175,6 +190,15 @@ body.home {
 	}
 }
 
+	h1 {
+		font-size: 45px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+		h3 {
+		font-size: 25px;
+	}
 header.header {
 	margin-top: 8px;
 	margin-bottom: var(--gap-2);
@@ -187,14 +211,7 @@ header.header {
 		text-transform: uppercase;
 
 	}
-	h1 {
-		font-size: 40px;
 
-	}
-	h2 {
-		font-size: 25px;
-
-	}
 	ul.slogan {
 		@include reset(list);
 		@include reset(all);
@@ -275,6 +292,7 @@ a.logo {
 
 		width: var(--logo-big);
 		height: var(--logo-big);
+		margin-top: 4px;
 		#background, #logo {
 			fill: var(--color-fg);
 
@@ -335,30 +353,7 @@ section.category {
 				$spacing: 0);
 		}
 	}
-	h3.title {
-		@include highlight;
-		font-size: 35px;
-		font-weight: bold;
-		svg {
-			height: 36px;
-			width: 36px;
-
-		}
-		&:before {
-			content: "/";
-
-			background-image: url("../images/logo-small.svg");
-			html.dark-mode & {
-				background-image: url("../images/logo-small-white.svg");
-			}
-			width: calc(var(--logo-small) + 20px);
-			background-repeat: no-repeat;
-			height: var(--logo-small);
-			display: inline-block;
-			text-align: right;
-
-		}
-	}
+	
 	.category-menu {
 		@include transition;
 		height: 0px;

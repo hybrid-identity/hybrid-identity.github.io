@@ -1,19 +1,26 @@
 .team {
-.members {
+	.members {
 		// display: grid;
 		// grid-template-columns: repeat(2, 50%);
 		// grid-gap: var(--gap-2);
-}
-	.member {
-
+	}
+	section.group {
+		border-top: solid 3px var(--color-fg);
 		&:last-of-type {
-			margin-bottom: var(--gap-5);
+			border-bottom: solid 3px var(--color-fg);
 		}
-		margin-top: var(--gap-5);
+		padding: var(--gap-3) 0;
+
+		h1, h2, h3 {
+			@include highlight($bg: var(--color-bg), $spacing: 0);
+			color: var(--color-fg);
+		}
+	}
+	.member {
+		margin-top: var(--gap-2);
 		display: grid;
 		grid-template-columns: var(--logo-big) 1fr;
 		grid-gap: var(--gap-2);
-		margin-left: -10px;
 		.emoji {
 			width: var(--logo-big);
 			font-size: 300%;
@@ -25,25 +32,15 @@
 			text-align: center;   
 			@include radius(50%); 
 		}
-		ul {
-			@include reset(all);
-			@include reset(list);
-			li {
-				@include highlight($spacing: 0);
 
-				&.title {
-					text-transform: uppercase;
-					font-weight: bold;
-					font-size: 150%;
-				}
-				&.links {
-					a:not(:last-of-type) {
-							margin-right: var(--gap);
-							display: inline-block;
-					}
-				}
-
+		.links {
+			@include highlight($spacing: 0);
+			a:not(:last-of-type) {
+				margin-right: var(--gap);
+				display: inline-block;
 			}
+
+			
 		}
 	}
 }

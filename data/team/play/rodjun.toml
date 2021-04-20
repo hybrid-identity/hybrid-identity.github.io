@@ -1,0 +1,8 @@
+name      = "Rodrigo"
+surname     = "Junqueira"
+emoji       	= "✨"
+bio       = "lorem"
+email           = "rodrigo.fpjunqueira@gmail.com"
+
+[social]
+	"mastodon" = "?"
