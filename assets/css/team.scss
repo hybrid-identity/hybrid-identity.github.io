@@ -17,11 +17,18 @@
 		}
 	}
 	.member {
+		p {
+			@include highlight($spacing: 0);
+
+		}
+		.bio {
+
+		}
 		margin-top: var(--gap-2);
 		display: grid;
 		grid-template-columns: var(--logo-big) 1fr;
 		grid-gap: var(--gap-2);
-		.emoji {
+		div.emoji {
 			width: var(--logo-big);
 			font-size: 300%;
 			height: var(--logo-big);
@@ -32,11 +39,22 @@
 			text-align: center;   
 			@include radius(50%); 
 		}
+		span.emoji {
+			font-size: 100%;
+			width: 40px;
+			display: inline-block;
+			font-size: bold;
+			&:after {
+				content: ":";
+				margin-left: 5px;
+			}
+		}
 
 		.links {
 			@include highlight($spacing: 0);
+			font-size: 80%;
 			a:not(:last-of-type) {
-				margin-right: var(--gap);
+				margin-right: 3px;
 				display: inline-block;
 			}
 

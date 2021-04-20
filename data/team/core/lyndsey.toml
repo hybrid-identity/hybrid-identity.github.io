@@ -1,8 +1,10 @@
-name      = "Lyndsey"
-surname     = "Richardson"
-emoji       	= "🦆"
-bio       = "lorem"
-email           = "Richar11489@gmail.com "
+name = "Lyndsey"
+surname = "Richardson"
+emoji = "🦆"
+bio = "lorem"
+email = "Richar11489@gmail.com "
 
-[social]
-	"instagram" 	= "https://www.instagram.com/mariesrichson/"
+
+[link1]
+title = "instagram"
+URL =  "https://www.instagram.com/mariesrichson"

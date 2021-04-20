@@ -2,7 +2,33 @@
 	<div class="emoji">{{ .emoji }}</div>
 	<div>
 	<h3>{{ .name }} {{ .surname }}</h3>
-
-	{{ if .social }}<div class="links">{{ range .social }}<a href="#">aaa</a>{{end}}</div>{{end}}
+	{{ if .location }}
+	<p class="location"><span class="emoji">📍</span>{{ .location }}</p>
+	{{ end }}
+	{{ if .bio }}
+	<p class="bio"><span class="emoji">💬</span>"{{ .bio }}"</p>
+{{ end }}
+<!-- 	{{ if .social }}<div class="links">{{ range .social }}<a href="#">aaa</a>{{end}}</div>{{end}} -->
+<div class="links">
+	{{ if .link1 }}
+	<span class="emoji">🔗</span>
+	<a href="{{ .link1.URL }}">{{ .link1.title }}</a>
+	{{end}} 
+	{{ if .link2 }}
+	<a href="{{ .link2.URL }}">{{ .link2.title }}</a>
+	{{end}} 
+	{{ if .link3 }}
+	<a href="{{ .link3.URL }}">{{ .link3.title }}</a>
+	{{end}} 
+	{{ if .link4 }}
+	<a href="{{ .link4.URL }}">{{ .link4.title }}</a>
+	{{end}} 
+	{{ if .link5 }}
+	<a href="{{ .link5.URL }}">{{ .link5.title }}</a>
+	{{end}} 
+	{{ if .link6 }}
+	<a href="{{ .link6.URL }}">{{ .link6.title }}</a>
+	{{end}} 
+</div>
 </div>
 </div>

@@ -1,8 +1,10 @@
-name      = "Luandro"
-surname     = "Vieira"
-emoji       	= "🍃"
-bio       = "lorem"
-email           = "luandro@digital-democracy.org"
+name = "Luandro"
+surname = "Vieira"
+emoji = "🍃"
+bio = "lorem"
+location = "Brasil"
+email = "luandro@digital-democracy.org"
 
-[social]
-	"digital democracy" = "https://digital-democracy.org"
+[link1]
+title = "digital democracy"
+URL = "https://digital-democracy.org"

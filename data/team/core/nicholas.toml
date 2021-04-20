@@ -4,30 +4,27 @@ emoji = "🧤"
 bio = "the anagram of my name is anarchist fool"
 location = "New York"
 email = "info@nicholasfrota.com"
-groups = ["study", "commons", "play"]
 
-[social]
-
-[social.1]
-title = "personal"
+[link1]
+title = "site"
 URL =  "https://nonlinear.nyc"
 
-[social.2]
+[link2]
 title = "mastodon"
 URL =  "https://mastodon.social/@nonlinear"
 
-[social.3]
+[link3]
 title = "twitter"
 URL = "https://twitter.com/nonlinear"
 
-[social.4]
+[link4]
 title = "instapaper"
 URL =  "https://www.instapaper.com/p/nonlinear"
 
-[social.5]
+[link5]
 title = "savee"
 URL =  "https://savee.it/nonlinear"
 
-[social.6]
+[link6]
 title = "instagram"
 URL =  "https://instagram.com/nonlinear"

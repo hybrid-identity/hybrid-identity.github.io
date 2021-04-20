@@ -1,8 +1,10 @@
-name      = "Rodrigo"
-surname     = "Junqueira"
-emoji       	= "✨"
-bio       = "lorem"
-email           = "rodrigo.fpjunqueira@gmail.com"
+name = "Rodrigo"
+surname = "Junqueira"
+emoji = "✨"
+bio = "lorem"
+location = "brasil"
+email = "rodrigo.fpjunqueira@gmail.com"
 
-[social]
-	"mastodon" = "?"
+[link1]
+	title = "site" 
+	URL= "https://www.rodjun.com/"

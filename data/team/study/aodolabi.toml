@@ -1,8 +1,10 @@
-name      = "Alex"
-surname   = "Dolabi"
-emoji     = "🐠"
-bio       = "lorem"
-email     = "aodolabi@gmail.com"
+name = "Alex"
+surname = "Dolabi"
+emoji = "🐠"
+bio = "lorem"
+email = "aodolabi@gmail.com"
+location = "New York"
 
-[social]
-	"instagram" = "https://www.instagram.com/aodolabi/"
+[link1]
+	title = "instagram" 
+	URL = "https://www.instagram.com/aodolabi/"

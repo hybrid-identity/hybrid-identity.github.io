@@ -1,9 +1,14 @@
-name      = "Camille"
-surname     = "E. Acey"
-emoji       	= "🗿"
-bio       = "lorem"
-email           = "connect@camilleacey.com"
+name = "Camille"
+surname = "E. Acey"
+emoji = "🗿"
+bio = "lorem"
+email = "connect@camilleacey.com"
+location = "New York"
 
-[social]
-	"colet" = "https://colet.space/"
-	"mastodon" = "https://eweg.be/@olamina"
+[link1]
+	title = "colet" 
+	URL = "https://colet.space/"
+
+[link2]
+	title = "mastodon" 
+	URL = "https://eweg.be/@olamina"
