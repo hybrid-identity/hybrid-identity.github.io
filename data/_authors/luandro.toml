@@ -1,0 +1,8 @@
+given_name      = "Luandro"
+family_name     = "Vieira"
+emoji       	= "🍃"
+short_bio       = "lorem"
+email           = "luandro@digital-democracy.org"
+
+[social]
+	"digital democracy" = https://digital-democracy.org

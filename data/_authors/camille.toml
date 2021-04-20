@@ -1,0 +1,9 @@
+given_name      = "Camille"
+family_name     = "E. Acey"
+emoji       	= "🗿"
+short_bio       = "lorem"
+email           = "connect@camilleacey.com"
+
+[social]
+	colet = https://colet.space/
+	mastodon = https://eweg.be/@olamina

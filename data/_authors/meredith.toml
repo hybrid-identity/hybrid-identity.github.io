@@ -1,0 +1,8 @@
+given_name      = "Meredith"
+family_name     = "?"
+emoji       	= "🕶"
+short_bio       = "lorem"
+email           = "hellomere@protonmail.com"
+
+[social]
+	mastodon = https://eweg.be/@olamina

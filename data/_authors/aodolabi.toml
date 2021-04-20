@@ -1,0 +1,8 @@
+given_name      = "Alex"
+family_name     = "Dolabi"
+emoji       	= "🐠"
+short_bio       = "lorem"
+email           = "aodolabi@gmail.com"
+
+[social]
+	instagram = https://www.instagram.com/aodolabi/
