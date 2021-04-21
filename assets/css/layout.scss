@@ -139,23 +139,23 @@ a:not(.btn) {
 }
 
 .paths {
-		@include highlight;
-		font-size: 35px;
-		font-weight: bold;
-		&:before {
-			content: "/";
-			background-image: url("../images/logo-small.svg");
-			html.dark-mode & {
-				background-image: url("../images/logo-small-white.svg");
-			}
-			width: calc(var(--logo-small) + 20px);
-			background-repeat: no-repeat;
-			background-position: left 10px;
-			display: inline-block;
-			text-align: right;
-
+	@include highlight;
+	font-size: 35px;
+	font-weight: bold;
+	&:before {
+		content: "/";
+		background-image: url("../images/logo-small.svg");
+		html.dark-mode & {
+			background-image: url("../images/logo-small-white.svg");
 		}
+		width: calc(var(--logo-small) + 20px);
+		background-repeat: no-repeat;
+		background-position: left 10px;
+		display: inline-block;
+		text-align: right;
+
 	}
+}
 
 span.emoji {
 	font-size: 150%;
@@ -172,11 +172,11 @@ code {
 
 
 h1, h2, h3, h4 {
-		@include highlight($bg: var(--color-fg), 
-			$spacing: 30px);
-		color: var(--color-bg);
-		text-transform: uppercase;
-		font-weight: bold;
+	@include highlight($bg: var(--color-fg), 
+		$spacing: 30px);
+	color: var(--color-bg);
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 body.home {
@@ -190,15 +190,15 @@ body.home {
 	}
 }
 
-	h1 {
-		font-size: 45px;
-	}
-	h2 {
-		font-size: 30px;
-	}
-		h3 {
-		font-size: 25px;
-	}
+h1 {
+	font-size: 45px;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 25px;
+}
 header.header {
 	margin-top: 8px;
 	margin-bottom: var(--gap-2);
@@ -357,16 +357,62 @@ section.category {
 	.category-menu {
 		@include transition;
 		height: 0px;
-		overflow: hidden;
+		overflow-y: hidden;
+		display: flex;
+		flex-wrap: no-wrap;
+		overflow-x: auto;
+		max-width: 520px;
+		.category-post {
+			flex: 0 0 auto;
+			margin-top: 20px;
+			padding: var(--gap-2);
+			width: calc(var(--nav) * 2);
+			height: var(--nav);
+			text-decoration: none;
+			background-size: cover;
+			background-position: center center;
+			header {
+				width: calc(var(--nav) * 2);
+			}
+			p {
+				@include transition;
+text-transform: uppercase;
+				font-weight: bold;
+				
+			}
+			&:hover {
+				width: calc(var(--nav) * 2.3);
+				p {
+					@include highlight(var(--color-accent),$spacing: 0px);
+					color: var(--color-bg);
+					
+				}
+			}
+
+			.title {
+				font-size: 150%;
+				line-height: 50%;
+				
+				@include highlight($spacing: 0px);
+			}
+		}
 	}
 	&:hover .category-menu {
-		height: 150px;
+		height: calc(var(--nav) + 40px);
+		.category-post {
+			@include fadeInLeft;
+			&:nth-of-type(2) {
+				@include fadeInLeft($delay: calc(var(--delay) * 2));
+			}
+				&:nth-of-type(3) {
+				@include fadeInLeft($delay: calc(var(--delay) * 4));
+			}
+			&:nth-of-type(4) {
+				@include fadeInLeft($delay: calc(var(--delay) * 6));
+			}
+		}
 	}
-	.category-post {
-		height: 150px;
-		overflow: auto;
-		
-	}
+	
 }
 
 footer.footer {
@@ -401,8 +447,8 @@ footer.footer {
 	&:not(.current) {
 		.syllabus {
 			.calendar, .room {
-			display: none;
-		}
+				display: none;
+			}
 		}
 	}
 	section.session {
@@ -416,7 +462,7 @@ footer.footer {
 			width: var(--logo-big);
 			height: var(--logo-big);
 			background-color: rgba(black, .3);
-margin-top: -5px;
+			margin-top: -5px;
 			counter-increment: section;                   /* Increment the value of section counter by 1 */
 			content: counter(section); 
 			color: var(--color-fg); 
@@ -444,9 +490,9 @@ margin-top: -5px;
 					text-transform: uppercase;
 				}
 				a {
-			text-transform: uppercase;
-font-weight: bold;
-		}
+					text-transform: uppercase;
+					font-weight: bold;
+				}
 			}
 		}
 		

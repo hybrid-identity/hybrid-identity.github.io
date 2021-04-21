@@ -8,14 +8,17 @@
 						</div>
 					</div>
 					<div class="category-menu">
-						<div class="category-post">
+						
 						{{ range where .Site.Pages "Params.category" "study" }}
-						<a href="{{ .Permalink }}">
-							<p>{{ .Title }}</p>
-							<p>{{ .Description }}</p>
+						
+						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url(https://praxis.nyc/v4/images/{{ .Params.cover  }})">
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
 						</a>
 						{{ end }}
-					</div>
+				
 					</div>
 				</section>
 				<section class="category">
