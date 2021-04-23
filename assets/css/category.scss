@@ -19,9 +19,9 @@ section.category {
 		margin-top: var(--gap-2);
 
 	}
-	& > a.btn {
+	a.btn {
 		float: right;
-		margin-top: -65px;
+		margin-top: -55px;
 	}
 	.category-description {
 		margin-top: var(--gap);
@@ -30,27 +30,49 @@ section.category {
 				$spacing: 0);
 		}
 	}
-	
 	.category-menu {
 		@include transition;
-		// height: 0px;
-		// overflow-y: hidden;
+		height: 0px;
+		overflow-y: hidden;
 		display: flex;
+		max-width: 520px;
 		flex-wrap: no-wrap;
 		overflow-x: auto;
 		max-width: 520px;
+				.category-post {
+			flex: 0 0 auto;
+			margin-top: 20px;
+			width: calc(var(--nav) * 2);
+			&:hover {
+				width: calc(var(--nav) * 2.3);
+			}
+		}
 		a.btn { 
 		white-space: nowrap;
 		margin: auto var(--gap-2);
 
 		}
+	}
+	
+	&:hover .category-menu {
+		height: calc(var(--nav) + 40px);
 		.category-post {
-			flex: 0 0 auto;
-			margin-top: 20px;
+			@include fadeInLeft;
+
+		}
+	}
+	
+}
+
+
+.category-menu {
+		@include transition;
+		.category-post {
 			padding: var(--gap-2);
-			width: calc(var(--nav) * 2);
+			displaY: block;
 			height: var(--nav);
 			text-decoration: none;
+			@include assorted-bgs;
 			background-size: cover;
 			background-position: center center;
 			header {
@@ -63,7 +85,7 @@ text-transform: uppercase;
 				
 			}
 			&:hover {
-				width: calc(var(--nav) * 2.3);
+				@include scale(1.1);
 				p {
 					@include highlight(var(--color-accent),$spacing: 0px);
 					color: var(--color-bg);
@@ -74,17 +96,7 @@ text-transform: uppercase;
 			.title {
 				font-size: 150%;
 				line-height: 50%;
-				
 				@include highlight($spacing: 0px);
 			}
 		}
 	}
-	&:hover .category-menu {
-		height: calc(var(--nav) + 40px);
-		.category-post {
-			@include fadeInLeft;
-
-		}
-	}
-	
-}

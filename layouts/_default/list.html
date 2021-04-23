@@ -10,13 +10,18 @@
 				<h1>{{ .Site.Title }}</h1>
 				<h2>/{{ .Title | singularize }}</h2>
 			</header>
-			<ul class="list">
-			 {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Title}}</a>
-        </li>
-    {{ end }}
-</ul>
+				<div class="category-menu">
+						
+						 {{ range .Pages }}
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
+						</a>
+						{{ end }}
+					</div>
+		
 			{{ partial "footer.html" . }}
 		</article>
 	</div>

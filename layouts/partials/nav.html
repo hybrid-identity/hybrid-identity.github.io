@@ -8,9 +8,8 @@
 						</div>
 					</div>
 					<div class="category-menu">
-						
 						{{ range where .Site.Pages "Params.category" "study" }}
-						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})">
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
 							<header>
 								<p class="title">{{ .Title }}</p>
 							<p class="description">{{ .Description }}</p>
@@ -32,7 +31,7 @@
 					<div class="category-menu">
 						
 						{{ range where .Site.Pages "Params.category" "commons" }}
-						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})">
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
 							<header>
 								<p class="title">{{ .Title }}</p>
 							<p class="description">{{ .Description }}</p>
@@ -54,7 +53,7 @@
 					<div class="category-menu">
 						
 						{{ range where .Site.Pages "Params.category" "play" }}
-						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})">
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
 							<header>
 								<p class="title">{{ .Title }}</p>
 							<p class="description">{{ .Description }}</p>
