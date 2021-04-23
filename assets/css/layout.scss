@@ -401,15 +401,7 @@ text-transform: uppercase;
 		height: calc(var(--nav) + 40px);
 		.category-post {
 			@include fadeInLeft;
-			&:nth-of-type(2) {
-				@include fadeInLeft($delay: calc(var(--delay) * 2));
-			}
-				&:nth-of-type(3) {
-				@include fadeInLeft($delay: calc(var(--delay) * 4));
-			}
-			&:nth-of-type(4) {
-				@include fadeInLeft($delay: calc(var(--delay) * 6));
-			}
+
 		}
 	}
 	
