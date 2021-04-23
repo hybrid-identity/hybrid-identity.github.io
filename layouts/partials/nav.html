@@ -10,53 +10,60 @@
 					<div class="category-menu">
 						
 						{{ range where .Site.Pages "Params.category" "study" }}
-						
-						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url(https://praxis.nyc/v4/images/{{ .Params.cover  }})">
+						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})">
 							<header>
 								<p class="title">{{ .Title }}</p>
 							<p class="description">{{ .Description }}</p>
 							</header>
 						</a>
 						{{ end }}
+						<a href="{{ .Site.BaseURL }}/study" class="btn">View All</a>
 				
 					</div>
 				</section>
-				<section class="category">
+								<section class="category">
 					<div class="category-trigger">
 							<p class="paths">commons</p>
 							<a href="{{ .Site.BaseURL }}/commons" class="btn">View More</a>
 						<div class="category-description">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti in sunt eligendi officiis debitis aspernatur quam soluta, reprehenderit, illo!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde voluptatum beatae maxime ea itaque, nemo repellat corrupti repellendus quod, neque?</p>
 						</div>
 					</div>
 					<div class="category-menu">
-						<div class="category-post">
+						
 						{{ range where .Site.Pages "Params.category" "commons" }}
-						<a href="{{ .Permalink }}">
-							<p>{{ .Title }}</p>
-							<p>{{ .Description }}</p>
+						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})">
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
 						</a>
 						{{ end }}
-					</div>
+						<a href="{{ .Site.BaseURL }}/commons" class="btn">View All</a>
+				
 					</div>
 				</section>
-				<section class="category">
+										<section class="category">
 					<div class="category-trigger">
 							<p class="paths">play</p>
 							<a href="{{ .Site.BaseURL }}/play" class="btn">View More</a>
 						<div class="category-description">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptatibus quos labore iusto nobis ratione, mollitia saepe eligendi? Dignissimos, sint, vitae.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde voluptatum beatae maxime ea itaque, nemo repellat corrupti repellendus quod, neque?</p>
 						</div>
 					</div>
 					<div class="category-menu">
-						<div class="category-post">
+						
 						{{ range where .Site.Pages "Params.category" "play" }}
-						<a href="{{ .Permalink }}">
-							<p>{{ .Title }}</p>
-							<p>{{ .Description }}</p>
+						<a  class="category-post" href="{{ .Permalink }}"  style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})">
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
 						</a>
 						{{ end }}
-					</div>
+						<a href="{{ .Site.BaseURL }}/play" class="btn">View All</a>
+				
 					</div>
 				</section>
+			
 			</nav>
