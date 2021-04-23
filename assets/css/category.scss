@@ -73,8 +73,8 @@ section.category {
 			height: var(--nav);
 			text-decoration: none;
 			@include assorted-bgs;
-			background-size: cover;
-			background-position: center center;
+			background-size: cover !important;
+			background-position: center center !important;
 			header {
 				width: calc(var(--nav) * 2);
 			}
