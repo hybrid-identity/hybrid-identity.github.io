@@ -69,3 +69,11 @@ table.table {
 	}
 
 }
+.modal-backdrop {
+	z-index: -1;
+}
+
+.modal-dialog {
+	z-index: 3000 !important;
+	@include find(red);
+}

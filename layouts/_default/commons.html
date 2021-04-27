@@ -32,7 +32,8 @@
 				  <div class="tab-pane fade show in active" id="english">
 				    <p>We are a voluntary consulting group helping original peoples and peripheral communities establish digital sovereignty <sup>1</sup> and evade surveillance capitalism <sup>2</sup> with rhizomatic technologies <sup>3</sup>.</p>
 				    <p>We solve the community-specific issues, with research, adoption and security, and educating community members to maintain and expand their digital autonomy.</p>
-
+<p>appointment stuff
+<a href="{{ .Site.BaseURL }}/appointment" class="btn" target="_blank">Set a time</a></p>
 				    <div class="notes">
 				    	<p>1. Indigenous data sovereignty is the right of a nation to govern the collection, ownership, and application of its own data.<br>
 				    		<a href="https://cdn.auckland.ac.nz/assets/psych/about/our-research/documents/TMR%2BM%C4%81ori%2BData%2BSovereignty%2BPrinciples%2BOct%2B2018.pdf">Principles of Māori Data Sovereignty (PDF)</a>
@@ -47,7 +48,8 @@
 				  <div class="tab-pane fade" id="portuguese">
 				     <p>Somos um grupo de tecnologistas e humanistas auxiliando povos originários, quilombolas e comunidades periféricas a estabelecer sua soberania digital <sup>1</sup> e evadir o capitalismo de vigilância <sup>2</sup> por meio de tecnologias rizomáticas <sup>3</sup>.</p>
 				    <p>Resolvemos problemas específicos da comunidade com consultoria (pesquisa, adoção/manutenção de tecnologia e segurança) e facilitando o conhecimento para os membros sobre como tirar o melhor proveito da  tecnologia, expandindo sua autonomia.</p>
-
+<p>appointment stuff
+<a href="{{ .Site.BaseURL }}/appointment" class="btn" target="_blank">Marque uma hora</a></p>
 				    <div class="notes">
 				    	<p>1. Resolvemos problemas específicos da comunidade com consultoria e como tirar o melhor proveito da  tecnologia, expandindo sua autonomia.<br>
 <a href="https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-311X2018001008001">Leia uma resenha</a><br>
@@ -61,6 +63,7 @@
 				    </div>
 				  </div>
 				</div>
+
 				<div class="category-menu">
 						 {{ range (.Pages.ByParam "category.commons") }}
 						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
