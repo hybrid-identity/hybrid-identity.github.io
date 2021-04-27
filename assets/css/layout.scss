@@ -173,7 +173,7 @@ code {
 
 h1, h2, h3, h4 {
 	@include highlight($bg: var(--color-fg), 
-		$spacing: 30px);
+		$spacing: var(--gap-2));
 	color: var(--color-bg);
 	text-transform: uppercase;
 	font-weight: bold;
@@ -184,7 +184,7 @@ body.home {
 		h1 {
 			@include highlight(
 				$bg: var(--color-fg), 
-				$spacing: 30px
+				$spacing: var(--gap-2)
 				);
 		}
 	}
@@ -194,7 +194,7 @@ h1 {
 	font-size: 45px;
 }
 h2 {
-	font-size: 30px;
+	font-size: var(--gap-2);
 }
 h3 {
 	font-size: 25px;
@@ -313,11 +313,23 @@ a.logo {
 	}
 }
 
-section.feature-list {
+section.feature-list, section.status {
 	border-top: solid 3px var(--color-fg);
 	margin-top: var(--gap-2);
 	&:last-of-type {	
 		border-bottom: solid 3px var(--color-fg);
+	}
+}
+section.status {
+	padding-top: var(--gap-2);
+	h1,h2, h3, h4, h4 {
+			@include highlight($bg: var(--color-bg), 
+		$spacing: var(--gap-2));
+	color: var(--color-fg);
+	}
+	&:last-of-type {
+
+	padding-bottom: var(--gap-2);
 	}
 }
 

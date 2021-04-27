@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
+<body class="list">
+		{{ partial "cover.html" . }}
+	<div class="container">
+		{{ partial "logo.html" . }}
+		<article class="main">
+			<header class="header">
+				<h1>{{ .Site.Title }}</h1>
+				<h2>/{{ .Title | singularize }}</h2>
+			</header>
+			
+			  <ul class="nav nav-pills" id="hugo" role="tablist">
+
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" href="#english" data-toggle="tab">
+    	<span data-toggle="tooltip" title="English version" data-html="true" >🇬🇧</span>
+    </a>
+</li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" href="#portuguese" data-toggle="tab">
+    	<span data-toggle="tooltip" title="Versão em português" data-html="true" >🇧🇷</span>
+    </a>
+</li>
+</ul>
+				<div id="myTabContent" class="tab-content">
+				  <div class="tab-pane fade show in active" id="english">
+				  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga nulla doloribus dolores laborum, nesciunt? Vel, architecto cumque quis, iure quod quia atque perspiciatis iste a aliquid, eius voluptates doloribus illo.</p>
+				    
+				  </div>
+				  <div class="tab-pane fade" id="portuguese">
+				    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, nemo non. Laborum harum assumenda molestiae voluptas. Laudantium consequatur modi minima, iusto vel provident harum itaque sapiente, dolores, nemo consectetur natus.</p>
+
+				    
+				  </div>
+				</div>
+
+				<div class="category-menu">
+					<section class="status">
+						<h3>Current study groups</h3>
+						 {{ range (.Pages.ByParam "category.study") }}
+						{{ if in .Params.status "current" }}
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
+						</a>
+						{{ end }}
+						{{ end }}
+					</section>
+					<section class="status">
+						<h3>Redux zines</h3>
+						 {{ range (.Pages.ByParam "category.study") }}
+						{{ if in .Params.status "redux" }}
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
+						</a>
+						{{ end }}
+						{{ end }}
+					</section>
+					<section class="status">
+						<h3>Past study groups</h3>
+						 {{ range (.Pages.ByParam "category.study") }}
+						{{ if in .Params.status "past" }}
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
+						</a>
+						{{ end }}
+						{{ end }}
+					</section>
+					</div>
+		
+			{{ partial "footer.html" . }}
+		</article>
+	</div>
+	{{ partial "scripts.html" . }} 
+</body>
+</html>
