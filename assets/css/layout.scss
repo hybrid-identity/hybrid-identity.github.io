@@ -406,3 +406,18 @@ footer.footer {
 	}
 
 }
+
+
+.notes {
+	border-top: solid 3px var(--color-medium);
+	font-size: 90%;
+	padding-top:  var(--gap-2);
+	margin-top: var(--gap-2);
+	@include transition;
+	&:not(:hover) {
+	&, a {
+		color: var(--color-dark);
+	}
+	}
+}
+

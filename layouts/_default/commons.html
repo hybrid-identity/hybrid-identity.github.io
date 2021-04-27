@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
+<body class="list">
+		{{ partial "cover.html" . }}
+	<div class="container">
+		{{ partial "logo.html" . }}
+		<article class="main">
+			<header class="header">
+				<h1>{{ .Site.Title }}</h1>
+				<h2>/{{ .Title }}</h2>
+			</header>
+			<div class="description">
+				{{ if (eq .Title "study") }}	!!!!
+				{{ end }}
+				{{ if in .Title "study" }}yyyy{{ end }}
+			</div>
+			  <ul class="nav nav-pills" id="hugo" role="tablist">
+
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" href="#english" data-toggle="tab">
+    	<span data-toggle="tooltip" title="English version" data-html="true" >🇬🇧</span>
+    </a>
+</li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" href="#portuguese" data-toggle="tab">
+    	<span data-toggle="tooltip" title="Versão em português" data-html="true" >🇧🇷</span>
+    </a>
+</li>
+</ul>
+				<div id="myTabContent" class="tab-content">
+				  <div class="tab-pane fade show in active" id="english">
+				    <p>We are a voluntary consulting group helping original peoples and peripheral communities establish digital sovereignty <sup>1</sup> and evade surveillance capitalism <sup>2</sup> with rhizomatic technologies <sup>3</sup>.</p>
+				    <p>We solve the community-specific issues, with research, adoption and security, and educating community members to maintain and expand their digital autonomy.</p>
+
+				    <div class="notes">
+				    	<p>1. Indigenous data sovereignty is the right of a nation to govern the collection, ownership, and application of its own data.<br>
+				    		<a href="https://cdn.auckland.ac.nz/assets/psych/about/our-research/documents/TMR%2BM%C4%81ori%2BData%2BSovereignty%2BPrinciples%2BOct%2B2018.pdf">Principles of Māori Data Sovereignty (PDF)</a>
+</p>
+<p>2. Surveillance capitalism unilaterally claims human experience as free raw material for translation into behavioral data.<br>
+	<a href="https://en.wikipedia.org/wiki/Surveillance_capitalism">Read more about surveillance capitalism on wikipedia</a>
+</p>
+<p>3. Rhizomatic organization opposes an arborescent (hierarchical, tree-like) conception of knowledge, working outside its dualist categories and binary choices.<br>
+	<a href="https://en.wikipedia.org/wiki/Rhizome_(philosophy)">Read about rhizome on Wikipedia</a></p>
+				    </div>
+				  </div>
+				  <div class="tab-pane fade" id="portuguese">
+				    <p>Tab 2 content</p>
+				  </div>
+				</div>
+				<div class="category-menu">
+						 {{ range (.Pages.ByParam "category.commons") }}
+						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
+							<header>
+								<p class="title">{{ .Title }}</p>
+							<p class="description">{{ .Description }}</p>
+							</header>
+						</a>
+						{{ end }}
+					</div>
+		
+			{{ partial "footer.html" . }}
+		</article>
+	</div>
+	{{ partial "scripts.html" . }} 
+</body>
+</html>

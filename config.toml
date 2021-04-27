@@ -3,3 +3,4 @@ languageCode = "en-us"
 title = "Praxis"
 description = "Decolonize your attention"
 publishDir = "docs"
+category = ["study", "commons", "play"]

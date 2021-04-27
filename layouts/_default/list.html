@@ -10,6 +10,11 @@
 				<h1>{{ .Site.Title }}</h1>
 				<h2>/{{ .Title | singularize }}</h2>
 			</header>
+			<div class="description">
+				{{ if (eq .Title "study") }}	!!!!
+				{{ end }}
+				{{ if in .Title "study" }}yyyy{{ end }}
+			</div>
 				<div class="category-menu">
 						
 						 {{ range .Pages }}
