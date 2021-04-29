@@ -10,6 +10,7 @@
 				<h1>{{ .Site.Title }}</h1>
 				<h2>/{{ .Title }}</h2>
 			</header>
+			<div class="description">
 			  <ul class="nav nav-pills" id="hugo" role="tablist">
 
   <li class="nav-item" role="presentation">
@@ -58,7 +59,7 @@
 				    </div>
 				  </div>
 				</div>
-
+</div>
 				<div class="category-menu">
 						 {{ range (.Pages.ByParam "category.commons") }}
 						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>

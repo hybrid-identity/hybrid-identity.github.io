@@ -96,3 +96,45 @@ background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, F
   }
 }
 
+
+@mixin stagger($start: 1, $diffraction: 0) {
+  &:nth-of-type($start + 0) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 0 + $diffraction));
+  }
+    &:nth-of-type($start + 1) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 1 + $diffraction));
+  }
+    &:nth-of-type($start + 2) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 2 + $diffraction));
+  }
+    &:nth-of-type($start + 3) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 3 + $diffraction));
+  }
+    &:nth-of-type($start + 4) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 4 + $diffraction));
+  }
+    &:nth-of-type($start + 5) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 5 + $diffraction));
+  }
+    &:nth-of-type($start + 6) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 6 + $diffraction));
+  }
+    &:nth-of-type($start + 7) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 7 + $diffraction));
+  }
+    &:nth-of-type($start + 8) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 8 + $diffraction));
+  }
+    &:nth-of-type($start + 9) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 9 + $diffraction));
+  }
+    &:nth-of-type($start + 10) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 10 + $diffraction));
+  }
+    &:nth-of-type($start + 11) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 11 + $diffraction));
+  }
+     &:nth-of-type($start + 12) {
+    @include fadeInDown($delay: calc(var(--delay) * $start + 12 + $diffraction));
+  }
+}
