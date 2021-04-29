@@ -346,6 +346,7 @@ footer.footer {
 		&:nth-of-type(3) {
 		@include fadeInDown($delay: calc(var(--delay) * 4));
 	}
+
 }
 
 .study {
