@@ -10,25 +10,13 @@
 {{ end }}
 <!-- 	{{ if .social }}<div class="links">{{ range .social }}<a href="#">aaa</a>{{end}}</div>{{end}} -->
 <div class="links">
-	{{ if .link1 }}
+	{{ if .links }}
 	<span class="emoji">🔗</span>
-	<a href="{{ .link1.URL }}">{{ .link1.title }}</a>
+	{{ range .links }}
+<a href="{{ .URL }}">{{ .title }}</a>
+	{{end}}
 	{{end}} 
-	{{ if .link2 }}
-	<a href="{{ .link2.URL }}">{{ .link2.title }}</a>
-	{{end}} 
-	{{ if .link3 }}
-	<a href="{{ .link3.URL }}">{{ .link3.title }}</a>
-	{{end}} 
-	{{ if .link4 }}
-	<a href="{{ .link4.URL }}">{{ .link4.title }}</a>
-	{{end}} 
-	{{ if .link5 }}
-	<a href="{{ .link5.URL }}">{{ .link5.title }}</a>
-	{{end}} 
-	{{ if .link6 }}
-	<a href="{{ .link6.URL }}">{{ .link6.title }}</a>
-	{{end}} 
+	
 </div>
 </div>
 </div>

@@ -1,10 +1,11 @@
+alias = "rodjun"
 name = "Rodrigo"
 surname = "Junqueira"
 emoji = "✨"
-bio = "lorem"
 location = "brasil"
 email = "rodrigo.fpjunqueira@gmail.com"
 
-[link1]
-	title = "site" 
-	URL= "https://www.rodjun.com/"
+links = [
+	{title = "site", URL =  "https://www.rodjun.com/"},
+	{title = "github", URL =  "https://github.com/rodjuncode"}
+]

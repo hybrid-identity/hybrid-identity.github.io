@@ -1,3 +1,4 @@
+alias = "camille"
 name = "Camille"
 surname = "E. Acey"
 emoji = "🗿"
@@ -5,10 +6,8 @@ bio = "lorem"
 email = "connect@camilleacey.com"
 location = "New York"
 
-[link1]
-	title = "colet" 
-	URL = "https://colet.space/"
 
-[link2]
-	title = "mastodon" 
-	URL = "https://eweg.be/@olamina"
+links = [
+		{title = "colet", URL = "https://colet.space/"}, 
+	{title = "mastodon", URL = "https://eweg.be/@olamina"}
+]

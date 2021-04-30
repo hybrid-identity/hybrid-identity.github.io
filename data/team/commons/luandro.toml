@@ -1,3 +1,4 @@
+alias = "luandro"
 name = "Luandro"
 surname = "Vieira"
 emoji = "🍃"
@@ -5,10 +6,7 @@ bio = "lorem"
 location = "Brasil"
 email = "luandro@digital-democracy.org"
 
-[link1]
-title = "scuttlebutt"
-URL = "https://viewer.scuttlebot.io/%25hMC%2FIx%2FmnDvk0KYGcvXGo%2FKt8UuegWYz6vB91RyhIKQ%3D.sha256"
-
-[link2]
-title = "digital democracy"
-URL = "https://digital-democracy.org"
+links = [
+	{title = "scuttlebutt", URL = "https://viewer.scuttlebot.io/%25hMC%2FIx%2FmnDvk0KYGcvXGo%2FKt8UuegWYz6vB91RyhIKQ%3D.sha256"},
+{title = "digital democracy", URL = "https://digital-democracy.org"}
+]

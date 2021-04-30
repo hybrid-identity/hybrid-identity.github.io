@@ -1,3 +1,4 @@
+alias = "nicholas"
 name = "Nicholas"
 surname = "Frota"
 emoji = "🧤"
@@ -5,22 +6,10 @@ bio = "the anagram of my name is anarchist fool"
 location = "New York"
 email = "info@nicholasfrota.com"
 
-[link1]
-title = "site"
-URL =  "https://nonlinear.nyc"
-
-[link2]
-title = "mastodon"
-URL =  "https://mastodon.social/@nonlinear"
-
-[link3]
-title = "twitter"
-URL = "https://twitter.com/nonlinear"
-
-[link4]
-title = "instapaper"
-URL =  "https://www.instapaper.com/p/nonlinear"
-
-[link6]
-title = "instagram"
-URL =  "https://instagram.com/nonlinear"
+links = [
+	{title = "site", URL =  "https://nonlinear.nyc"},
+	{title = "mastodon", URL =  "https://mastodon.social/@nonlinear"},
+	{title = "twitter", URL = "https://twitter.com/nonlinear"},
+	{title = "instapaper", URL =  "https://www.instapaper.com/p/nonlinear"},
+	{title = "instagram", URL =  "https://instagram.com/nonlinear"}
+]
