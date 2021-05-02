@@ -11,7 +11,9 @@
 				<h2>{{ .Description }}</h2>
 			</header>
 			{{ if in .Params.Category "study" }}
+			{{ if not (in .Params.Badge "zine") }}
 			{{ partial "study-rules.html" . }}
+			{{ end }}
 			{{ end }}
 			{{ .Content }}
 			{{ partial "footer.html" . }}
