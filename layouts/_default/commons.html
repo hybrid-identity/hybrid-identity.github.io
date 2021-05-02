@@ -62,12 +62,7 @@
 </div>
 				<div class="category-menu">
 						 {{ range (.Pages.ByParam "category.commons") }}
-						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
-							<header>
-								<p class="title">{{ .Title }}</p>
-							<p class="description">{{ .Description }}</p>
-							</header>
-						</a>
+						{{ partial "category-post.html" . }}
 						{{ end }}
 					</div>
 		

@@ -1,7 +1,14 @@
 <a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
-	{{ if Post.Params.style "xxx"  }}xxx{{ end }}
+
+		
+			
 	<header>
 		<p class="title">{{ .Title }}</p>
 		<p class="description">{{ .Description }}</p>
+		{{ if .Params.Badge }}
+		<span class="badge">{{ .Params.Badge }}</span>
+		{{ else if in .Params.Status "current" }}
+		<span class="badge">{{ .Params.Status }}</span>
+		{{ end }}
 	</header>
 </a>
