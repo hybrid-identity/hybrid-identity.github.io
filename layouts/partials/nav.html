@@ -9,12 +9,7 @@
 					</div>
 					<div class="category-menu">
 						{{ range where .Site.Pages "Params.category" "study" }}
-						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
-							<header>
-								<p class="title">{{ .Title }}</p>
-							<p class="description">{{ .Description }}</p>
-							</header>
-						</a>
+						{{ partial "category-post.html" . }}
 						{{ end }}
 						<a href="{{ .Site.BaseURL }}/study" class="btn">View All</a>
 				
@@ -31,12 +26,7 @@
 					<div class="category-menu">
 						
 						{{ range where .Site.Pages "Params.category" "commons" }}
-						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
-							<header>
-								<p class="title">{{ .Title }}</p>
-							<p class="description">{{ .Description }}</p>
-							</header>
-						</a>
+						{{ partial "category-post.html" . }}
 						{{ end }}
 						<a href="{{ .Site.BaseURL }}/commons" class="btn">View All</a>
 				
@@ -53,12 +43,7 @@
 					<div class="category-menu">
 						
 						{{ range where .Site.Pages "Params.category" "play" }}
-						<a  class="category-post" href="{{ .Permalink }}"  {{ if .Params.cover  }}style="background-image: url({{ .Site.BaseURL }}/images/{{ .Params.cover  }})"{{end}}>
-							<header>
-								<p class="title">{{ .Title }}</p>
-							<p class="description">{{ .Description }}</p>
-							</header>
-						</a>
+						{{ partial "category-post.html" . }}
 						{{ end }}
 						<a href="{{ .Site.BaseURL }}/play" class="btn">View All</a>
 				
