@@ -1,6 +1,11 @@
+
 {{ $jquery := resources.Get "js/jquery.min.js" }}
-<script src="{{ $jquery.Permalink }}"></script>{{ $popper := resources.Get "js/popper.min.js" }}
-<script src="{{ $popper.Permalink }}"></script>{{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
+<script src="{{ $jquery.Permalink }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://raw.githubusercontent.com/barisaydinoglu/Detectizr/master/dist/detectizr.js"></script>
+{{ $popper := resources.Get "js/popper.min.js" }}
+<script src="{{ $popper.Permalink }}"></script>
+{{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
 <script src="{{ $bootstrap.Permalink }}"></script>
 <script>
     $(function () {
