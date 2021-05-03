@@ -1,6 +1,10 @@
 name = "Meredith"
-surname = "?"
+surname = "Meredith"
 emoji = "🕶"
-bio = "lorem"
 email = "hellomere@protonmail.com"
-location = "?"
+location = "New York"
+
+links = [
+	{title = "site", URL =  "https://www.systempoetics.com/"},
+	{title = "instagram", URL =  "https://www.instagram.com/hackerm0m/"}
+]
