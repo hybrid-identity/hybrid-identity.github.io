@@ -5,6 +5,8 @@
 <script src="https://raw.githubusercontent.com/barisaydinoglu/Detectizr/master/dist/detectizr.js"></script>
 {{ $popper := resources.Get "js/popper.min.js" }}
 <script src="{{ $popper.Permalink }}"></script>
+{{ $screenfull := resources.Get "js/screenfull.min.js" }}
+<script src="{{ $screenfull.Permalink }}"></script>
 {{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
 <script src="{{ $bootstrap.Permalink }}"></script>
 <script>

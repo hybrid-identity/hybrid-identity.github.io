@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 16 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://praxis.nyc/v4/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>events calendar</title>
+      <link>https://praxis.nyc/v4/calendar/</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://praxis.nyc/v4/calendar/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis, nihil quos amet omnis natus suscipit molestiae tenetur laboriosam at.
+   Subscribe to Calendar Suggest an Event </description>
+    </item>
+    
+    <item>
       <title>Radical Care</title>
       <link>https://praxis.nyc/v4/study/radical-care/</link>
       <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
