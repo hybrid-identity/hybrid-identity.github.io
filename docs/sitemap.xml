@@ -11,16 +11,19 @@
     <loc>https://praxis.nyc/v4/study/</loc>
     <lastmod>2021-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://praxis.nyc/v4/play/resources/</loc>
-    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://praxis.nyc/v4/play/hugo-theme/</loc>
     <lastmod>2021-04-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://praxis.nyc/v4/play/</loc>
     <lastmod>2021-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://praxis.nyc/v4/study/redux-1/</loc>
+    <loc>https://praxis.nyc/v4/redux/1/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://praxis.nyc/v4/redux/</loc>
+    <lastmod>2021-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://praxis.nyc/v4/play/resources/</loc>
     <lastmod>2021-04-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://praxis.nyc/v4/study/panopticon/</loc>
@@ -53,19 +56,13 @@
     <loc>https://praxis.nyc/v4/study/bureaucracy/</loc>
     <lastmod>2020-07-06T02:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://praxis.nyc/v4/categories/</loc>
+    <loc>https://praxis.nyc/v4/slide/cognition/</loc>
     <lastmod>2020-06-01T18:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://praxis.nyc/v4/commons/</loc>
+    <loc>https://praxis.nyc/v4/slide/</loc>
     <lastmod>2020-06-01T18:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://praxis.nyc/v4/categories/commons/</loc>
-    <lastmod>2020-06-01T18:03:16-05:00</lastmod>
-  </url><url>
-    <loc>https://praxis.nyc/v4/commons/embodied/</loc>
-    <lastmod>2020-06-01T18:03:16-05:00</lastmod>
-  </url><url>
-    <loc>https://praxis.nyc/v4/commons/wish/</loc>
+    <loc>https://praxis.nyc/v4/slide/wish/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://praxis.nyc/v4/study/collapsism/</loc>
@@ -80,11 +77,16 @@
     <loc>https://praxis.nyc/v4/study/queer-families/</loc>
     <lastmod>2019-01-21T18:03:16-05:00</lastmod>
   </url><url>
+    <loc>https://praxis.nyc/v4/commons/</loc>
+    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+  </url><url>
+    <loc>https://praxis.nyc/v4/commons/consulting/</loc>
+    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+  </url><url>
     <loc>https://praxis.nyc/v4/commons/janeraka/</loc>
     <lastmod>2019-01-21T04:03:16-05:00</lastmod>
   </url><url>
-    <loc>https://praxis.nyc/v4/commons/office-hours/</loc>
-    <lastmod>2019-01-21T04:03:16-05:00</lastmod>
+    <loc>https://praxis.nyc/v4/categories/</loc>
   </url><url>
     <loc>https://praxis.nyc/v4/tags/</loc>
   </url>

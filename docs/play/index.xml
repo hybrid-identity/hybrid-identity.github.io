@@ -8,16 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://praxis.nyc/v4/play/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creative Code Resources</title>
-      <link>https://praxis.nyc/v4/play/resources/</link>
-      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://praxis.nyc/v4/play/resources/</guid>
-      <description>Do you have a resource you want to add to the list? Add it here
-Do you want to connect? Find the others</description>
-    </item>
-    
-    <item>
       <title>Play</title>
       <link>https://praxis.nyc/v4/play/hugo-theme/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
@@ -27,6 +17,16 @@ Do you want to connect? Find the others</description>
 Subscribe to our newsletter for updates
 features  CSS scope  credits  installation  Shortcodes  --  Ready-to-use features to speed up your creative code: Want text not to be selectable? Want to prevent zoom? ml5? smooth scroll?
 On frontmatter, add the features you need with play: feature1, feature2, etc (Make sure post is .</description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://praxis.nyc/v4/play/resources/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://praxis.nyc/v4/play/resources/</guid>
+      <description>Do you have a resource you want to add to the list? Add it here
+Do you want to connect? Find the others</description>
     </item>
     
   </channel>

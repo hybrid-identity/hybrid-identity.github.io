@@ -52,7 +52,6 @@
 
 		.links {
 			@include highlight($spacing: 0);
-			font-size: 80%;
 			a:not(:last-of-type) {
 				margin-right: 3px;
 				display: inline-block;

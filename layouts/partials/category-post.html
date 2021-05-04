@@ -5,9 +5,16 @@
 	<header>
 		<p class="title">{{ .Title }}</p>
 		<p class="description">{{ .Description }}</p>
-		{{ if .Params.Badge }}
-		<span class="badge">{{ .Params.Badge }}</span>
-		{{ else if in .Params.Status "current" }}
+		{{ if in .Params.Category "redux" }}
+		<span class="badge">{{ .Params.Category }}</span>
+		{{ end }}
+		{{ if in .Params.Category "slide" }}
+		<span class="badge">{{ .Params.Category }}</span>
+		{{ end }}
+		{{ if in .Params.Status "current" }}
+		<span class="badge">{{ .Params.Status }}</span>
+		{{ end }}
+		{{ if in .Params.Status "previous" }}
 		<span class="badge">{{ .Params.Status }}</span>
 		{{ end }}
 	</header>

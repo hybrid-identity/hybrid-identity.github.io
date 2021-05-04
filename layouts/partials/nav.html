@@ -8,8 +8,20 @@
 						</div>
 					</div>
 					<div class="category-menu">
+						
+
 						{{ range where .Site.Pages "Params.category" "study" }}
+						{{ if in .Params.status "current" }}
 						{{ partial "category-post.html" . }}
+						{{ end }}
+						{{ end }}
+							{{ range where .Site.Pages "Params.category" "redux" }}
+						{{ partial "category-post.html" . }}
+						{{ end }}
+					{{ range where .Site.Pages "Params.category" "study" }}
+						{{ if in .Params.status "previous" }}
+						{{ partial "category-post.html" . }}
+						{{ end }}
 						{{ end }}
 						<a href="{{ .Site.BaseURL }}/study" class="btn">View All</a>
 				
@@ -26,6 +38,9 @@
 					<div class="category-menu">
 						
 						{{ range where .Site.Pages "Params.category" "commons" }}
+						{{ partial "category-post.html" . }}
+						{{ end }}
+						{{ range where .Site.Pages "Params.category" "slide" }}
 						{{ partial "category-post.html" . }}
 						{{ end }}
 						<a href="{{ .Site.BaseURL }}/commons" class="btn">View All</a>

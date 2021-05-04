@@ -17,16 +17,6 @@
     </item>
     
     <item>
-      <title>Creative Code Resources</title>
-      <link>https://praxis.nyc/v4/play/resources/</link>
-      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://praxis.nyc/v4/play/resources/</guid>
-      <description>Do you have a resource you want to add to the list? Add it here
-Do you want to connect? Find the others</description>
-    </item>
-    
-    <item>
       <title>Play</title>
       <link>https://praxis.nyc/v4/play/hugo-theme/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
@@ -40,14 +30,24 @@ On frontmatter, add the features you need with play: feature1, feature2, etc (Ma
     
     <item>
       <title>redux 1</title>
-      <link>https://praxis.nyc/v4/study/redux-1/</link>
+      <link>https://praxis.nyc/v4/redux/1/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://praxis.nyc/v4/study/redux-1/</guid>
+      <guid>https://praxis.nyc/v4/redux/1/</guid>
       <description>Download Redux #1Print PDF  --   A compilation of quotes from panopticon study group
 Web version Print version
 Reprint freely
   </description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://praxis.nyc/v4/play/resources/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://praxis.nyc/v4/play/resources/</guid>
+      <description>Do you have a resource you want to add to the list? Add it here
+Do you want to connect? Find the others</description>
     </item>
     
     <item>
@@ -142,20 +142,20 @@ Reprint freely
     </item>
     
     <item>
-      <title>Embodied Cognition</title>
-      <link>https://praxis.nyc/v4/commons/embodied/</link>
+      <title>Situated Cognition</title>
+      <link>https://praxis.nyc/v4/slide/cognition/</link>
       <pubDate>Mon, 01 Jun 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://praxis.nyc/v4/commons/embodied/</guid>
-      <description>Embodied Cognition Embodied // Situated // Extended A talk for Sensory Engagement Lab       Brainbound The (nonneural) body is just the sensor and effector system of the brain, and the world is just the arena in which adaptive problems get posed and in which the brain–body system must sense and act. All human cognition depends directly on neural activity alone.    Extended Includes inextricable tangles of feedback, feed-forward, and feed-around loops: loops that promiscuously criss-cross the boundaries of brain, body, and world.</description>
+      <guid>https://praxis.nyc/v4/slide/cognition/</guid>
+      <description>Situated Cognition Embodied // Extended A talk for Sensory Engagement Lab       Brainbound The (nonneural) body is just the sensor and effector system of the brain, and the world is just the arena in which adaptive problems get posed and in which the brain–body system must sense and act. All human cognition depends directly on neural activity alone.    Extended Includes inextricable tangles of feedback, feed-forward, and feed-around loops: loops that promiscuously criss-cross the boundaries of brain, body, and world.</description>
     </item>
     
     <item>
       <title>✨wish</title>
-      <link>https://praxis.nyc/v4/commons/wish/</link>
+      <link>https://praxis.nyc/v4/slide/wish/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://praxis.nyc/v4/commons/wish/</guid>
+      <guid>https://praxis.nyc/v4/slide/wish/</guid>
       <description>{{page.title}} {{page.description}} A {{ partial &#34;logo.html&#34; . }} and  collaboration   What it is  facilitates #needs and #offers in a community taxonomy is defined bottom-up by #tags regions are defined bottom-up by geofencing    {{ partial &#34;wish/story1-1.svg&#34; . }} #compost Denise searches for a #compost #offer nearby.
   {{ partial &#34;wish/story1-2.svg&#34; . }} #compost Denise enters a private room with Mary, the one #offering the #compost.</description>
     </item>
@@ -199,23 +199,21 @@ Reprint freely
     </item>
     
     <item>
+      <title>Consulting</title>
+      <link>https://praxis.nyc/v4/commons/consulting/</link>
+      <pubDate>Mon, 21 Jan 2019 04:03:16 -0500</pubDate>
+      
+      <guid>https://praxis.nyc/v4/commons/consulting/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
       <title>janeraka</title>
       <link>https://praxis.nyc/v4/commons/janeraka/</link>
       <pubDate>Mon, 21 Jan 2019 04:03:16 -0500</pubDate>
       
       <guid>https://praxis.nyc/v4/commons/janeraka/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Office Hours</title>
-      <link>https://praxis.nyc/v4/commons/office-hours/</link>
-      <pubDate>Mon, 21 Jan 2019 04:03:16 -0500</pubDate>
-      
-      <guid>https://praxis.nyc/v4/commons/office-hours/</guid>
-      <description>vai o texto de quem somos,
-
-dai passa para link pro calendly</description>
     </item>
     
   </channel>

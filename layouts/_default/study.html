@@ -47,16 +47,14 @@
 					</section>
 					<section class="status">
 						<h3>Redux zines</h3>
-						 {{ range (.Pages.ByParam "category.study") }}
-						{{ if in .Params.status "redux" }}
+							{{ range where .Site.Pages "Params.category" "redux" }}
 						{{ partial "category-post.html" . }}
-						{{ end }}
 						{{ end }}
 					</section>
 					<section class="status">
 						<h3>Past study groups</h3>
 						 {{ range (.Pages.ByParam "category.study") }}
-						{{ if in .Params.status "past" }}
+						{{ if in .Params.status "previous" }}
 						{{ partial "category-post.html" . }}
 						{{ end }}
 						{{ end }}

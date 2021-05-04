@@ -2,14 +2,12 @@ alias = "nicholas"
 name = "Nicholas"
 surname = "Frota"
 emoji = "🧤"
-bio = "the anagram of my name is anarchist fool"
+bio = "anarchist fool"
 location = "New York"
 email = "info@nicholasfrota.com"
 
 links = [
 	{title = "site", URL =  "https://nonlinear.nyc"},
 	{title = "mastodon", URL =  "https://mastodon.social/@nonlinear"},
-	{title = "twitter", URL = "https://twitter.com/nonlinear"},
-	{title = "instapaper", URL =  "https://www.instapaper.com/p/nonlinear"},
-	{title = "instagram", URL =  "https://instagram.com/nonlinear"}
+	{title = "twitter", URL = "https://twitter.com/nonlinear"}
 ]

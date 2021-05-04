@@ -3,6 +3,9 @@
   height: var(--pdf);
   overflow: hidden;
   @include radius(3px);
+
+  @include fadeInRight($delay: var(--delay), $duration: 1s);
+
   .slides {
     display: flex;
     overflow-x: auto;
@@ -15,6 +18,7 @@
   }
 
 .slides > img {
+
     scroll-snap-align: start;
     flex-shrink: 0;
     height: var(--pdf);

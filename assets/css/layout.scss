@@ -351,6 +351,9 @@ footer.footer {
 	width: 100%;
 	height: 205px;
 	@include fadeInDown;
+	.no-cover & {
+		display: none;
+	}
 }
 
 .category-menu section.status {
@@ -458,7 +461,7 @@ span.badge {
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: var(--gap-2);
 	border-top: solid 3px var(--color-fg);
-	margin-top: var(--gap-4);
+	margin-top: var(--gap-8);
 	padding: var(--gap-2) 0;
 	border-bottom: solid 3px var(--color-fg);
 	p {
