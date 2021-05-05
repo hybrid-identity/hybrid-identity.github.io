@@ -1,35 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="cognition  slide draft">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.c9f9bcd3ae5df997be21735457bae8c01f70e0a29ba07a4ae270c83f0e961386.css">
-
-	<title>Praxis</title>
-</head>
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
 <body>
 	<div id="presentation">
 		<div class="slides">
 <!DOCTYPE html>
-<html lang="en" class="cognition  slide draft">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.c9f9bcd3ae5df997be21735457bae8c01f70e0a29ba07a4ae270c83f0e961386.css">
-
-	<title>Praxis</title>
-</head>
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
 <body>
 	<div id="presentation">
 		<div class="slides">
 <section>
-				<h1>Situated Cognition</h1>
+				<h1>{{ .Title }}</h1>
 				<div class="fragment">
-					<h4>Embodied // Extended</h4>
+					<h4>{{ .Description }}</h4>
 				<h4>A talk for <a href="https://lizlessner.com/about-sel/">Sensory Engagement Lab</a></h4>
 				</div>
 			</section>
@@ -60,7 +44,13 @@
 <section>
 	<h3>"This matters because it drives home the degree to which environmental engineering is also self-engineering."</h3>
 </section>
+<!--
+<p>If such bodily and extrabodily loops are indeed integral to certain forms of intelligent activity, we need to understand when and why this can be so</p>
 
+<p>to say that cognition is embodied means that it arises from bodily interactions with the world,</p>
+
+<p>Mind, therefore, is not incidentally but intimately embodied and intimately embedded in its world.</p>
+-->
 
 
 
@@ -103,7 +93,9 @@
 <blockquote>The recruitment process marks no special distinction among neural, bodily, and environmental resources</blockquote>
 </section>
 
+<!-- <p>the embodiment level” to indicate the level at which functionally critical operations occur at timescales of around one-third second. This corresponds, nonaccidentally, to the observed frequency of saccades and is, the authors claim, the timescale at which “the natural sequentiality of body movements can be matched to the natural computational economies of sequential decision systems through a system of implicit reference (called deictic) in which pointing movements are used to bind objects in the world to cognitive programs</p>
 
+<p>The embodied agent is empowered to use active sensing and perceptual coupling in ways that simplify neural problem solving by making the most of environmental opportunities and information freely available in the optic array.</p> -->
 
 <section>
 	<h2>Extentions as Amputations</h2>
@@ -126,76 +118,14 @@
 	
 		</div>
 	</div>
-	
-
-<script src="https://praxis.nyc/v4/js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-<script src="https://raw.githubusercontent.com/barisaydinoglu/Detectizr/master/dist/detectizr.js"></script>
-
-<script src="https://praxis.nyc/v4/js/popper.min.js"></script>
-
-<script src="https://praxis.nyc/v4/js/screenfull.min.js"></script>
-
-<script src="https://praxis.nyc/v4/js/bootstrap.min.js"></script>
-<script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    });
-    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
-    .on("mouseenter", function () {
-      var _this = this;
-      $(this).popover("show");
-      $(".popover").on("mouseleave", function () {
-        $(_this).popover('hide');
-      });
-    }).on("mouseleave", function () {
-      var _this = this;
-      setTimeout(function () {
-        if (!$(".popover:hover").length) {
-          $(_this).popover("hide");
-        }
-      }, 300);
-    });
-  </script>
- 
+	{{ partial "scripts.html" . }} 
 </body>
 </html>
 
 
 		</div>
 	</div>
-	
-
-<script src="https://praxis.nyc/v4/js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-<script src="https://raw.githubusercontent.com/barisaydinoglu/Detectizr/master/dist/detectizr.js"></script>
-
-<script src="https://praxis.nyc/v4/js/popper.min.js"></script>
-
-<script src="https://praxis.nyc/v4/js/screenfull.min.js"></script>
-
-<script src="https://praxis.nyc/v4/js/bootstrap.min.js"></script>
-<script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    });
-    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
-    .on("mouseenter", function () {
-      var _this = this;
-      $(this).popover("show");
-      $(".popover").on("mouseleave", function () {
-        $(_this).popover('hide');
-      });
-    }).on("mouseleave", function () {
-      var _this = this;
-      setTimeout(function () {
-        if (!$(".popover:hover").length) {
-          $(_this).popover("hide");
-        }
-      }, 300);
-    });
-  </script>
- 
+	{{ partial "scripts.html" . }} 
 </body>
 </html>
 
