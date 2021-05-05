@@ -77,3 +77,111 @@ table.table {
 	z-index: 3000 !important;
 	@include find(red);
 }
+
+a[data-toggle="popover"] {
+  @include highlight(
+    $bg: var(--color-accent-2), 
+    $gap: 2px, 
+    $spacing: 0, 
+    $top: 5px, 
+    $bottom: 3px,
+    $break: false
+    );
+  &:hover {
+
+    color: var(--color-bg) !important;@include highlight(
+      $bg: var(--color-accent), 
+      $gap: 2px, 
+      $spacing: 0, 
+      $top: 5px, 
+      $bottom: 3px,
+      $break: false
+      );
+  }
+}
+.popover {
+  @include fadeIn;
+
+  border-radius: 0;
+  border-color: var(--color-accent);
+  margin: var(--gap);
+}
+
+.tooltip {
+    font-family: var(--font);
+    text-transform: uppercase;
+   .tooltip-body {
+     padding: var(--gap);
+      border-radius: 0 !important;
+   }
+}
+
+
+.popover-body {
+  padding: var(--gap-2);
+  font-family: var(--font);
+  font-size: 120%;
+  a {
+    display: block;
+    background-color: var(--color-bg);
+    color:  var(--color-accent);
+    border: solid 1px  var(--color-accent);
+    &:first-of-type {
+      margin-top: var(--gap);
+    }
+  }
+}
+
+
+
+.arrow::before {
+  .bs-popover-top >  & {
+    border-top-color: var(--color-accent);
+  }
+  .bs-popover-right > & {
+    border-right-color: var(--color-accent);
+  }
+  
+
+  .bs-popover-bottom > & {
+    border-bottom-color: var(--color-accent);
+  }
+
+
+  .bs-popover-left > & {
+    border-left-color: var(--color-accent);
+  }
+}
+
+
+.description {
+  // margin-left: calc(var(--gap-2) * -1);
+  // display: grid;
+  // grid-template-columns: var(--lang) 1fr;
+.nav {
+  margin-left: -10px;
+}
+  .nav a {
+    background-color: var(--color-bg);
+    @include radius(0);
+    padding: 10px !important;
+    line-height: 80%;
+    font-size: 150%;
+    max-width: var(--lang);
+    max-height: var(--lang);
+    overflow: hidden;
+    &.active {
+      background-color: var(--color-accent-2) !important;
+    }
+  }
+  .tab-content {
+    margin-top: -40px;
+  }
+}
+
+.nav.lang {
+  @include find(red);
+  width: 50px;
+  float: left;
+  margin-left: -100px;
+}

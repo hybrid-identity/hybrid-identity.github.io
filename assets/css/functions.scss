@@ -1,13 +1,17 @@
 :root {
+  --font: Space Grotesk;
   --color-bg: white;
   --color-fg: black;
   --color-medium: #999;
   --color-dark: #666;
   --color-accent: purple;
+  --color-accent-2: #EDB6D3;
   --logo-big: 90px;
   --logo-small: 36px;
   --pdf: 100vh;
    --nav: 150px;
+   
+--lang: 50px;
   --pdf-ratio: 0.3863636364;
   --delay: 300ms;
   --gap: 15px;
@@ -29,6 +33,7 @@
   --color-medium: white;
   --color-dark: #999;
   --color-accent: #EDB6D3;
+  --color-accent-2: purple;
   body {
     background-image: url("../images/dot-bg-dark-mode.svg");
   }
