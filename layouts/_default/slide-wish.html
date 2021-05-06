@@ -2,12 +2,13 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
-	<div id="presentation">
+	<div class="presentation">
+
 		<div class="slides">
-			<section>
+			<section class="middle">
 				<h1>{{ .Title }}</h1>
 				<h2  class="fragment">{{ .Description }}</h2>
-				<h3 class="collab fragment">A <a href="{{ .Site.BaseURL }}" class="logo">{{ partial "logo-big.svg" . }}</a> and <a href="https://colet.space" target="_blank"><img src="/v4/images/colet-logo@2x-300x109.png" alt=""></a> collaboration</h3>
+				<h3 class="collab fragment">A <a href="{{ .Site.BaseURL }}" >{{ partial "logo-big.svg" . }}</a> and <a href="https://colet.space" target="_blank"><img src="{{ .Site.BaseURL }}/images/colet-logo@2x-300x109.png" alt=""></a> collaboration</h3>
 			</section>
 			<section>
 				<h2>What it is</h2>

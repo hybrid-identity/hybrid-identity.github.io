@@ -166,13 +166,15 @@ code {
 }
 
 
-
-h1, h2, h3, h4 {
-	@include highlight($bg: var(--color-fg), 
+html:not(.slide) {
+	h1, h2, h3, h4 {
+		@include highlight($bg: var(--color-fg), 
 		$spacing: var(--gap-2));
 	color: var(--color-bg);
 	text-transform: uppercase;
 	font-weight: bold;
+	
+}
 }
 
 body.home {

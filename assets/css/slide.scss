@@ -1,28 +1,35 @@
-:root {
-  --slide-w: 800px;
---slide-h: 600px;
-}
 
-#presentation {
-  width: var(--slide-w);
-  height: var(--slide-h);
-  margin: 0 auto;
-  overflow: hidden;
-  @include radius(3px);
-  @include fadeInRight($delay: var(--delay), $duration: 1s);
+.slide body {
+  --slide-h: 600px;
+--slide-w: 800px;
+--slide-ratio: calc(var(--slide-h) * 100 / var(--slide-w));
+--logo-big: 50px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  background-color: var(--color-bg);
+}
+.presentation {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .slides {
+
+  background-image: url("../images/dot-bg.svg");
     display: flex;
     overflow-x: auto;
+    margin: 0 auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-points-x: repeat(calc(var(--pdf) * var(--pdf-ratio)));
+    scroll-snap-points-x: repeat(var(--slide-w));
     scroll-snap-type: mandatory;
     width: var(--slide-w);
   height: var(--slide-h);
-  margin: 0 auto;
-
+  @include fadeInRight;
   }
 
 .slides > section {
@@ -31,12 +38,43 @@ overflow-y: hidden;
     flex-shrink: 0;
      width: var(--slide-w);
   height: var(--slide-h);
-    &:not(:last-of-type) {
-      border-right: solid 1px #ccc;
-    }
-    // transform-origin: center center;
-    // transition: transform 0.5s;
-    // position: relative;
-    // display: flex;
+padding: var(--gap-4);
+padding-left: var(--gap);
+  // .fragment {
+  //     &:nth-of-type(1) {
+  //   @include fadeInLeft($delay: calc(var(--delay) * 2));
+  // }
+  // &:nth-of-type(2) {
+  //   @include fadeInLeft($delay: calc(var(--delay) * 3));
+  // }
+  // &:nth-of-type(3) {
+  //   @include fadeInLeft($delay: calc(var(--delay) * 4));
+  // }
+  // &:nth-of-type(4) {
+  //   @include fadeInLeft($delay: calc(var(--delay) * 5));
+  // }
+  // &:nth-of-type(5) {
+  //   @include fadeInLeft($delay: calc(var(--delay) * 6));
+  // }
+  // &:nth-of-type(6) {
+  //   @include fadeInLeft($delay: calc(var(--delay) * 7));
+  // }
+  // }
+  h1, h2, h3, h4, p {
+    @include highlight($bg: var(--color-bg), 
+    $spacing: 0);
+    color: var(--color-fg);
+    line-height: 100%;
   }
+ 
+  h1 {
+    font-size: 100px;
+  }
+   h2 {
+    font-size: 50px;
+  }
+   h3, li {
+    font-size: 40px;
+  }
+}
 }
