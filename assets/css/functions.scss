@@ -102,44 +102,28 @@ background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, F
 }
 
 
-@mixin stagger($start: 1, $diffraction: 0) {
-  &:nth-of-type($start + 0) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 0 + $diffraction));
-  }
-    &:nth-of-type($start + 1) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 1 + $diffraction));
-  }
-    &:nth-of-type($start + 2) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 2 + $diffraction));
-  }
-    &:nth-of-type($start + 3) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 3 + $diffraction));
-  }
-    &:nth-of-type($start + 4) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 4 + $diffraction));
-  }
-    &:nth-of-type($start + 5) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 5 + $diffraction));
-  }
-    &:nth-of-type($start + 6) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 6 + $diffraction));
-  }
-    &:nth-of-type($start + 7) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 7 + $diffraction));
-  }
-    &:nth-of-type($start + 8) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 8 + $diffraction));
-  }
-    &:nth-of-type($start + 9) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 9 + $diffraction));
-  }
-    &:nth-of-type($start + 10) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 10 + $diffraction));
-  }
-    &:nth-of-type($start + 11) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 11 + $diffraction));
-  }
-     &:nth-of-type($start + 12) {
-    @include fadeInDown($delay: calc(var(--delay) * $start + 12 + $diffraction));
+@mixin fade($x: 0, $y: 0, $z: 0, $duration: $durationDefault, $function: $functionDefault, $delay: $delayDefault, $count: $countDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(fade);
+  @include duration($duration);
+  @include function($function);
+  @include delay($delay);
+  @include count($count);
+  @include visibility($visibility);
+  @include fill-mode($fill);
+
+  @at-root {
+    @include keyframes(fade) {
+      0% {
+        opacity: 0;
+        transform: translate3d($x, $y, $z);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 }
+
+

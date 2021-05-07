@@ -2,6 +2,14 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
+{{ if in .Params.Category "slide" }}
+	<div class="reveal">
+			<div class="slides">
+	{{ partial "wish/slide.html" . }}
+</div>
+</div>
+{{ else }}
+
 	{{ partial "cover.html" . }}
 	<div class="container">
 		{{ partial "logo.html" . }}
@@ -19,6 +27,8 @@
 			{{ partial "footer.html" . }}
 		</article>
 	</div>
+
+{{ end }}
 	{{ partial "scripts.html" . }} 
 </body>
 </html>

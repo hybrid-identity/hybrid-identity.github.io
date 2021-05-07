@@ -5,14 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.226e8ca19d73629d0e8f3576857dd94ccc2e9e9293f883d8b4289f77dcb750bb.css">
+<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.6b4558ea1229951a013fb6dae272b7bd40f1929e7ce127555633d9281a6b70ec.css">
+
+<link rel="stylesheet" href="https://praxis.nyc/v4vendors/revealjs/dist/reset.css">
+		<link rel="stylesheet" href="https://praxis.nyc/v4vendors/revealjs/dist/reveal.css">
+		<link rel="stylesheet" href="https://praxis.nyc/v4vendors/revealjs/dist/theme/black.css" id="theme">
+
+		
+		<link rel="stylesheet" href="https://praxis.nyc/v4plugin/highlight/monokai.css" id="highlight-theme">
+		
 
 	<title>Praxis</title>
 </head>
 <body>
-	<div class="presentation">
-
-		<div class="slides">
+	<div class="reveal">
+			<div class="slides">
+	
 			<section class="middle">
 				<h1>✨wish</h1>
 				<h2  class="fragment">mutual aid micro-volunteering</h2>
@@ -664,9 +672,10 @@
 
 
 
-</div>
-</div>
 
+</div>
+</div>
+	
 
 <script src="https://praxis.nyc/v4/js/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -697,7 +706,29 @@
       }, 300);
     });
   </script>
- 
+
+  <script src="https://praxis.nyc/v4vendors/revealjs/dist/reveal.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/zoom/zoom.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/notes/notes.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/search/search.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/markdown/markdown.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/highlight/highlight.js"></script>
+    <script>
+
+      
+      
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+
+    </script>
+     
 </body>
 </html>
 

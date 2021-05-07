@@ -4,6 +4,14 @@
 {{ $sass := resources.Get "css/main.scss"  | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" true) | fingerprint  }}
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ if in .Params.Category "slide" }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}vendors/revealjs/dist/reset.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}vendors/revealjs/dist/reveal.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}vendors/revealjs/dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}plugin/highlight/monokai.css" id="highlight-theme">
+		{{ end }}
 
 	<title>{{ .Site.Title }}</title>
 </head>

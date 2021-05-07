@@ -1,17 +1,26 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="cognition  slide draft">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.226e8ca19d73629d0e8f3576857dd94ccc2e9e9293f883d8b4289f77dcb750bb.css">
+<link rel="stylesheet" href="https://praxis.nyc/v4/css/main.6b4558ea1229951a013fb6dae272b7bd40f1929e7ce127555633d9281a6b70ec.css">
+
+<link rel="stylesheet" href="https://praxis.nyc/v4vendors/revealjs/dist/reset.css">
+		<link rel="stylesheet" href="https://praxis.nyc/v4vendors/revealjs/dist/reveal.css">
+		<link rel="stylesheet" href="https://praxis.nyc/v4vendors/revealjs/dist/theme/black.css" id="theme">
+
+		
+		<link rel="stylesheet" href="https://praxis.nyc/v4plugin/highlight/monokai.css" id="highlight-theme">
+		
 
 	<title>Praxis</title>
 </head>
 <body>
-	<div class="presentation">
-		<div class="slides">
+	<div class="reveal">
+			<div class="slides">
+	
 <section>
 				<h1>Situated Cognition</h1>
 				<div class="fragment">
@@ -110,8 +119,9 @@
 
 
 	
-		</div>
-	</div>
+		
+</div>
+</div>
 	
 
 <script src="https://praxis.nyc/v4/js/jquery.min.js"></script>
@@ -143,45 +153,29 @@
       }, 300);
     });
   </script>
- 
-</body>
-</html>
 
+  <script src="https://praxis.nyc/v4vendors/revealjs/dist/reveal.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/zoom/zoom.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/notes/notes.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/search/search.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/markdown/markdown.js"></script>
+    <script src="https://praxis.nyc/v4vendors/revealjs/plugin/highlight/highlight.js"></script>
+    <script>
 
-		</div>
-	</div>
-	
+      
+      
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
 
-<script src="https://praxis.nyc/v4/js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-<script src="https://raw.githubusercontent.com/barisaydinoglu/Detectizr/master/dist/detectizr.js"></script>
-
-<script src="https://praxis.nyc/v4/js/popper.min.js"></script>
-
-<script src="https://praxis.nyc/v4/js/screenfull.min.js"></script>
-
-<script src="https://praxis.nyc/v4/js/bootstrap.min.js"></script>
-<script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    });
-    $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false, content: ''})
-    .on("mouseenter", function () {
-      var _this = this;
-      $(this).popover("show");
-      $(".popover").on("mouseleave", function () {
-        $(_this).popover('hide');
+        
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
       });
-    }).on("mouseleave", function () {
-      var _this = this;
-      setTimeout(function () {
-        if (!$(".popover:hover").length) {
-          $(_this).popover("hide");
-        }
-      }, 300);
-    });
-  </script>
- 
+
+    </script>
+     
 </body>
 </html>
 
