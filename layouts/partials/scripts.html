@@ -30,12 +30,18 @@
     });
   </script>
 {{ if in .Params.Category "slide" }}
-  <script src="{{ .Site.BaseURL }}vendors/revealjs/dist/reveal.js"></script>
-    <script src="{{ .Site.BaseURL }}vendors/revealjs/plugin/zoom/zoom.js"></script>
-    <script src="{{ .Site.BaseURL }}vendors/revealjs/plugin/notes/notes.js"></script>
-    <script src="{{ .Site.BaseURL }}vendors/revealjs/plugin/search/search.js"></script>
-    <script src="{{ .Site.BaseURL }}vendors/revealjs/plugin/markdown/markdown.js"></script>
-    <script src="{{ .Site.BaseURL }}vendors/revealjs/plugin/highlight/highlight.js"></script>
+{{ $reveal := resources.Get "js/revealjs/reveal.js" }}
+<script src="{{ $reveal.Permalink }}"></script>
+{{ $zoom := resources.Get "js/revealjs/plugin/zoom/zoom.js" }}
+<script src="{{ $zoom.Permalink }}"></script>
+{{ $notes := resources.Get "js/revealjs/plugin/notes/notes.js" }}
+<script src="{{ $notes.Permalink }}"></script>
+{{ $search := resources.Get "js/revealjs/plugin/search/search.js" }}
+<script src="{{ $search.Permalink }}"></script>
+{{ $markdown := resources.Get "js/revealjs/plugin/markdown/markdown.js" }}
+<script src="{{ $markdown.Permalink }}"></script>
+{{ $highlight := resources.Get "js/revealjs/plugin/highlight/highlight.js" }}
+<script src="{{ $highlight.Permalink }}"></script>
     <script>
 
       // Also available as an ES module, see:

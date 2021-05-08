@@ -1,3 +1,4 @@
+
 $mobile-radius: 10px;
 $mobile-border: #999;
 $mobile-padding: 10px;
@@ -16,7 +17,10 @@ html.slide {
 body {
   background-color: var(--color-bg);
   background-image: url("../images/dot-bg.svg");
+  padding: 0;
+  margin: 0;
 }
+
 
   section {
     text-align: left;
@@ -27,10 +31,6 @@ body {
       grid-gap: 50px;
     }
   } 
-   p {
-    @include highlight($spacing: 0px, $top: 7px, $bottom: 5px);
-    font-size: 90%;
-  }
   h1, h2, h3, h4 {
     @include highlight($spacing: 0px, $top: 10px, $bottom: 10px);
    
@@ -43,7 +43,6 @@ body {
     }
   }
   .reveal {
-    font-family: SpaceGrotesk-Regular;
     font-size: 2rem;
     line-height: 130%;
     word-wrap: break-word;
@@ -123,7 +122,7 @@ body {
     }
       width: 70%;
       margin-left: $frame;
-      @include highlight($bg: lighten(yellow, 40%), $spacing: 0px, $top: 7px, $bottom: 5px);
+     // @include highlight($bg: lighten(yellow, 40%), $spacing: 0px, $top: 7px, $bottom: 5px);
       font-style: italic;
     }
     q {
