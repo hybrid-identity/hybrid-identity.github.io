@@ -1,13 +1,10 @@
 alias = "camille"
 name = "Camille"
-surname = "E. Acey"
 emoji = "🗿"
-bio = "blackrage"
 email = "connect@camilleacey.com"
 location = "sometimes nyc/lenape land and sometimes slovenia/wheelmantown"
 
 
 links = [
-		{title = "colet", URL = "https://colet.space/"}, 
-	{title = "mastodon", URL = "https://eweg.be/@olamina"}
+		{title = "colet", URL = "https://colet.space/"}
 ]
