@@ -3,4 +3,5 @@ languageCode = "en-us"
 title = "Praxis"
 description = "Decolonize your attention"
 publishDir = "docs"
+logo = "logo-big.svg"
 category = ["study", "commons", "play"]

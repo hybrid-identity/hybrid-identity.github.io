@@ -476,3 +476,34 @@ span.badge {
 		padding: var(--gap-half);
 	}
 }
+
+.sig {
+  position: absolute;
+  bottom: var(--gap);
+  left: var(--gap);
+  height: var(--gap-3);
+  @include opacity(40);
+  z-index: 1000;
+  &:hover {
+     @include opacity(100);
+  }
+  @include transition;
+  text-decoration: none !important;
+  svg {
+    height: var(--gap-2);
+    width: var(--gap-2);
+  }
+span {
+    @include highlight(var(--color-fg),  $gap: 10px, 
+  $spacing: 0px, 
+  $top: 7px, 
+  $bottom: 3px, 
+  $break: true);
+    color: var(--color-bg);
+text-transform: uppercase;
+font-weight: bold;
+font-size: 90%;
+ margin-left: var(--gap-half);
+
+}
+}
