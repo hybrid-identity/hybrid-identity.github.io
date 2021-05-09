@@ -1,7 +1,6 @@
 html.slide {
     h1, h2, h3, h4 {
     @include highlight($spacing: 0px, $top: 10px, $bottom: 10px);
-
   }
   body {
     background-color: var(--color-bg);
@@ -17,13 +16,14 @@ html.slide {
       grid-template-columns: 1fr 1fr;
       grid-gap: var(--gap-2);
     }
+    h1, h2 tt, h3 tt {
+    text-transform: uppercase;
+    }
   } 
 
-  h1 {
-    text-transform: uppercase;
-  }
   tt {
     @include highlight(yellow, $break: false, $gap: 0);
+font-family: var(--font);
 
     & + tt {
       margin-left: 10px;
