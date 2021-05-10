@@ -254,8 +254,6 @@ font-family: var(--font);
     }
   }
 }
-}
-
 .status {
   font-size: 1rem;
   @include highlight(rgba(0,0,0, .2), $top: 10px, $gap: 20px, $break: false);
@@ -263,6 +261,9 @@ font-family: var(--font);
   vertical-align: middle;
   text-transform: none;
 }
+}
+
+
 
 .collab {
   a {

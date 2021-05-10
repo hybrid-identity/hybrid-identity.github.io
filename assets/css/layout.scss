@@ -514,4 +514,26 @@ font-size: 90%;
 
 }
 }
+blockquote {
+	margin-top: var(--gap);
+	padding: var(--gap);
+	padding-left: 0;
+	color: var(--color-fg);
+	font-style: italic;
+	&:before {
+		content: "\201C";
+		font-size: 100px;
+		line-height: 110%;
+		display: block;
+		float: left;
+		padding: 0;
+		z-index: 800;
+			color: var(--color-medium); 
+			text-align: center;  
+			margin-left: -10px; 
+			font-style: normal;
+			margin-top: -10px; 
+			padding-right: var(--gap);
 
+	}
+}
