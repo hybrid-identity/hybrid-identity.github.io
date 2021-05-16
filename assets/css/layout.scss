@@ -425,7 +425,16 @@ section.status {
 		margin-top: var(--gap-7);
 		display: grid;
 		grid-template-columns: var(--logo-size) 1fr;
-		grid-gap: var(--gap-2);
+	
+				@media screen and (min-width: 800px) {
+	grid-gap: var(--gap-2);
+		  
+			@include radius(50%); 
+	}
+		@media screen and (max-width: 800px) {
+
+				grid-gap: var(--gap);
+	}
 		margin-left: -10px;
 		.counter:before {
 			displaY: inline-block;
@@ -436,10 +445,20 @@ section.status {
 			counter-increment: section;                   /* Increment the value of section counter by 1 */
 			content: counter(section); 
 			color: var(--color-fg); 
-			font-size: 300%;
+			
+			@media screen and (min-width: 800px) {
+
 			padding-top: 10px; 
-			text-align: center;   
+		font-size: 300%;
+
 			@include radius(50%); 
+	}
+		@media screen and (max-width: 800px) {
+
+			padding-top: 5px; 
+		font-size: 200%;
+	}
+			text-align: center; 
 		}
 		&:last-of-type {
 			margin-bottom: var(--gap-7);
