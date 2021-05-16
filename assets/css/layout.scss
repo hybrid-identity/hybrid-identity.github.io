@@ -381,7 +381,14 @@ section.status {
 	background-position: left center;
 	top: 0;
 	width: 100%;
+	@media screen and (min-width: 800px) {
+		
 	height: 205px;
+	}
+	@media screen and (max-width: 800px) {
+		
+	height: 250px;
+	}
 	@include fadeInDown;
 	.no-cover & {
 		display: none;

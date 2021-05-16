@@ -6,21 +6,21 @@
 
 .container {
 	display: grid;
-			a.logo svg {
+	a.logo svg {
 		height: var(--logo-size);
 		width: var(--logo-size);
-}
+	}
 	@media screen and (min-width: 800px) {
-		  --logo-size: 100px;
+		--logo-size: 100px;
 		html.firefox body.home & a.logo svg {
-		margin-top: 4px;
-	}
-			html:not(.firefox) body.home & a.logo svg {
-		margin-top: -2px;
-	}
-			html.firefox body:not(.home) & a.logo svg {
-		margin-top: 6px;
-	}
+			margin-top: 4px;
+		}
+		html:not(.firefox) body.home & a.logo svg {
+			margin-top: -2px;
+		}
+		html.firefox body:not(.home) & a.logo svg {
+			margin-top: 6px;
+		}
 
 		article.main footer.footer {
 			display: none;
@@ -42,7 +42,14 @@
 		}
 	}
 	@media screen and (max-width: 800px) {
-		--logo-size: 70px;
+		--logo-size: 60px;
+		.logo {
+			margin-left: -10px;
+		}
+		article.main {
+
+			margin-top: 10px;
+		}
 		width: 100%;
 		aside footer.footer {
 			display: none;
