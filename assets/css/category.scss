@@ -54,12 +54,15 @@ section.category {
 		}
 	}
 	
-	&:hover .category-menu {
+	&:hover .category-menu, html.touch & .category-menu {
 		height: calc(var(--nav) + 40px);
 		.category-post {
 			@include fadeInLeft;
 
 		}
+	}
+	html.touch & .category-menu {
+	@include fadeInDown($delay: calc(var(--delay) * 4));
 	}
 	
 }

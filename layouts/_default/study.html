@@ -4,7 +4,12 @@
 <body class="list">
 		{{ partial "cover.html" . }}
 	<div class="container">
-		{{ partial "logo.html" . }}
+	<aside>
+			<div class="fixed">
+					{{ partial "logo.html" . }}
+				{{ partial "footer.html" . }}
+			</div>
+		</aside>
 		<article class="main">
 			<header class="header">
 				<h1>{{ .Site.Title }}</h1>
@@ -67,9 +72,9 @@
 						{{ end }}
 					</section>
 					</div>
-		
-			{{ partial "footer.html" . }}
+		{{ partial "footer.html" . }}
 		</article>
+		
 	</div>
 	{{ partial "scripts.html" . }} 
 </body>

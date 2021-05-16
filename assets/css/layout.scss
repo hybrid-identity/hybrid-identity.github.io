@@ -26,15 +26,17 @@
 	$transform: normal
 	);
 
-
-.container {
-	width: 100%;
-	max-width: 700px;
-	padding: var(--gap-2);
-	display: grid;
-	grid-template-columns: var(--logo-big) 1fr;
-	grid-gap: var(--gap-2);
+footer.footer {
+	margin-top: var(--gap-2);
+	.links {
+		@include highlight;
+	}
+	a:not(:last-of-type) {
+		padding-right: var(--gap-2);
+	}
 }
+
+
 
 p {
 	@include highlight;
@@ -74,13 +76,16 @@ p {
 
 }
 
-.description {
+
+.logo {
+	@include fadeInDown;
+}
+article.main, .description {
 	@include fadeInDown($delay: var(--delay));
 }
 
-
-article.main, a.logo {
-	@include fadeInDown($delay: calc(var(--delay) * 1))
+footer.footer {
+	@include fadeIn($delay: calc(var(--delay) * 6));
 }
 
 section.category, section.session, section.group, ul.list {
@@ -103,9 +108,6 @@ section.category, section.session, section.group, ul.list {
 		@include fadeInDown($delay: calc(var(--delay) * 7));
 	}
 
-}
-footer.footer  {
-	@include fadeInDown($delay: calc(var(--delay) * 5));
 }
 
 
@@ -283,13 +285,7 @@ a.btn {
 }
 
 a.logo {
-	width: var(--logo-big);
-	height: var(--logo-big);
-	position: fixed;
 	svg {
-
-		width: var(--logo-big);
-		height: var(--logo-big);
 		margin-top: 4px;
 		#background, #logo {
 			fill: var(--color-fg);
@@ -299,9 +295,7 @@ a.logo {
 		}
 		#border {
 			fill: var(--color-bg);
-
 		}
-
 	}
 	&:hover {
 		#background, #logo {
@@ -332,15 +326,7 @@ section.status {
 }
 
 
-footer.footer {
-	margin-top: var(--gap-2);
-	.links {
-		@include highlight;
-	}
-	a:not(:last-of-type) {
-		padding-right: var(--gap-2);
-	}
-}
+
 
 .cover {
 	position: fixed;

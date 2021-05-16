@@ -4,7 +4,10 @@
 <body>
 	{{ partial "cover.html" . }}
 	<div class="container">
-		{{ partial "logo.html" . }}
+		<aside>
+			{{ partial "logo.html" . }}
+			{{ partial "footer.html" . }}
+	</aside>
 		<article class="main">
 			<header class="header">
 				<h1>{{ .Title }}</h1>

@@ -3,6 +3,49 @@
 @import "vendor/tile.scss";
 @import "mixins";
 @import "functions";
+
+.container {
+		display: grid;
+	@media screen and (min-width: 800px) {
+		article.main footer.footer {
+			display: none;
+		}
+width: var(--bp);
+	padding: var(--gap-2);
+	grid-template-columns: var(--logo-big) 1fr;
+grid-column-gap: var(--gap-2);
+.fixed {
+	height: 100vh;
+	position: fixed;
+	display: grid;
+grid-template-rows: var(--logo-big) 1fr;
+padding-bottom: var(--gap-6);
+footer.footer {
+	 align-self: flex-end;
+	 width: var(--logo-big);
+}
+}
+}
+@media screen and (max-width: 800px) {
+width: 100%;
+		aside footer.footer {
+			display: none;
+		}
+}
+		
+
+
+
+
+}
+
+
+
+
+
+
+
+
 @import "layout";
 @import "category";
 @import "team";

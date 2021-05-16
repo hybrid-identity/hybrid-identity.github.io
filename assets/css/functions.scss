@@ -11,7 +11,7 @@
   --pdf: 100vh;
    --nav: 150px;
    --transition: 300ms;
-   
+   --bp: 700px;
 --lang: 50px;
   --pdf-ratio: 0.3863636364;
   --delay: 300ms;
@@ -53,7 +53,7 @@ background-color: rgba(white, .3);
   $bg: var(--color-bg), 
   $gap: 10px, 
   $spacing: 20px, 
-  $top: 10px, 
+  $top: 7px, 
   $bottom: 5px, 
   $break: true
   ) {
