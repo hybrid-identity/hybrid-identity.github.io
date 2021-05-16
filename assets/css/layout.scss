@@ -37,9 +37,9 @@ footer.footer {
 			margin-bottom: var(--gap-2);
 		}
 		a {
-			@include highlight($gap: 5px, $spacing: 3px);
+			@include highlight($gap: 5px, $spacing: 5px);
 			&:hover {
-				@include highlight(var(--color-accent-2), $gap: 5px, $spacing: 3px);
+				@include highlight(var(--color-accent-2), $gap: 5px, $spacing: 5px);
 				color: var(--color-fg);
 
 			}

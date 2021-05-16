@@ -35,7 +35,16 @@ section.category {
 		height: 0px;
 		overflow-y: hidden;
 		display: flex;
-		max-width: 520px;
+		
+				@media screen and (min-width: 800px) {
+max-width: 520px;
+		  
+			
+	}
+		@media screen and (max-width: 800px) {
+
+			max-width: 80vw;
+	}
 		flex-wrap: no-wrap;
 		overflow-x: auto;
 		max-width: 520px;
