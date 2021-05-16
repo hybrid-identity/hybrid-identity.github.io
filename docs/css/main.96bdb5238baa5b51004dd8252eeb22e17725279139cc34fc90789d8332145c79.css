@@ -14894,7 +14894,7 @@ a.text-dark:hover, a.text-dark:focus {
   --color-dark: #666;
   --color-accent: purple;
   --color-accent-2: #EDB6D3;
-  --logo-big: 90px;
+  --logo-size: 90px;
   --logo-small: 36px;
   --pdf: 100vh;
   --nav: 150px;
@@ -14941,7 +14941,7 @@ a.text-dark:hover, a.text-dark:focus {
   .container {
     width: var(--bp);
     padding: var(--gap-2);
-    grid-template-columns: var(--logo-big) 1fr;
+    grid-template-columns: var(--logo-size) 1fr;
     grid-column-gap: var(--gap-2); }
   .container article.main footer.footer {
     display: none; }
@@ -14949,11 +14949,11 @@ a.text-dark:hover, a.text-dark:focus {
     height: 100vh;
     position: fixed;
     display: grid;
-    grid-template-rows: var(--logo-big) 1fr;
+    grid-template-rows: var(--logo-size) 1fr;
     padding-bottom: var(--gap-6); }
   .container .fixed footer.footer {
     align-self: flex-end;
-    width: var(--logo-big); } }
+    width: var(--logo-size); } }
 
 @media screen and (max-width: 800px) {
   .container {
@@ -15903,14 +15903,14 @@ section.status:last-of-type {
 .study section.session {
   margin-top: var(--gap-7);
   display: grid;
-  grid-template-columns: var(--logo-big) 1fr;
+  grid-template-columns: var(--logo-size) 1fr;
   grid-gap: var(--gap-2);
   margin-left: -10px; }
 
 .study section.session .counter:before {
   displaY: inline-block;
-  width: var(--logo-big);
-  height: var(--logo-big);
+  width: var(--logo-size);
+  height: var(--logo-size);
   background-color: rgba(0, 0, 0, 0.3);
   margin-top: -5px;
   counter-increment: section;
@@ -16364,7 +16364,7 @@ html.touch section.category .category-menu {
 .team .member {
   margin-top: var(--gap-2);
   display: grid;
-  grid-template-columns: var(--logo-big) 1fr;
+  grid-template-columns: var(--logo-size) 1fr;
   grid-gap: var(--gap-2); }
 
 .team .member p {
@@ -16383,9 +16383,9 @@ html.touch section.category .category-menu {
   background: none !important; }
 
 .team .member div.emoji {
-  width: var(--logo-big);
+  width: var(--logo-size);
   font-size: 300%;
-  height: var(--logo-big);
+  height: var(--logo-size);
   background-color: rgba(0, 0, 0, 0.2);
   margin-top: -5px;
   color: var(--color-fg);

@@ -14899,6 +14899,7 @@ a.text-dark:hover, a.text-dark:focus {
   --pdf: 100vh;
   --nav: 150px;
   --transition: 300ms;
+  --bp: 700px;
   --lang: 50px;
   --pdf-ratio: 0.3863636364;
   --delay: 300ms;
@@ -14932,6 +14933,45 @@ a.text-dark:hover, a.text-dark:focus {
 
 .dark-mode:root .cover, .redux:root .cover {
   display: none; }
+
+.container {
+  display: grid; }
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: var(--bp);
+    padding: var(--gap-2);
+    grid-template-columns: var(--logo-size) 1fr;
+    grid-column-gap: var(--gap-2); }
+  .container article.main footer.footer {
+    display: none; }
+  .container .fixed {
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    grid-template-rows: var(--logo-size) 1fr;
+    padding-bottom: var(--gap-6); }
+  .container .fixed footer.footer {
+    align-self: flex-end;
+    width: var(--logo-size); } }
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%; }
+  .container aside footer.footer {
+    display: none; } }
+
+@media screen and (min-width: 800px) {
+  .redux .grid {
+    display: grid;
+    grid-gap: var(--gap-2);
+    grid-template-columns: calc(var(--pdf) * var(--pdf-ratio)) 1fr; } }
+
+@media screen and (max-width: 800px) {
+  .redux .zine {
+    margin: 0 auto; }
+  .redux .content {
+    padding-top: var(--gap-2); } }
 
 @font-face {
   font-family: Space Grotesk;
@@ -14975,13 +15015,26 @@ a.text-dark:hover, a.text-dark:focus {
     font-family: Hasklig;
     src: url("../fonts/hasklig-light.svg#Hasklig") format("svg"); } }
 
-.container {
-  width: 100%;
-  max-width: 700px;
-  padding: var(--gap-2);
-  display: grid;
-  grid-template-columns: var(--logo-size) 1fr;
-  grid-gap: var(--gap-2); }
+footer.footer {
+  margin-top: var(--gap-2); }
+
+footer.footer .links {
+  display: inline;
+  background: var(--color-bg);
+  box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
+  position: relative;
+  padding-bottom: 5px;
+  padding-top: 7px;
+  box-decoration-break: clone; }
+
+footer.footer .links::after {
+  content: "";
+  display: block;
+  height: 20px;
+  background: none !important; }
+
+footer.footer a:not(:last-of-type) {
+  padding-right: var(--gap-2); }
 
 p {
   display: inline;
@@ -14989,7 +15042,7 @@ p {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   line-height: 160%; }
 
@@ -15005,7 +15058,7 @@ p:last-of-type {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 p:last-of-type::after {
@@ -15020,7 +15073,7 @@ p:last-of-type::after {
   box-shadow: 10px 0 0 var(--color-fg), -10px 0 0 var(--color-fg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 .list header.header h1::after {
@@ -15033,16 +15086,44 @@ p:last-of-type::after {
   text-transform: lowercase;
   font-weight: normal; }
 
-.redux .grid {
-  display: grid;
-  grid-gap: var(--gap-2);
-  grid-template-columns: calc(var(--pdf) * var(--pdf-ratio)) 1fr; }
+.logo {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-iteration-count: 1s;
+  -moz-animation-iteration-count: 1s;
+  -ms-animation-iteration-count: 1s;
+  -o-animation-iteration-count: 1s;
+  animation-iteration-count: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
 
-.redux embed.pdf {
-  height: var(--pdf);
-  width: calc(var(--pdf) * var(--pdf-ratio)); }
-
-.description {
+article.main, .description {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
   -ms-animation-name: fadeInDown;
@@ -15079,12 +15160,12 @@ p:last-of-type::after {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-article.main, a.logo {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -ms-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+footer.footer {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
   -webkit-animation-iteration-count: 1s;
   -moz-animation-iteration-count: 1s;
   -ms-animation-iteration-count: 1s;
@@ -15095,11 +15176,11 @@ article.main, a.logo {
   -ms-animation-duration: 1s;
   -o-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-delay: calc(var(--delay) * 1);
-  -moz-animation-delay: calc(var(--delay) * 1);
-  -ms-animation-delay: calc(var(--delay) * 1);
-  -o-animation-delay: calc(var(--delay) * 1);
-  animation-delay: calc(var(--delay) * 1);
+  -webkit-animation-delay: calc(var(--delay) * 6);
+  -moz-animation-delay: calc(var(--delay) * 6);
+  -ms-animation-delay: calc(var(--delay) * 6);
+  -o-animation-delay: calc(var(--delay) * 6);
+  animation-delay: calc(var(--delay) * 6);
   -webkit-animation-timing-function: ease;
   -moz-animation-timing-function: ease;
   -ms-animation-timing-function: ease;
@@ -15338,43 +15419,6 @@ section.category:nth-of-type(6), section.session:nth-of-type(6), section.group:n
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-footer.footer {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -ms-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  -webkit-animation-iteration-count: 1s;
-  -moz-animation-iteration-count: 1s;
-  -ms-animation-iteration-count: 1s;
-  -o-animation-iteration-count: 1s;
-  animation-iteration-count: 1s;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-delay: calc(var(--delay) * 5);
-  -moz-animation-delay: calc(var(--delay) * 5);
-  -ms-animation-delay: calc(var(--delay) * 5);
-  -o-animation-delay: calc(var(--delay) * 5);
-  animation-delay: calc(var(--delay) * 5);
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  -ms-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
 body {
   font-family: var(--font);
   padding: 20px;
@@ -15404,7 +15448,7 @@ a:not(.btn):hover {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   font-size: 35px;
   font-weight: bold; }
@@ -15444,7 +15488,7 @@ html:not(.slide) h1, html:not(.slide) h2, html:not(.slide) h3, html:not(.slide) 
   box-shadow: 10px 0 0 var(--color-fg), -10px 0 0 var(--color-fg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   color: var(--color-bg);
   text-transform: uppercase;
@@ -15462,7 +15506,7 @@ body.home header.header h1 {
   box-shadow: 10px 0 0 var(--color-fg), -10px 0 0 var(--color-fg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 body.home header.header h1::after {
@@ -15490,7 +15534,7 @@ header.header h1, header.header h2 {
   box-shadow: 10px 0 0 var(--color-fg), -10px 0 0 var(--color-fg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   color: var(--color-bg);
   text-transform: uppercase; }
@@ -15520,7 +15564,7 @@ header.header ul.slogan li {
   box-shadow: 10px 0 0 var(--color-fg), -10px 0 0 var(--color-fg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   color: var(--color-bg);
   font-weight: normal;
@@ -15647,14 +15691,7 @@ a.btn.CTA:hover .text {
 a.btn.CTA:after {
   content: ""; }
 
-a.logo {
-  width: var(--logo-size);
-  height: var(--logo-size);
-  position: fixed; }
-
 a.logo svg {
-  width: var(--logo-size);
-  height: var(--logo-size);
   margin-top: 4px; }
 
 a.logo svg #background, a.logo svg #logo {
@@ -15687,7 +15724,7 @@ section.status h1, section.status h2, section.status h3, section.status h4, sect
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   color: var(--color-fg); }
 
@@ -15699,27 +15736,6 @@ section.status h1::after, section.status h2::after, section.status h3::after, se
 
 section.status:last-of-type {
   padding-bottom: var(--gap-2); }
-
-footer.footer {
-  margin-top: var(--gap-2); }
-
-footer.footer .links {
-  display: inline;
-  background: var(--color-bg);
-  box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
-  position: relative;
-  padding-bottom: 5px;
-  padding-top: 10px;
-  box-decoration-break: clone; }
-
-footer.footer .links::after {
-  content: "";
-  display: block;
-  height: 20px;
-  background: none !important; }
-
-footer.footer a:not(:last-of-type) {
-  padding-right: var(--gap-2); }
 
 .cover {
   position: fixed;
@@ -15937,7 +15953,7 @@ footer.footer a:not(:last-of-type) {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 .study section.session .syllabus li::after {
@@ -15955,7 +15971,7 @@ footer.footer a:not(:last-of-type) {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 .study section.session .syllabus li.title::after {
@@ -16018,13 +16034,16 @@ span.badge {
   width: 130px;
   height: 130px;
   background-color: white;
-  padding: var(--gap-half); }
+  padding: var(--gap-half);
+  margin-bottom: var(--gap); }
+
+.instructions .btn {
+  margin-left: -10px;
+  margin-top: var(--gap); }
 
 .sig {
-  position: absolute;
   bottom: var(--gap);
   left: var(--gap);
-  height: var(--gap-3);
   opacity: .4;
   filter: "alpha(opacity=40)";
   -khtml-opacity: .4;
@@ -16067,6 +16086,28 @@ span.badge {
   height: 0px;
   background: none !important; }
 
+blockquote {
+  margin-top: var(--gap);
+  padding: var(--gap);
+  padding-left: 0;
+  color: var(--color-fg);
+  font-style: italic; }
+
+blockquote:before {
+  content: "\201C";
+  font-size: 100px;
+  line-height: 110%;
+  display: block;
+  float: left;
+  padding: 0;
+  z-index: 800;
+  color: var(--color-medium);
+  text-align: center;
+  margin-left: -10px;
+  font-style: normal;
+  margin-top: -10px;
+  padding-right: var(--gap); }
+
 section.category {
   margin-bottom: var(--gap-2); }
 
@@ -16099,7 +16140,7 @@ section.category .category-description p {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 section.category .category-description p::after {
@@ -16134,10 +16175,10 @@ section.category .category-menu a.btn {
   white-space: nowrap;
   margin: auto var(--gap-2); }
 
-section.category:hover .category-menu {
+section.category:hover .category-menu, html.touch section.category .category-menu {
   height: calc(var(--nav) + 40px); }
 
-section.category:hover .category-menu .category-post {
+section.category:hover .category-menu .category-post, html.touch section.category .category-menu .category-post {
   -webkit-animation-name: fadeInLeft;
   -moz-animation-name: fadeInLeft;
   -ms-animation-name: fadeInLeft;
@@ -16158,6 +16199,43 @@ section.category:hover .category-menu .category-post {
   -ms-animation-delay: 0s;
   -o-animation-delay: 0s;
   animation-delay: 0s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+html.touch section.category .category-menu {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-iteration-count: 1s;
+  -moz-animation-iteration-count: 1s;
+  -ms-animation-iteration-count: 1s;
+  -o-animation-iteration-count: 1s;
+  animation-iteration-count: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: calc(var(--delay) * 4);
+  -moz-animation-delay: calc(var(--delay) * 4);
+  -ms-animation-delay: calc(var(--delay) * 4);
+  -o-animation-delay: calc(var(--delay) * 4);
+  animation-delay: calc(var(--delay) * 4);
   -webkit-animation-timing-function: ease;
   -moz-animation-timing-function: ease;
   -ms-animation-timing-function: ease;
@@ -16234,7 +16312,7 @@ section.category:hover .category-menu .category-post {
   box-shadow: 10px 0 0 var(--color-accent), -10px 0 0 var(--color-accent);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   color: var(--color-bg); }
 
@@ -16252,7 +16330,7 @@ section.category:hover .category-menu .category-post {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 .category-menu .category-post .title::after {
@@ -16274,7 +16352,7 @@ section.category:hover .category-menu .category-post {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   color: var(--color-fg); }
 
@@ -16296,7 +16374,7 @@ section.category:hover .category-menu .category-post {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 .team .member p::after {
@@ -16339,7 +16417,7 @@ section.category:hover .category-menu .category-post {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 .team .member .links::after {
@@ -18089,7 +18167,7 @@ html.slide tt {
   box-shadow: 0 0 0 #ff0,0 0 0 #ff0;
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone;
   font-family: var(--font); }
 
@@ -18146,7 +18224,7 @@ html.slide .reveal ol li, html.slide .reveal ul li {
   box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg);
   position: relative;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   box-decoration-break: clone; }
 
 html.slide .reveal ol li::after, html.slide .reveal ul li::after {
@@ -18408,7 +18486,7 @@ html.slide picture.mobile.more-both {
 html.slide picture.mobile.more-both:before {
   margin-top: -8px; }
 
-.status {
+html.slide .status {
   font-size: 1rem;
   display: inline;
   background: rgba(0, 0, 0, 0.2);

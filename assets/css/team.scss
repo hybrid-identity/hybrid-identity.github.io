@@ -26,12 +26,12 @@
 		}
 		margin-top: var(--gap-2);
 		display: grid;
-		grid-template-columns: var(--logo-big) 1fr;
+		grid-template-columns: var(--logo-size) 1fr;
 		grid-gap: var(--gap-2);
 		div.emoji {
-			width: var(--logo-big);
+			width: var(--logo-size);
 			font-size: 300%;
-			height: var(--logo-big);
+			height: var(--logo-size);
 			background-color: rgba(black, .2);
 			margin-top: -5px;
 			color: var(--color-fg); 

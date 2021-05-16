@@ -27,14 +27,71 @@
 	);
 
 footer.footer {
-	margin-top: var(--gap-2);
-	.links {
-		@include highlight;
+	body.home & nav {
+		display: none;
 	}
-	a:not(:last-of-type) {
-		padding-right: var(--gap-2);
+
+	--logo-small: 18px;
+	aside & {
+		nav {
+			margin-bottom: var(--gap-2);
+		}
+		a {
+			@include highlight($gap: 5px, $spacing: 3px);
+			&:hover {
+				@include highlight(var(--color-accent-2), $gap: 5px, $spacing: 3px);
+				color: var(--color-fg);
+
+			}
+		}
+	}
+	article.main & {
+		
+		display: inline;
+		
+		a {
+			display: inline-block;
+			&:not(:first-of-type) {
+				margin-left: -6px;
+			}
+			background-color: var(--color-bg);
+			padding: var(--gap-quart) var(--gap);
+			&:hover {
+				background-color: var(--color-accent-2);
+				color: var(--color-fg);
+			}
+
+		}
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 90%;
+		&:not(.path) {
+			text-transform: capitalize;
+		}
+		&.path {
+			font-weight: bold;
+			&:before {
+				content: "/";
+				background-image: url("../images/logo-small.svg");
+				background-size: var(--logo-small) var(--logo-small);
+				html.dark-mode & {
+					background-image: url("../images/logo-small-white.svg");
+				}
+				width: calc(var(--logo-small) + 7px);
+				background-repeat: no-repeat;
+				background-position: left 2px;
+				display: inline-block;
+				text-align: right;
+
+			}
+
+		}
 	}
 }
+
+
 
 
 
@@ -62,19 +119,7 @@ p {
 	}
 }
 
-.redux {
-	@extend .dark-mode;
-	.grid {
-		display: grid;
-		grid-gap: var(--gap-2);
-		grid-template-columns: calc(var(--pdf) * var(--pdf-ratio)) 1fr;
-	}
-	embed.pdf {
-		height: var(--pdf);
-		width: calc(var(--pdf) * var(--pdf-ratio));
-	}
 
-}
 
 
 .logo {
@@ -171,12 +216,12 @@ code {
 html:not(.slide) {
 	h1, h2, h3, h4 {
 		@include highlight($bg: var(--color-fg), 
-		$spacing: var(--gap-2));
-	color: var(--color-bg);
-	text-transform: uppercase;
-	font-weight: bold;
-	
-}
+			$spacing: var(--gap-2));
+		color: var(--color-bg);
+		text-transform: uppercase;
+		font-weight: bold;
+
+	}
 }
 
 body.home {
@@ -286,7 +331,6 @@ a.btn {
 
 a.logo {
 	svg {
-		margin-top: 4px;
 		#background, #logo {
 			fill: var(--color-fg);
 
@@ -373,13 +417,13 @@ section.status {
 	section.session {
 		margin-top: var(--gap-7);
 		display: grid;
-		grid-template-columns: var(--logo-big) 1fr;
+		grid-template-columns: var(--logo-size) 1fr;
 		grid-gap: var(--gap-2);
 		margin-left: -10px;
 		.counter:before {
 			displaY: inline-block;
-			width: var(--logo-big);
-			height: var(--logo-big);
+			width: var(--logo-size);
+			height: var(--logo-size);
 			background-color: rgba(black, .3);
 			margin-top: -5px;
 			counter-increment: section;                   /* Increment the value of section counter by 1 */
@@ -460,8 +504,8 @@ span.badge {
 		height: 130px;
 		background-color: white;
 		padding: var(--gap-half);
-			
-	margin-bottom: var(--gap);
+
+		margin-bottom: var(--gap);
 	}
 	.btn {
 		margin-left: -10px;
@@ -471,34 +515,32 @@ span.badge {
 }
 
 .sig {
-  position: absolute;
-  bottom: var(--gap);
-  left: var(--gap);
-  height: var(--gap-3);
-  @include opacity(40);
-  z-index: 1000;
-  &:hover {
-     @include opacity(100);
-  }
-  @include transition;
-  text-decoration: none !important;
-  svg {
-    height: var(--gap-2);
-    width: var(--gap-2);
-  }
-span {
-    @include highlight(var(--color-fg),  $gap: 10px, 
-  $spacing: 0px, 
-  $top: 7px, 
-  $bottom: 3px, 
-  $break: true);
-    color: var(--color-bg);
-text-transform: uppercase;
-font-weight: bold;
-font-size: 90%;
- margin-left: var(--gap-half);
+	bottom: var(--gap);
+	left: var(--gap);
+	@include opacity(40);
+	z-index: 1000;
+	&:hover {
+		@include opacity(100);
+	}
+	@include transition;
+	text-decoration: none !important;
+	svg {
+		height: var(--gap-2);
+		width: var(--gap-2);
+	}
+	span {
+		@include highlight(var(--color-fg),  $gap: 10px, 
+			$spacing: 0px, 
+			$top: 7px, 
+			$bottom: 3px, 
+			$break: true);
+		color: var(--color-bg);
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 90%;
+		margin-left: var(--gap-half);
 
-}
+	}
 }
 blockquote {
 	margin-top: var(--gap);
@@ -514,12 +556,12 @@ blockquote {
 		float: left;
 		padding: 0;
 		z-index: 800;
-			color: var(--color-medium); 
-			text-align: center;  
-			margin-left: -10px; 
-			font-style: normal;
-			margin-top: -10px; 
-			padding-right: var(--gap);
+		color: var(--color-medium); 
+		text-align: center;  
+		margin-left: -10px; 
+		font-style: normal;
+		margin-top: -10px; 
+		padding-right: var(--gap);
 
 	}
 }

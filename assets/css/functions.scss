@@ -6,7 +6,6 @@
   --color-dark: #666;
   --color-accent: purple;
   --color-accent-2: #EDB6D3;
-  --logo-big: 90px;
   --logo-small: 36px;
   --pdf: 100vh;
    --nav: 150px;
@@ -64,6 +63,9 @@ background-color: rgba(white, .3);
   position: relative;
   padding-bottom: $bottom;
   padding-top: $top;
+  html.firefox & {
+    padding-top: $top + 3px;
+  }
   box-decoration-break: clone;
 
   @if $break==true {
