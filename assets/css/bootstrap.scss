@@ -57,6 +57,9 @@ table.table {
 	}
 	td {
 		border-color: #666;
+    p {
+      color: var(--color-fg);
+    }
 		&:first-of-type {
 			padding-left: 0;
 		}

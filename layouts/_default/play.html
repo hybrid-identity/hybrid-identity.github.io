@@ -3,7 +3,7 @@
 {{ partial "head.html" . }}
 <body class="list">
 		{{ partial "cover.html" . }}
-	<div class="container">
+	<div class="box-content">
 			<aside>
 			<div class="fixed">
 					{{ partial "logo.html" . }}
@@ -16,6 +16,11 @@
 				<h2>/{{ .Title | singularize }}</h2>
 			</header>
 			<div class="description">
+				<p>Digital as material. Open source as a property. Coding for exploration and discovery.</p>
+				<p>Resources and tools to get in the zone with the machine.</p>
+				<br>
+
+			<!-- 
 			  <ul class="nav nav-pills" id="hugo" role="tablist">
 
   <li class="nav-item" role="presentation">
@@ -35,7 +40,7 @@
 				  <div class="tab-pane fade" id="portuguese">
 				  	<p>pending</p></div>
 				</div>
-</div>
+ --></div>
 				<div class="category-menu">
 						 {{ range (.Pages.ByParam "category.commons") }}
 						{{ partial "category-post.html" . }}

@@ -4,7 +4,7 @@
 					<p class="paths">study</p>
 					<a href="{{ .Site.BaseURL }}/study" class="btn">View More</a>
 					<div class="category-description">
-						<p>With seminal topics and diverse authors, we interrogate and develop our disparate and shared practices unto resistance. Anthopocene is our threat model.</p>
+						<p>With seminal topics and diverse authors, we interrogate and develop our disparate and shared practices unto resistance.</p>
 					</div>
 				</div>
 				<div class="category-menu">
@@ -13,8 +13,11 @@
 					{{ partial "category-post.html" . }}
 					{{ end }}
 					{{ end }}
+
 					{{ range where .Site.Pages "Params.category" "redux" }}
+					{{ if in .Params.status "published" }}
 					{{ partial "category-post.html" . }}
+					{{ end }}
 					{{ end }}
 					{{ range where .Site.Pages "Params.category" "study" }}
 					{{ if in .Params.status "previous" }}
@@ -50,7 +53,7 @@
 					<p class="paths">play</p>
 					<a href="{{ .Site.BaseURL }}/play" class="btn">View More</a>
 					<div class="category-description">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde voluptatum beatae maxime ea itaque, nemo repellat corrupti repellendus quod, neque?</p>
+						<p>Digital as material. Open source as a property. Coding for exploration and discovery.</p>
 					</div>
 				</div>
 				<div class="category-menu">

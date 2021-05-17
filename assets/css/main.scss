@@ -4,8 +4,9 @@
 @import "mixins";
 @import "functions";
 
-.container {
+.box-content {
 	display: grid;
+	margin: 0 auto;
 	a.logo svg {
 		height: var(--logo-size);
 		width: var(--logo-size);

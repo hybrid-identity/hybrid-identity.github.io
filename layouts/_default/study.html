@@ -3,7 +3,7 @@
 {{ partial "head.html" . }}
 <body class="list">
 		{{ partial "cover.html" . }}
-	<div class="container">
+	<div class="box-content">
 	<aside>
 			<div class="fixed">
 					{{ partial "logo.html" . }}
@@ -16,6 +16,12 @@
 				<h2>/{{ .Title | singularize }}</h2>
 			</header>
 			<div class="description">
+				  <p>With seminal topics and diverse authors, we interrogate and develop our disparate and shared practices unto resistance. Anthopocene is our threat model. </p>
+
+<p>Study is a sandbox and sparring ground for deepening our understanding of the world ahead.</p>
+
+<blockquote><p>When education is not liberating, the dream of the oppressed is to become the oppressor<br><a href="https://www.freire.org/paulo-freire/quotes-by-paulo-freire" class="signature" target="_blank">Paulo Freire</a></p></blockquote>
+			<!-- 
 			  <ul class="nav nav-pills" id="hugo" role="tablist">
 
   <li class="nav-item" role="presentation">
@@ -47,7 +53,7 @@
 				    
 				  </div>
 				</div>
-</div>
+ --></div>
 				<div class="category-menu">
 					<section class="status">
 						<h3>Current study groups</h3>
@@ -60,7 +66,11 @@
 					<section class="status">
 						<h3>Redux zines</h3>
 							{{ range where .Site.Pages "Params.category" "redux" }}
+						{{ if in .Params.status "published" }}
 						{{ partial "category-post.html" . }}
+						{{ else }}
+<p>Soon</p>
+						{{ end }}
 						{{ end }}
 					</section>
 					<section class="status">
