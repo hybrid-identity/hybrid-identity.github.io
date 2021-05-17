@@ -10,7 +10,7 @@
 		height: var(--logo-size);
 		width: var(--logo-size);
 	}
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: $bp) {
 		--logo-size: 100px;
 		html.firefox body.home & a.logo svg {
 			margin-top: 4px;
@@ -25,7 +25,7 @@
 		article.main footer.footer {
 			display: none;
 		}
-		width: var(--bp);
+		width: var(--container);
 		padding: var(--gap-2);
 		grid-template-columns: var(--logo-size) 1fr;
 		grid-column-gap: var(--gap-2);
@@ -41,7 +41,7 @@
 			}
 		}
 	}
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: $bp) {
 		--logo-size: 60px;
 		.logo {
 			margin-left: -10px;
@@ -50,7 +50,8 @@
 
 			margin-top: 10px;
 		}
-		width: 100%;
+		min-width: 100%;
+		padding: 0;
 		aside footer.footer {
 			display: none;
 		}
@@ -64,14 +65,14 @@
 
 .redux {
 	@extend .dark-mode;
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: $bp) {
 		.grid {
 			display: grid;
 			grid-gap: var(--gap-2);
 			grid-template-columns: calc(var(--pdf) * var(--pdf-ratio)) 1fr;
 		}
 	}
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: $bp) {
 		.zine {
 			margin: 0 auto;
 		}

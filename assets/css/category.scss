@@ -19,9 +19,13 @@ section.category {
 		margin-top: var(--gap-2);
 
 	}
+
 	a.btn {
-		float: right;
+			@media screen and (min-width: $bp) {
+					float: right;
 		margin-top: -55px;
+			}
+	
 	}
 	.category-description {
 		margin-top: var(--gap);

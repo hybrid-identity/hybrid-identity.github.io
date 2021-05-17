@@ -353,7 +353,10 @@ section.feature-list, section.status {
 	border-top: solid 3px var(--color-fg);
 	margin-top: var(--gap-2);
 	&:last-of-type {	
-		border-bottom: solid 3px var(--color-fg);
+		border-bottom: solid 3px var(--color-fg);	
+		@media screen and (max-width: $bp) {
+			margin-bottom: var(--gap-2);
+		}
 	}
 }
 section.status {
@@ -381,11 +384,11 @@ section.status {
 	background-position: left center;
 	top: 0;
 	width: 100%;
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: $bp) {
 		
 	height: 205px;
 	}
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: $bp) {
 		
 	height: 250px;
 	}
@@ -426,12 +429,12 @@ section.status {
 		display: grid;
 		grid-template-columns: var(--logo-size) 1fr;
 	
-				@media screen and (min-width: 800px) {
+				@media screen and (min-width: $bp) {
 	grid-gap: var(--gap-2);
 		  
 			@include radius(50%); 
 	}
-		@media screen and (max-width: 800px) {
+		@media screen and (max-width: $bp) {
 
 				grid-gap: var(--gap);
 	}
@@ -446,14 +449,14 @@ section.status {
 			content: counter(section); 
 			color: var(--color-fg); 
 			
-			@media screen and (min-width: 800px) {
+			@media screen and (min-width: $bp) {
 
 			padding-top: 10px; 
 		font-size: 300%;
 
 			@include radius(50%); 
 	}
-		@media screen and (max-width: 800px) {
+		@media screen and (max-width: $bp) {
 
 			padding-top: 5px; 
 		font-size: 200%;
