@@ -26,7 +26,7 @@
 		article.main footer.footer {
 			display: none;
 		}
-		width: var(--container);
+		max-width: $bp;
 		padding: var(--gap-2);
 		grid-template-columns: var(--logo-size) 1fr;
 		grid-column-gap: var(--gap-2);
@@ -63,6 +63,21 @@
 
 
 }
+
+
+
+		
+		
+			.category-menu {
+			
+			@media screen and (max-width: $bp) {
+			width: 100vw;
+	}
+	@media screen and (max-width: $bp - 60px) {
+			width: 90vw;
+	}
+}
+
 
 .redux {
 	@extend .dark-mode;

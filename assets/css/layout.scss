@@ -257,18 +257,23 @@ header.header {
 
 	}
 
-	ul.slogan {
-		@include reset(list);
-		@include reset(all);
-		li {
+	.slogan {
+		
+		text-transform: capitalize;
+		@media screen and (min-width: $bp) {
+			width: 50px;
+		}
+		p {
 			@include highlight(
 				$bg: var(--color-fg),
 				$spacing: 0px
 				);
+			line-height: 150%;
 			color: var(--color-bg);
 			font-weight: normal;
 			font-size: 22px;
 		}
+
 		
 	}
 
