@@ -594,3 +594,28 @@ blockquote {
 
 	}
 }
+
+form.tinyletter {
+	margin-top: var(--gap);
+	padding-top: var(--gap);
+	padding-right: var(--gap);
+	background-color: var(--color-bg);
+	display: grid;
+	grid-template-columns: 1fr 150px;
+	input {
+		height: 50px;
+		 align-self: flex-start;
+		padding: var(--gap) var(--gap-2) !important;
+		&.input {
+			height: 75px;
+			margin-top: -13px;
+
+	}
+	&.button {
+
+		font-weight: bold;
+		text-transform: uppercase;
+		border: 0;
+}
+	}
+}
