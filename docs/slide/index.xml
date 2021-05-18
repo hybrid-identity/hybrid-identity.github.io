@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides on Praxis</title>
-    <link>https://praxis.nyc/v4/slide/</link>
+    <link>https://praxis.nyc/slide/</link>
     <description>Recent content in Slides on Praxis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 18:03:16 -0500</lastBuildDate><atom:link href="https://praxis.nyc/v4/slide/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jun 2020 18:03:16 -0500</lastBuildDate><atom:link href="https://praxis.nyc/slide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Situated Cognition</title>
-      <link>https://praxis.nyc/v4/slide/cognition/</link>
+      <link>https://praxis.nyc/slide/cognition/</link>
       <pubDate>Mon, 01 Jun 2020 18:03:16 -0500</pubDate>
       
-      <guid>https://praxis.nyc/v4/slide/cognition/</guid>
+      <guid>https://praxis.nyc/slide/cognition/</guid>
       <description>Brainbound The (nonneural) body is just the sensor and effector system of the brain, and the world is just the arena in which adaptive problems get posed and in which the brain–body system must sense and act. All human cognition depends directly on neural activity alone.    Extended Includes inextricable tangles of feedback, feed-forward, and feed-around loops: loops that promiscuously criss-cross the boundaries of brain, body, and world.</description>
     </item>
     
     <item>
       <title>✨Wish</title>
-      <link>https://praxis.nyc/v4/slide/wish/</link>
+      <link>https://praxis.nyc/slide/wish/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://praxis.nyc/v4/slide/wish/</guid>
+      <guid>https://praxis.nyc/slide/wish/</guid>
       <description></description>
     </item>
     

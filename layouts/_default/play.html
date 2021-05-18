@@ -2,11 +2,11 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body class="list">
-		{{ partial "cover.html" . }}
+	{{ partial "cover.html" . }}
 	<div class="box-content">
-			<aside>
+		<aside>
 			<div class="fixed">
-					{{ partial "logo.html" . }}
+				{{ partial "logo.html" . }}
 				{{ partial "footer.html" . }}
 			</div>
 		</aside>
@@ -40,13 +40,13 @@
 				  <div class="tab-pane fade" id="portuguese">
 				  	<p>pending</p></div>
 				</div>
- --></div>
-				<div class="category-menu">
-						 {{ range (.Pages.ByParam "category.commons") }}
-						{{ partial "category-post.html" . }}
-						{{ end }}
-					</div>
-		
+			--></div>
+			<div class="category-menu">
+				{{ range (.Pages.ByParam "category.commons") }}
+				{{ partial "category-post.html" . }}
+				{{ end }}
+			</div>
+			
 			{{ partial "footer.html" . }}
 		</article>
 	</div>

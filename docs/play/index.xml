@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plays on Praxis</title>
-    <link>https://praxis.nyc/v4/play/</link>
+    <link>https://praxis.nyc/play/</link>
     <description>Recent content in Plays on Praxis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://praxis.nyc/v4/play/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://praxis.nyc/play/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Play</title>
-      <link>https://praxis.nyc/v4/play/hugo-theme/</link>
+      <link>https://praxis.nyc/play/hugo-theme/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://praxis.nyc/v4/play/hugo-theme/</guid>
+      <guid>https://praxis.nyc/play/hugo-theme/</guid>
       <description>Download Praxis Play Version 1.4 A hugo theme environment for stand-alone creative code experiments, reducing the learning curve so you can enjoy being in the zone.
 Subscribe to our newsletter for updates
 features  CSS scope  credits  installation  Shortcodes  --  Ready-to-use features to speed up your creative code: Want text not to be selectable? Want to prevent zoom? ml5? smooth scroll?
@@ -21,10 +21,10 @@ On frontmatter, add the features you need with play: feature1, feature2, etc (Ma
     
     <item>
       <title>Resources</title>
-      <link>https://praxis.nyc/v4/play/resources/</link>
+      <link>https://praxis.nyc/play/resources/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://praxis.nyc/v4/play/resources/</guid>
+      <guid>https://praxis.nyc/play/resources/</guid>
       <description>Do you have a resource you want to add to the list? Add it here
 Do you want to connect? Find the others</description>
     </item>
