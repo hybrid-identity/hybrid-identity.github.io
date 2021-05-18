@@ -7,37 +7,37 @@
 		<aside>
 			{{ partial "logo.html" . }}
 			{{ partial "footer.html" . }}
-	</aside>
+		</aside>
 		<article class="main">
 			<header class="header">
 				<h1>{{ .Title }}</h1>
 			</header>
-<div class="members">
-	<section class="group">
-		<p class="paths">core</p>
-{{ range .Site.Data.team.core }}
-{{ partial "team.html" . }}
-{{end}}
-	</section>
-	<section class="group">
-		<p class="paths">study</p>
-{{ range .Site.Data.team.study }}
-{{ partial "team.html" . }}
-{{end}}
-	</section>
-		<section class="group">
-		<p class="paths">commons</p>
-{{ range .Site.Data.team.commons }}
-{{ partial "team.html" . }}
-{{end}}
-	</section>
-			<section class="group">
-		<p class="paths">play</p>
-{{ range .Site.Data.team.play }}
-{{ partial "team.html" . }}
-{{end}}
-	</section>
-</div>
+			<div class="members">
+				<section class="group">
+					<p class="paths">core</p>
+					{{ range .Site.Data.team.core }}
+					{{ partial "team.html" . }}
+					{{end}}
+				</section>
+				<section class="group">
+					<p class="paths">study</p>
+					{{ range .Site.Data.team.study }}
+					{{ partial "team.html" . }}
+					{{end}}
+				</section>
+				<section class="group">
+					<p class="paths">commons</p>
+					{{ range .Site.Data.team.commons }}
+					{{ partial "team.html" . }}
+					{{end}}
+				</section>
+				<section class="group">
+					<p class="paths">play</p>
+					{{ range .Site.Data.team.play }}
+					{{ partial "team.html" . }}
+					{{end}}
+				</section>
+			</div>
 			{{ partial "footer.html" . }}
 		</article>
 	</div>
