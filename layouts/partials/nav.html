@@ -15,7 +15,7 @@
 					{{ end }}
 
 					{{ range where .Site.Pages "Params.category" "redux" }}
-					{{ if in .Params.status "published" }}
+					{{ if not (in .Params.status "draft") }}
 					{{ partial "category-post.html" . }}
 					{{ end }}
 					{{ end }}
@@ -39,7 +39,9 @@
 				<div class="category-menu">
 
 					{{ range where .Site.Pages "Params.category" "commons" }}
+					{{ if not (in .Params.status "draft") }}
 					{{ partial "category-post.html" . }}
+					{{ end }}
 					{{ end }}
 					{{ range where .Site.Pages "Params.category" "slide" }}
 					{{ partial "category-post.html" . }}

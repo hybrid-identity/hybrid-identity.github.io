@@ -66,7 +66,7 @@
 					<section class="status">
 						<h3>Redux zines</h3>
 							{{ range where .Site.Pages "Params.category" "redux" }}
-						{{ if in .Params.status "published" }}
+						{{ if not (in .Params.status "draft") }}
 						{{ partial "category-post.html" . }}
 						{{ else }}
 <p>Soon</p>

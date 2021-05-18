@@ -67,7 +67,9 @@
 				<div class="category-menu">
 					<section class="status">
 						{{ range where .Site.Pages "Params.category" "commons" }}
+						{{ if not (in .Params.status "draft") }}
 						{{ partial "category-post.html" . }}
+						{{ end }}
 						{{ end }}
 					</section>
 					<section class="status">
