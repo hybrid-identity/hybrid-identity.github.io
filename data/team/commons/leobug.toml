@@ -1,0 +1,10 @@
+alias = "leobug"
+name = "Leandro"
+surname = "Kalkoff"
+emoji = "🐛"
+location = "Germany"
+email = "leandro@teixeirakalkhoff.eu"
+
+links = [
+	{title = "instagram", URL = "https://www.instagram.com/ltkalkhoff/"}
+]

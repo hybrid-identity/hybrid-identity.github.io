@@ -1,0 +1,11 @@
+alias = "josh"
+name = "Joshua"
+surname = "Christman"
+emoji = "🍃"
+location = "LA"
+email = "christman.joshua@gmail.com"
+
+links = [
+	{title = "Atypical Beings", URL = "https://www.atypicalbeings.com/"},
+{title = "instagram", URL = "https://www.instagram.com/mrchristman/"}
+]
