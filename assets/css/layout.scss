@@ -155,22 +155,26 @@ section.category, section.session, section.group, ul.list {
 
 }
 
-
-
 body {
 	font-family: var(--font);
 	padding: 20px;
 	margin: 0;
-	background-image: url("../images/dot-bg.svg");
 	font-weight: normal;
-	background-attachment: fixed;
-	background-color: var(--color-bg);
 	font-size: 18px;
 	color: var(--color-fg);
+	.background {
+		background-image: var(--bg-image);
+		background-attachment: fixed;
+		background-color: var(--color-bg);
+		top: 0;
+		left: 0;
+		position: fixed;
+		height: 100px;
+		width: 100%;
+		height: 100%;
+		z-index: -100;	
+	}
 }
-
-
-
 
 a:not(.btn) {
 	color: var(--color-fg);
@@ -391,11 +395,11 @@ section.status {
 	width: 100%;
 	@media screen and (min-width: $bp) {
 		
-	height: 205px;
+		height: 205px;
 	}
 	@media screen and (max-width: $bp) {
 		
-	height: 250px;
+		height: 250px;
 	}
 	@include fadeInDown;
 	.no-cover & {
@@ -433,16 +437,16 @@ section.status {
 		margin-top: var(--gap-7);
 		display: grid;
 		grid-template-columns: var(--logo-size) 1fr;
-	
-				@media screen and (min-width: $bp) {
-	grid-gap: var(--gap-2);
-		  
+
+		@media screen and (min-width: $bp) {
+			grid-gap: var(--gap-2);
+
 			@include radius(50%); 
-	}
+		}
 		@media screen and (max-width: $bp) {
 
-				grid-gap: var(--gap);
-	}
+			grid-gap: var(--gap);
+		}
 		margin-left: -10px;
 		.counter:before {
 			displaY: inline-block;
@@ -456,16 +460,16 @@ section.status {
 			
 			@media screen and (min-width: $bp) {
 
-			padding-top: 10px; 
-		font-size: 300%;
+				padding-top: 10px; 
+				font-size: 300%;
 
-			@include radius(50%); 
-	}
-		@media screen and (max-width: $bp) {
+				@include radius(50%); 
+			}
+			@media screen and (max-width: $bp) {
 
-			padding-top: 5px; 
-		font-size: 200%;
-	}
+				padding-top: 5px; 
+				font-size: 200%;
+			}
 			text-align: center; 
 		}
 		&:last-of-type {
@@ -609,18 +613,18 @@ form.tinyletter {
 	grid-template-columns: 1fr 150px;
 	input {
 		height: 50px;
-		 align-self: flex-start;
+		align-self: flex-start;
 		padding: var(--gap) var(--gap-2) !important;
 		&.input {
 			height: 75px;
 			margin-top: -13px;
 
-	}
-	&.button {
+		}
+		&.button {
 
-		font-weight: bold;
-		text-transform: uppercase;
-		border: 0;
-}
+			font-weight: bold;
+			text-transform: uppercase;
+			border: 0;
+		}
 	}
 }
