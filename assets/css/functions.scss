@@ -29,7 +29,7 @@
     --gap-10: calc(var(--gap) * 10);
     --gap-half: calc(var(--gap) / 2);
     --gap-quart: calc(var(--gap) / 4);
-    --bg-image: url("../images/dot-bg.svg");
+    --bg-image: url("https://praxis.nyc/images/dot-bg.svg");
     &.dark-mode {
       --color-bg: #281831;
       --color-fg: white;
