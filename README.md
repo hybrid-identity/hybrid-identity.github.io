@@ -4,7 +4,7 @@ https://praxis.nyc
 
 ### TODO
 
-- [ ] background fixed ios fix ([iOS work around/fix for background attachment fixed](https://codepen.io/callumfindlay/pen/VaYeoW))
+- [x] background fixed ios fix ([iOS work around/fix for background attachment fixed](https://codepen.io/callumfindlay/pen/VaYeoW))
 - [ ] language switch
 - [ ] slide last page
 - [ ] zine affordance (back to revealjs?)
