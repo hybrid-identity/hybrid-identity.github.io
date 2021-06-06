@@ -7,7 +7,7 @@
 - [ ] review bg
 - [x] z-index issue
 - [ ] animation, diagonal
-- [ ] soundcloud, instagram icons (open in new page)
+- [x] soundcloud, instagram icons
 - [ ] mobile version (breakpoint)
    - [ ] smaller padding
    - [ ] internal scroll?
