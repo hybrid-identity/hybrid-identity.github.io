@@ -1,8 +1,9 @@
 ## TODO
 
 
-- [ ] popover
 - [ ] actual copy
+- [ ] hybrididentity.nyc wiring
+- [x] `.print` version
 - [ ] review bg
 - [x] z-index issue
 - [ ] animation, diagonal
@@ -12,3 +13,4 @@
    - [ ] internal scroll?
    - [ ] 100% width
 - [ ] QR code?
+- [ ] popover

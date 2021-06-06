@@ -65,6 +65,25 @@ html, body {
 	background-position: center center;
 }
 
+.print {
+	.verse2, .place {
+		a {
+		display: none;
+	}
+	}
+	.action {
+	font-size: 120%;
+	border-top: solid 1px var(--color-fg);
+	padding-top: var(--gap-4);
+	margin-top: var(--gap-4);
+	a {
+		color: var(--color-fg) !important;
+		border-bottom: solid 1px var(--color-fg);
+	}
+}
+}
+
+
 
 .content {
 	z-index: 100;
