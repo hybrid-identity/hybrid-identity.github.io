@@ -8,13 +8,13 @@
 
 body {
 	font-family:  cm_sans_serif;
-	color:  var(--color);
+	color:  var(--color-fg);
+	svg path {
+		fill: var(--color-fg);
+	}
 }
 
 
-.container {
-	
-}
 
 h1, h2, h3 {
 	@include reset(all);
@@ -54,13 +54,13 @@ html, body {
 
 }
 
-.summer-solstice .cover {
+
+
+.cover {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	z-index: -1;
-	@include opacity(80);
-	background-image: url(/images/summer-solstice/01.jpg);
 	background-size: cover;
 	background-position: center center;
 }
@@ -88,9 +88,9 @@ footer {
 		margin-top: var(--quote-height-neg);
 		text-align: right;
 		.drop {
-		display: inline;
-		margin-left: 10px;
-	}
+			display: inline;
+			margin-left: 10px;
+		}
 	}
 	&.verse2 {
 		text-orientation: mixed;
@@ -100,8 +100,8 @@ footer {
 		padding-top: calc(var(--quote-height) + var(--gap));
 		margin-top: var(--quote-width-neg);
 
-	@include rotate(180);
-	float: right;
+		@include rotate(180);
+		float: right;
 		.social {
 			displaY: inline-block;
 			margin-top: var(--gap);
@@ -124,10 +124,10 @@ a {
 	@include transition;
 	&:not(.btn) {
 		color: var(--color-accent);
-	
+
 		&:hover {
 			color: var(--color-fg);
-	
+
 		}
 	}
 	&.icon {
@@ -137,24 +137,24 @@ a {
 			fill: var(--color-accent);
 		}
 		&:hover {
-		svg path {
-			fill: var(--color-fg);
-		}
+			svg path {
+				fill: var(--color-fg);
+			}
 		}
 	}
 	&.btn {
 		@include transition;
-	border: solid 2px var(--color-fg);
-	text-transform: uppercase;
-	@include radius(0);
-	@include shadow(box, 0 5px 0px rgba(0, 0, 0, 0.1));
-	padding: var(--gap-2);
-	color: var(--color-fg);
-	
+		border: solid 2px var(--color-fg);
+		text-transform: uppercase;
+		@include radius(0);
+		@include shadow(box, 0 5px 0px rgba(0, 0, 0, 0.1));
+		padding: var(--gap-2);
+		color: var(--color-fg);
+
 		&:hover {
 			color: var(--color-accent);
-	border-color: var(--color-accent);
-		@include shadow(box, 0 0px 15px rgba(0, 0, 0, 0.3));
+			border-color: var(--color-accent);
+			@include shadow(box, 0 0px 15px rgba(0, 0, 0, 0.3));
 		}
-}
+	}
 }
