@@ -2,6 +2,7 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
+	<div class="cover"></div>
 
 	<div class="container">
 		<div class="flyer">
@@ -14,12 +15,12 @@
 			<h1 class="title">{{ .Title }}</h1>
 			{{ .Content }}
 		</div>
-		<footer class="footer">
-			<div class="verse1">{{ .Params.verse1 }}<div class="drop">{{ partial "drop.svg" . }} </div></div>
+			<footer class="verse1">{{ .Params.verse1 }}<div class="drop">{{ partial "drop.svg" . }} </div></footer>
 			
-			<div class="verse2">{{ .Params.verse2 }}</div>
+			<footer class="verse2">{{ .Params.verse2 }}
+<div class="social"><a class="icon" href="https://soundcloud.com/hybrididentity">{{ partial "social/soundcloud-circle.svg" . }}</a> <a class="icon" href="https://www.instagram.com/hybrididentity.nyc/">{{ partial "social/instagram.svg" . }}</a></div>
+			</footer>
 			
-		</footer>
 	</div>
 </div>
 	
