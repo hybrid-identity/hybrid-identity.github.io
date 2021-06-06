@@ -3,10 +3,22 @@
 <script src="{{ $jquery.Permalink }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/detectizr/2.2.0/detectizr.min.js" integrity="sha512-nDDw7LfkxLf4hO24ikFLVfx6B8LE0mJqCnVFE7gmpTyJSd5EGs8iw+o64qjlQRIHHMfI2SfzYQEGbKrU2tBTqQ==" crossorigin="anonymous"></script>
+
+
+{{ $gsap := resources.Get "js/gsap.js" }}
+<script src="{{ $gsap.Permalink }}"></script>
+{{ $sketch := resources.Get "js/sketch.js" }}
+<script src="{{ $sketch.Permalink }}"></script>
+{{ $three := resources.Get "js/three.js" }}
+<script src="{{ $three.Permalink }}"></script>
+{{ $demo2 := resources.Get "js/demo2.js" }}
+<script src="{{ $demo2.Permalink }}"></script>
+{{ $datgui := resources.Get "js/dat-gui.js" }}
+<script src="{{ $datgui.Permalink }}"></script>
+
+
 {{ $popper := resources.Get "js/popper.min.js" }}
 <script src="{{ $popper.Permalink }}"></script>
-{{ $screenfull := resources.Get "js/screenfull.min.js" }}
-<script src="{{ $screenfull.Permalink }}"></script>
 {{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
 <script src="{{ $bootstrap.Permalink }}"></script>
 <script>
@@ -29,32 +41,3 @@
       }, 300);
     });
   </script>
-{{ if in .Params.Category "slide" }}
-{{ $reveal := resources.Get "js/revealjs/reveal.js" }}
-<script src="{{ $reveal.Permalink }}"></script>
-{{ $zoom := resources.Get "js/revealjs/plugin/zoom/zoom.js" }}
-<script src="{{ $zoom.Permalink }}"></script>
-{{ $notes := resources.Get "js/revealjs/plugin/notes/notes.js" }}
-<script src="{{ $notes.Permalink }}"></script>
-{{ $search := resources.Get "js/revealjs/plugin/search/search.js" }}
-<script src="{{ $search.Permalink }}"></script>
-{{ $markdown := resources.Get "js/revealjs/plugin/markdown/markdown.js" }}
-<script src="{{ $markdown.Permalink }}"></script>
-{{ $highlight := resources.Get "js/revealjs/plugin/highlight/highlight.js" }}
-<script src="{{ $highlight.Permalink }}"></script>
-    <script>
-
-      // Also available as an ES module, see:
-      // https://revealjs.com/initialization/
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        center: true,
-        hash: true,
-
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-      });
-
-    </script>
-    {{ end }}

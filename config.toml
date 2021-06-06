@@ -1,4 +1,5 @@
 baseURL = "https://hybrid-identity.github.io/"
 languageCode = "en-us"
+redirect = "summer-solstice"
 title = "Hybrid Identity"
 publishDir = "docs"
