@@ -1,0 +1,17 @@
+canvas.mystery {
+	display:  none !important;
+}
+#slider {
+	position:  fixed;
+	top: 0;
+	left: 0;
+	z-index:  -1;
+
+}
+canvas {
+	position:  fixed; 
+	top: 0;
+	left: 0;
+	height:  100%;
+	width:  100%;
+}

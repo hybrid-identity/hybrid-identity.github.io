@@ -2,8 +2,29 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
+
+	<div class="container">
+		<div class="flyer">
+		<header class="header">
+			
+			<div class="identity">{{ partial "identity.svg" . }} </div>
+			<div class="hybrid">{{ partial "hybrid.svg" . }} </div>
+		</header>
+		<div class="content">
+			<h1 class="title">{{ .Title }}</h1>
 			{{ .Content }}
+		</div>
+		<footer class="footer">
+			<div class="verse1">{{ .Params.verse1 }}<div class="drop">{{ partial "drop.svg" . }} </div></div>
+			
+			<div class="verse2">{{ .Params.verse2 }}</div>
+			
+		</footer>
+	</div>
+</div>
+	
 	{{ partial "scripts.html" . }} 
+
 </body>
 </html>
 

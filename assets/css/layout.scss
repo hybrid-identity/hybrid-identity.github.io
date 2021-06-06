@@ -10,21 +10,90 @@ body {
 	font-family:  cm_sans_serif;
 	color:  var(--color);
 }
-canvas.mystery {
-	display:  none !important;
+
+
+.container {
+	
 }
-#slider {
-	position:  fixed;
-	top: 0;
-	left: 0;
-	z-index:  -1;
+
+h1, h2, h3 {
+	@include reset(all);
+}
+.scroll {
+	border-top: solid 1px var(--color-fg);
+	border-bottom: solid 1px var(--color-fg);
+	padding: var(--gap-4) 0;
+	margin: var(--gap-4) 0;
+	ul {
+		@include reset(list);
+		@include reset(all);
+	}
+}
+html, body {
+	height: 100%;
+}
+.container {
+	height: 100%;
+	width: var(--flyer);
+	display: table;
+}
+.content {
+	margin: var(--offset);
+	z-index: 1000;
+	.title {
+		@include fadeInUp($delay: calc(var(--delay) * 1));
+	}
+	.scroll {
+		@include fadeInUp($delay: calc(var(--delay) * 2));
+	}
+	.place {
+		@include fadeInUp($delay: calc(var(--delay) * 3));
+	}
+	.action {
+		@include fadeInUp($delay: calc(var(--delay) * 4));
+	}
 
 }
-canvas {
+footer.footer, header.header {
+	z-index: -1;
+	height: var(--quote);
 	
-	position:  fixed; 
-	top: 0;
-	left: 0;
-	height:  100%;
-	width:  100%;
+}
+header.header {
+	position: absolute;
+	margin-left: calc(var(--offset) * -1px);
+	.hybrid {
+		margin-top: 10px;
+	}
+}
+
+footer.footer {
+	float: right;
+	font-size: 120%;
+	@include rotate(180);
+	margin-top: var(--quote-neg);
+	.verse2 {
+		text-orientation: mixed;
+		writing-mode: vertical-rl;
+	}
+
+	.verse1 {
+		@include rotate(180);
+	}
+	.drop {
+		display: inline;
+		margin-left: 10px;
+	}
+}
+.flyer {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+a.btn {
+	border: solid 2px var(--color-fg);
+	text-transform: uppercase;
+	@include radius(0);
+	padding: var(--gap-2);
 }

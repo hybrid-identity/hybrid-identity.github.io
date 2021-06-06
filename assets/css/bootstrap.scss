@@ -1,105 +1,9 @@
-.nav {
-	
-	li {
-		.active-only {
-			display: none;
-			padding-left: var(--gap);
-			color: var(--color-bg);
-		}
-		:not(.active), .active {
-			@include radius(20px);
-		}
-		.active {
-			background-color: var(--color-fg) !important;
-			color: var(--color-bg)!important;
-			font-weight: bold;
-			font-size: 120%;
-			padding-top: var(--gap-quart);
-			padding-bottom: var(--gap-quart);
-			.active-only {
-				display: inline-block;
-			}
-		}
-	}
-	
-	li a {
-		text-decoration: none;
-	}
-}
-
-.tab-pane, .nav {
-	margin: var(--gap-2) 0;
-
-}
-
-.tab-pane .nav {
-	margin: var(--gap-2) 0;
-	li {
-		margin-right: 5px;
-		:not(.active) {
-			@include radius(20px);
-			background-color: var(--color-fg) !important;
-		}
-		.active {
-			padding-top: 7px;
-			height: 38px;
-		}
-	}
-}
-
-
-table.table {
-	tr {
-		@include transition;
-		&:hover {
-			background-color: rgba(yellow, .4);
-		}
-	}
-	td {
-		border-color: #666;
-    p {
-      color: var(--color-fg);
-    }
-		&:first-of-type {
-			padding-left: 0;
-		}
-		&:last-of-type {
-			padding-right: 0;
-		}
-	}
-	code {
-		white-space: nowrap;
-	}
-
-}
-.modal-backdrop {
-	z-index: -1;
-}
-
-.modal-dialog {
-	z-index: 3000 !important;
-	@include find(red);
-}
 
 a[data-toggle="popover"] {
-  @include highlight(
-    $bg: var(--color-accent-2), 
-    $gap: 2px, 
-    $spacing: 0, 
-    $top: 5px, 
-    $bottom: 3px,
-    $break: false
-    );
+
   &:hover {
 
-    color: var(--color-bg) !important;@include highlight(
-      $bg: var(--color-accent), 
-      $gap: 2px, 
-      $spacing: 0, 
-      $top: 5px, 
-      $bottom: 3px,
-      $break: false
-      );
+    color: var(--color-bg) !important;
   }
 }
 .popover {
@@ -108,15 +12,6 @@ a[data-toggle="popover"] {
   border-radius: 0;
   border-color: var(--color-accent);
   margin: var(--gap);
-}
-
-.tooltip {
-    font-family: var(--font);
-    text-transform: uppercase;
-   .tooltip-body {
-     padding: var(--gap);
-      border-radius: 0 !important;
-   }
 }
 
 
@@ -156,35 +51,3 @@ a[data-toggle="popover"] {
   }
 }
 
-
-.description {
-  // margin-left: calc(var(--gap-2) * -1);
-  // display: grid;
-  // grid-template-columns: var(--lang) 1fr;
-.nav {
-  margin-left: -10px;
-}
-  .nav a {
-    background-color: var(--color-bg);
-    @include radius(0);
-    padding: 10px !important;
-    line-height: 80%;
-    font-size: 150%;
-    max-width: var(--lang);
-    max-height: var(--lang);
-    overflow: hidden;
-    &.active {
-      background-color: var(--color-accent-2) !important;
-    }
-  }
-  .tab-content {
-    margin-top: -40px;
-  }
-}
-
-.nav.lang {
-  @include find(red);
-  width: 50px;
-  float: left;
-  margin-left: -100px;
-}
