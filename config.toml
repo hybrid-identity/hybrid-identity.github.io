@@ -1,7 +1,4 @@
-baseURL = "https://praxis.nyc/"
+baseURL = "https://hybrid-identity.github.io/"
 languageCode = "en-us"
-title = "Praxis"
-description = "Decolonize your attention"
+title = "Hybrid Identity"
 publishDir = "docs"
-logo = "logo-big.svg"
-category = ["study", "commons", "play"]
