@@ -2,10 +2,14 @@
   :root {
     --font: Space Grotesk;
     --flyer: 450px;
-    --quote-height: 25px;
---quote-height-neg: -25px;
---quote-width: 350px;
---quote-width-neg: -350px;
+      --quote-height: 25px;
+    --quote-height-neg: -25px;
+     @media screen and (max-width: 450px) {
+       --quote-height: 35px;
+    --quote-height-neg: -35px;
+     }
+    --quote-width: 350px;
+    --quote-width-neg: -350px;
     --color-fg: black;
     --color-medium: #999;
     --color-dark: #666;
@@ -25,7 +29,10 @@
     --gap-10: calc(var(--gap) * 10);
     --gap-half: calc(var(--gap) / 2);
     --gap-quart: calc(var(--gap) / 4);
-
-    --offset: var(--gap-8);
+--offset: var(--gap-7);
+ @media screen and (max-width: 450px) {
+    --offset: var(--gap-6);
   }
+  }
+
 

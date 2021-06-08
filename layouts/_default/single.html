@@ -2,8 +2,6 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
-	<div class="cover">
-	</div>
 
 	<div class="container">
 		<div class="flyer">
@@ -19,7 +17,9 @@
 			<div class="action print-CTA">Buy tickets at <a href="https://hybrididentity.nyc">HybridIdentity.nyc</a></div>
 			{{ else }}
 			<div class="action">
-   <a href="{{ .Params.CTAlink }}" class="btn btn-block">{{ .Params.CTA }}</a>
+   <a href="{{ .Params.CTAlink }}" class="btn btn-block">{{ .Params.CTA }}
+   	<span class="sig">{{ .Params.CTA2 }}</span>
+   </a>
 </div>
 {{ end }}
 		</div>

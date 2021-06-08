@@ -1,6 +1,5 @@
 .summer-solstice {
-	.cover {
-		@include opacity(80);
+	body {
 		background-image: url(/images/summer-solstice/01.jpg);
 	}
 }
@@ -8,8 +7,7 @@
 .test2 {
 	--color-fg: white;
 	--color-accent: #ffff00;
-	.cover {
-		@include opacity(100);
+	body {
 		background-image: url(/images/summer-solstice/05.jpg);
 	}
 }

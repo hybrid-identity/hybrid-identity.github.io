@@ -2,7 +2,7 @@
 
 
 - [ ] actual copy
-- [ ] hybrididentity.nyc wiring
+- [x] hybrididentity.nyc wiring
 - [x] `.print` version
 - [ ] review bg
 - [x] z-index issue
