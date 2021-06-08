@@ -11,15 +11,18 @@
 			<div class="hybrid">{{ partial "hybrid.svg" . }} </div>
 		</header>
 		<div class="content">
-			<h1 class="title">{{ .Title }}</h1>
+		<header>
+				<h1 class="title">{{ .Title }}</h1>
+			<p class="when">{{ .Params.When }}</p>
+		</header>
 			{{ .Content }}
 			{{ if in .Params.style "print"  }}
 			<div class="action print-CTA">Buy tickets at <a href="https://hybrididentity.nyc">HybridIdentity.nyc</a></div>
 			{{ else }}
 			<div class="action">
    <a href="{{ .Params.CTAlink }}" class="btn btn-block">{{ .Params.CTA }}
-   	<span class="sig">{{ .Params.CTA2 }}</span>
    </a>
+   <p class="price">{{ .Params.Price }}</p>
 </div>
 {{ end }}
 		</div>

@@ -17,32 +17,51 @@ body {
 	}
 }
 
-
-
-h1, h2, h3 {
-	@include reset(all);
+.credits {
+	font-style: italic;
 }
-@media screen and (max-width: 450px) {
-	h1.title {
-		font-size: 30px;
+
+
+
+	h1 {
+		font-size: 35px;
 	}
-	}
+	
 .lineup {
 	border-top: solid 1px var(--color-fg);
 	border-bottom: solid 1px var(--color-fg);
 	padding: var(--gap-3) 0;
 	margin: var(--gap-3) 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: var(--gap-2);
+
 	 @media screen and (max-width: 450px) {
 	 		padding: var(--gap-2) 0;
 	margin: var(--gap-2) 0;
 	 }
+	 p.title {
+	 	text-transform: uppercase;
+	 	margin: 0;
+	 	font-size: 120%;
+	 }
 	ul {
 		@include reset(list);
-		@include reset(all);
+		padding: var(--gap-2) 0;
+		margin: 0;
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+		& + ul {
+			padding-top: 0;
+		}
 	}
 }
 html, body {
 	height: 100%;
+}
+.price {
+	margin-top: var(--gap-2);
 }
 .container {
 	height: 100%;
@@ -57,7 +76,7 @@ html, body {
 }
 .content {
 	margin: var(--offset);
-	.title {
+	header {
 		@include fadeInUp($delay: calc(var(--delay) * 1));
 	}
 	.lineup {
