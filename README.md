@@ -8,9 +8,9 @@
 - [x] z-index issue
 - [ ] animation, diagonal
 - [x] soundcloud, instagram icons
-- [ ] mobile version (breakpoint)
-   - [ ] smaller padding
-   - [ ] internal scroll?
-   - [ ] 100% width
+- [X] mobile version (breakpoint)
+   - [X] smaller padding
+   - [X] internal scroll?
+   - [X] 100% width
 - [ ] QR code?
 - [ ] popover
