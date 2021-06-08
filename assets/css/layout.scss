@@ -27,7 +27,7 @@ h1, h2, h3 {
 		font-size: 30px;
 	}
 	}
-.scroll {
+.lineup {
 	border-top: solid 1px var(--color-fg);
 	border-bottom: solid 1px var(--color-fg);
 	padding: var(--gap-3) 0;
@@ -35,8 +35,6 @@ h1, h2, h3 {
 	 @media screen and (max-width: 450px) {
 	 		padding: var(--gap-2) 0;
 	margin: var(--gap-2) 0;
-	overflow: auto;
-	height: 250px;
 	 }
 	ul {
 		@include reset(list);
@@ -62,7 +60,7 @@ html, body {
 	.title {
 		@include fadeInUp($delay: calc(var(--delay) * 1));
 	}
-	.scroll {
+	.lineup {
 		@include fadeInUp($delay: calc(var(--delay) * 2));
 	}
 	.place {
