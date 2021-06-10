@@ -31,4 +31,3 @@ let sketch = new Sketch({
 	`
 });
 
-

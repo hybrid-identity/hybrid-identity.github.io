@@ -12,6 +12,7 @@
 {{ $three := resources.Get "js/three.js" }}
 <script src="{{ $three.Permalink }}"></script>
 {{ $demo2 := resources.Get "js/demo2.js" }}
+<script src="{{ $demo2.Permalink }}"></script>
 
 {{ $popper := resources.Get "js/popper.min.js" }}
 <script src="{{ $popper.Permalink }}"></script>

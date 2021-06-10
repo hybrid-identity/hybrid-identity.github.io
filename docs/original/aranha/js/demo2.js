@@ -1,4 +1,8 @@
-
+let delay = 300;
+function changeBg(s, t) {
+	s.next();
+	setTimeout(changeBg(s, t), t);
+}
 let sketch = new Sketch({
 	duration: 1.5,
 	debug: false,
@@ -30,5 +34,8 @@ let sketch = new Sketch({
 		}
 	`
 });
-
+// sketch.next();
+// setTimeout(changeBg(sketch, delay), delay);
+// sketch.play();
+sketch.banana();
 
