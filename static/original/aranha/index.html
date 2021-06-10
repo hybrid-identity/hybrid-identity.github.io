@@ -14,7 +14,14 @@
 <body>
     
    <div id="content">
+      <!-- <button onclick="sketch.next()">Try it</button> -->
 
+      <script>
+         var intervalId = window.setInterval(function(){
+            sketch.next()
+         }, 5000);
+
+      </script>
 
       <div id="slider" data-images='[
       "http://hybrididentity.nyc/images/summer-solstice/01.jpg",

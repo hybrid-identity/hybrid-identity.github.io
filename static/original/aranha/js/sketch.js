@@ -1,4 +1,3 @@
-
 class Sketch {
   constructor(opts) {
     this.scene = new THREE.Scene();
@@ -84,6 +83,11 @@ class Sketch {
 
   setupResize() {
     window.addEventListener("resize", this.resize.bind(this));
+  }
+
+  nextSlide() {
+    this.addObjects();
+    this.next();
   }
 
   resize() {

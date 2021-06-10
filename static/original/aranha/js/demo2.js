@@ -37,5 +37,5 @@ let sketch = new Sketch({
 // sketch.next();
 // setTimeout(changeBg(sketch, delay), delay);
 // sketch.play();
-sketch.banana();
+
 
