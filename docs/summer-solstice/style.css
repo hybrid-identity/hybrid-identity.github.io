@@ -14911,7 +14911,16 @@ a.text-dark:hover, a.text-dark:focus {
   --gap-10: calc(var(--gap) * 10);
   --gap-half: calc(var(--gap) / 2);
   --gap-quart: calc(var(--gap) / 4);
-  --offset: var(--gap-8); }
+  --offset: var(--gap-7); }
+
+@media screen and (max-width: 450px) {
+  :root {
+    --quote-height: 35px;
+    --quote-height-neg: -35px; } }
+
+@media screen and (max-width: 450px) {
+  :root {
+    --offset: var(--gap-6); } }
 
 @font-face {
   font-family: 'cm_sans_serif';
@@ -14921,51 +14930,71 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: cm_sans_serif;
-  color: var(--color); }
+  color: var(--color-fg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
 
-h1, h2, h3 {
-  margin: 0px !important;
-  padding: 0px !important;
-  border: none;
-  background: transparent; }
+body svg path {
+  fill: var(--color-fg); }
 
-h1:focus, h2:focus, h3:focus {
-  outline-width: 0;
-  outline: none;
-  outline-color: transparent;
-  outline-style: none; }
+.credits {
+  font-style: italic; }
 
-.scroll {
+h1 {
+  font-size: 35px; }
+
+.lineup {
   border-top: solid 1px var(--color-fg);
   border-bottom: solid 1px var(--color-fg);
-  padding: var(--gap-4) 0;
-  margin: var(--gap-4) 0; }
+  padding: var(--gap-3) 0;
+  margin: var(--gap-3) 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--gap-2); }
 
-.scroll ul {
+@media screen and (max-width: 450px) {
+  .lineup {
+    padding: var(--gap-2) 0;
+    margin: var(--gap-2) 0; } }
+
+.lineup p.title {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 120%; }
+
+.lineup ul {
   list-style: none;
-  margin: 0px !important;
-  padding: 0px !important;
-  border: none;
-  background: transparent; }
+  padding: var(--gap-2) 0;
+  margin: 0; }
 
-.scroll ul:focus {
-  outline-width: 0;
-  outline: none;
-  outline-color: transparent;
-  outline-style: none; }
+.lineup ul:last-of-type {
+  padding-bottom: 0; }
+
+.lineup ul + ul {
+  padding-top: 0; }
 
 html, body {
   height: 100%; }
 
+.price {
+  margin-top: var(--gap-2); }
+
 .container {
   height: 100%;
   width: var(--flyer);
-  display: table; }
+  display: table;
+  padding: var(--gap-2); }
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+    padding: var(--gap) !important; } }
 
 .content {
   margin: var(--offset); }
 
-.content .title {
+.content header {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15002,7 +15031,7 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .scroll {
+.content .lineup {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15113,25 +15142,25 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.summer-solstice .cover {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: .8;
-  filter: "alpha(opacity=80)";
-  -khtml-opacity: .8;
-  -moz-opacity: .8;
-  background-image: url(/images/summer-solstice/01.jpg);
-  background-size: cover;
-  background-position: center center; }
+.print .verse2 a, .print .place a {
+  display: none; }
+
+.print .action {
+  font-size: 120%;
+  border-top: solid 1px var(--color-fg);
+  padding-top: var(--gap-4);
+  margin-top: var(--gap-4); }
+
+.print .action a {
+  color: var(--color-fg) !important;
+  border-bottom: solid 1px var(--color-fg); }
 
 .content {
   z-index: 100; }
 
 header.header {
   height: var(--quote);
-  z-index: -1; }
+  z-index: 50; }
 
 header.header {
   position: absolute;
@@ -15185,6 +15214,9 @@ footer.verse2 .social svg {
   height: 100%;
   vertical-align: middle; }
 
+.sig {
+  font-size: 80%; }
+
 a {
   -webkit-transition: all 300ms ease-out;
   -moz-transition: all 300ms ease-out;
@@ -15192,10 +15224,11 @@ a {
   -o-transition: all 300ms ease-out;
   transition: all 300ms ease-out; }
 
-a:not(.btn) {
-  color: var(--color-accent); }
+a:not(.btn):not(.icon) {
+  color: var(--color-accent);
+  text-decoration: underline; }
 
-a:not(.btn):hover {
+a:not(.btn):not(.icon):hover {
   color: var(--color-fg); }
 
 a.icon {
@@ -15245,8 +15278,8 @@ a.btn:hover {
   -o-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.3); }
 
-canvas.mystery {
-  display: none !important; }
+a.btn span.sig {
+  displaY: block; }
 
 #slider {
   position: fixed;
@@ -15254,12 +15287,18 @@ canvas.mystery {
   left: 0;
   z-index: -1; }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%; }
+.summer-solstice body {
+  background-image: url(/images/summer-solstice/01.jpg); }
+
+.test2 {
+  --color-fg: white;
+  --color-accent: #ffff00; }
+
+.test2 body {
+  background-image: url(/images/summer-solstice/05.jpg); }
+
+.test body {
+  background: none !important; }
 
 a[data-toggle="popover"]:hover {
   color: var(--color-bg) !important; }

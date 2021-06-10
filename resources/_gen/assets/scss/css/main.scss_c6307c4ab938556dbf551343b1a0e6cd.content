@@ -15281,21 +15281,11 @@ a.btn:hover {
 a.btn span.sig {
   displaY: block; }
 
-canvas.mystery {
-  display: none !important; }
-
 #slider {
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1; }
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%; }
 
 .summer-solstice body {
   background-image: url(/images/summer-solstice/01.jpg); }
