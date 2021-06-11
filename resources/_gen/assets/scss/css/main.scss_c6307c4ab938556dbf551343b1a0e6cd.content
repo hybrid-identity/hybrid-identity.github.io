@@ -15388,14 +15388,8 @@ a.btn span.sig {
   left: 0;
   z-index: -1; }
 
-.summer-solstice body {
-  background-image: url(/images/summer-solstice/01.jpg); }
-
 .summer-original body {
   background: none; }
-
-.summer-original body #slider {
-  display: none; }
 
 .test2 {
   --color-fg: white;
