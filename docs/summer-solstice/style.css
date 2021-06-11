@@ -14939,19 +14939,52 @@ body svg path {
   fill: var(--color-fg); }
 
 .credits {
-  font-style: italic; }
+  font-size: 80%; }
 
 h1 {
-  font-size: 35px; }
+  line-height: 100%;
+  margin-bottom: var(--gap); }
 
-.lineup {
-  border-top: solid 1px var(--color-fg);
-  border-bottom: solid 1px var(--color-fg);
-  padding: var(--gap-3) 0;
-  margin: var(--gap-3) 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: var(--gap-2); }
+a.social {
+  width: 20px;
+  heighT: 20px;
+  display: inline-block;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  margin: 0 3px;
+  -webkit-transform: translate(0px, 3px);
+  -moz-transform: translate(0px, 3px);
+  -ms-transform: translate(0px, 3px);
+  -o-transform: translate(0px, 3px);
+  transform: translate(0px, 3px);
+  background-position: bottom left; }
+
+a.social:hover {
+  background-position: top left; }
+
+a.social.soundcloud {
+  background-image: url("../images/soundcloud.svg"); }
+
+a.social.ra {
+  background-image: url("../images/ra.svg"); }
+
+a.social.location {
+  background-image: url("../images/location.svg"); }
+
+a.social.globe {
+  background-image: url("../images/globe.svg"); }
+
+a.social.soundcloud-2 {
+  background-image: url("../images/soundcloud-2.svg"); }
+
+a.social.bandcamp {
+  background-image: url("../images/bandcamp.svg"); }
+
+a.social.instagram {
+  background-image: url("../images/instagram.svg"); }
 
 @media screen and (max-width: 450px) {
   .lineup {
@@ -14961,21 +14994,56 @@ h1 {
 .lineup p.title {
   text-transform: uppercase;
   margin: 0;
-  font-size: 120%; }
+  margin-top: 1px; }
+
+.lineup .set {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-gap: var(--gap);
+  border-top: solid 1px var(--color-fg);
+  padding: var(--gap-2) 0; }
 
 .lineup ul {
   list-style: none;
-  padding: var(--gap-2) 0;
+  padding: 0;
   margin: 0; }
-
-.lineup ul:last-of-type {
-  padding-bottom: 0; }
-
-.lineup ul + ul {
-  padding-top: 0; }
 
 html, body {
   height: 100%; }
+
+.action a.btn {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: var(--gap); }
+
+.action a.btn:hover .social {
+  background-position: top left; }
+
+.action a.btn .social {
+  width: 30px;
+  heighT: 30px;
+  background-size: 30px 60px;
+  display: inline-block;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  margin: 0 3px;
+  -webkit-transform: translate(0px, 3px);
+  -moz-transform: translate(0px, 3px);
+  -ms-transform: translate(0px, 3px);
+  -o-transform: translate(0px, 3px);
+  transform: translate(0px, 3px);
+  background-image: url("../images/ra.svg");
+  background-position: bottom left; }
+
+.action a.btn .copy {
+  text-align: left; }
+
+.action a.btn sup {
+  margin-top: 10px;
+  display: block; }
 
 .price {
   margin-top: var(--gap-2); }
@@ -15031,7 +15099,7 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .lineup {
+.content .set:first-of-type {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15068,7 +15136,7 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .place {
+.content .set:nth-of-type(2) {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15105,7 +15173,7 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .action {
+.content .set:nth-of-type(3) {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15142,7 +15210,44 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.print .verse2 a, .print .place a {
+.content .action {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -ms-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1s;
+  -moz-animation-iteration-count: 1s;
+  -ms-animation-iteration-count: 1s;
+  -o-animation-iteration-count: 1s;
+  animation-iteration-count: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: calc(var(--delay) * 5);
+  -moz-animation-delay: calc(var(--delay) * 5);
+  -ms-animation-delay: calc(var(--delay) * 5);
+  -o-animation-delay: calc(var(--delay) * 5);
+  animation-delay: calc(var(--delay) * 5);
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.print a.social {
   display: none; }
 
 .print .action {
@@ -15167,7 +15272,7 @@ header.header {
   margin-left: calc(var(--offset) * -1px); }
 
 header.header .hybrid {
-  margin-top: 10px; }
+  margin-top: 7px; }
 
 footer {
   font-size: 120%; }
@@ -15195,19 +15300,15 @@ footer.verse2 {
   transform: rotate(180deg);
   float: right; }
 
-footer.verse2 .social {
-  displaY: inline-block;
-  margin-top: var(--gap); }
+footer.verse2 a.social {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
 
-footer.verse2 .social a {
-  margin-top: 4px; }
-
-footer.verse2 .social svg {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg); }
+footer.verse2 a.social:first-of-type {
+  margin-top: var(--gap-2); }
 
 .flyer {
   display: table-cell;
@@ -15287,8 +15388,8 @@ a.btn span.sig {
   left: 0;
   z-index: -1; }
 
-.summer-solstice body {
-  background-image: url(/images/summer-solstice/01.jpg); }
+.summer-original body {
+  background: none; }
 
 .test2 {
   --color-fg: white;
