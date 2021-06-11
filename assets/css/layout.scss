@@ -120,10 +120,6 @@ margin: 0 3px;
 @include translate(0, 3);
 background-image: url("../images/ra.svg");
 background-position: bottom left;
-	.ra {
-
-
-	}
 }
 .copy {
 	text-align: left;
@@ -139,7 +135,6 @@ background-position: bottom left;
 .container {
 	height: 100%;
 	width: var(--flyer);
-
 	display: table;
 	padding: var(--gap-2);
 	    @media screen and (max-width: 450px) {
@@ -150,19 +145,19 @@ background-position: bottom left;
 .content {
 	margin: var(--offset);
 	header {
-		@include fadeInUp($delay: calc(var(--delay) * 1));
-	}
-	.set:first-of-type {
 		@include fadeInUp($delay: calc(var(--delay) * 2));
 	}
-	.set:nth-of-type(2) {
+	.set:first-of-type {
 		@include fadeInUp($delay: calc(var(--delay) * 3));
 	}
-	.set:nth-of-type(3) {
+	.set:nth-of-type(2) {
 		@include fadeInUp($delay: calc(var(--delay) * 4));
 	}
-	.action {
+	.set:nth-of-type(3) {
 		@include fadeInUp($delay: calc(var(--delay) * 5));
+	}
+	.action {
+		@include fadeInUp($delay: calc(var(--delay) * 6));
 	}
 
 }
@@ -199,9 +194,7 @@ background-position: bottom left;
 header.header {
 	height: var(--quote);
 	z-index: 50;
-	
-}
-header.header {
+	@include fadeIn;
 	position: absolute;
 	margin-left: calc(var(--offset) * -1px);
 	.hybrid {
@@ -210,10 +203,12 @@ header.header {
 }
 footer {
 	font-size: 120%;
+@include fadeIn;
 	&.verse1 {
 		height: var(--quote-height);
 		margin-top: var(--quote-height-neg);
 		text-align: right;
+		
 		.drop {
 			display: inline;
 			margin-left: 10px;
