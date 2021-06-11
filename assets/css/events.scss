@@ -10,7 +10,9 @@
 
 
 .summer-solstice {
-	.cover {z-index: -1;
+
+	.cover {
+		z-index: -1;
 		@include fadeIn;
 		display: block;
 		background-image: url(/images/summer-solstice/01.jpg);
@@ -18,6 +20,9 @@
 	background-attachment: fixed;
 	background-position: center center;
 
+@media screen and (max-width: 450px) {
+	background-size: 180% 180%;
+}
 	position: fixed;
 	top: 0;
 	left: 0;

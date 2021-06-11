@@ -94,6 +94,20 @@ background-image: url("../images/instagram.svg");
 		@include reset(list);
 		padding: 0;
 		margin: 0;
+		li {
+			line-height: 120%;
+		@media screen and (max-width: 450px) {
+		
+			min-height: 30px;
+				&:not(:first-of-type) {
+					margin-bottom: var(--gap);
+				}
+				.social {
+					float: right;
+					margin: 0;
+				}
+			}
+		}
 		
 
 	}
@@ -125,6 +139,14 @@ background-position: bottom left;
 }
 .copy {
 	text-align: left;
+	p {
+		margin: 0;
+
+			line-height: 110%;
+		&:last-of-type {
+			font-size: 75%;
+		}
+	}
 }
 	sup {
 		margin-top: 10px;
