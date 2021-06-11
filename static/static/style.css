@@ -14928,12 +14928,12 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: normal;
   font-style: normal; }
 
-.cover {
-  display: none; }
-
 body {
   font-family: cm_sans_serif;
-  color: var(--color-fg); }
+  color: var(--color-fg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
 
 body svg path {
   fill: var(--color-fg); }
@@ -15078,6 +15078,43 @@ html, body {
   -ms-animation-duration: 1s;
   -o-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-delay: calc(var(--delay) * 1);
+  -moz-animation-delay: calc(var(--delay) * 1);
+  -ms-animation-delay: calc(var(--delay) * 1);
+  -o-animation-delay: calc(var(--delay) * 1);
+  animation-delay: calc(var(--delay) * 1);
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.content .set:first-of-type {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -ms-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1s;
+  -moz-animation-iteration-count: 1s;
+  -ms-animation-iteration-count: 1s;
+  -o-animation-iteration-count: 1s;
+  animation-iteration-count: 1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-delay: calc(var(--delay) * 2);
   -moz-animation-delay: calc(var(--delay) * 2);
   -ms-animation-delay: calc(var(--delay) * 2);
@@ -15099,7 +15136,7 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .set:first-of-type {
+.content .set:nth-of-type(2) {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15136,7 +15173,7 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .set:nth-of-type(2) {
+.content .set:nth-of-type(3) {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15173,7 +15210,7 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .set:nth-of-type(3) {
+.content .action {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
   -ms-animation-name: fadeInUp;
@@ -15210,43 +15247,6 @@ html, body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.content .action {
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -ms-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-  -webkit-animation-iteration-count: 1s;
-  -moz-animation-iteration-count: 1s;
-  -ms-animation-iteration-count: 1s;
-  -o-animation-iteration-count: 1s;
-  animation-iteration-count: 1s;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-delay: calc(var(--delay) * 6);
-  -moz-animation-delay: calc(var(--delay) * 6);
-  -ms-animation-delay: calc(var(--delay) * 6);
-  -o-animation-delay: calc(var(--delay) * 6);
-  animation-delay: calc(var(--delay) * 6);
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  -ms-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
 .print a.social {
   display: none; }
 
@@ -15265,42 +15265,9 @@ html, body {
 
 header.header {
   height: var(--quote);
-  z-index: 50;
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -ms-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-iteration-count: 1s;
-  -moz-animation-iteration-count: 1s;
-  -ms-animation-iteration-count: 1s;
-  -o-animation-iteration-count: 1s;
-  animation-iteration-count: 1s;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -ms-animation-delay: 0s;
-  -o-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  -ms-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
+  z-index: 50; }
+
+header.header {
   position: absolute;
   margin-left: calc(var(--offset) * -1px); }
 
@@ -15308,42 +15275,7 @@ header.header .hybrid {
   margin-top: 7px; }
 
 footer {
-  font-size: 120%;
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -ms-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-iteration-count: 1s;
-  -moz-animation-iteration-count: 1s;
-  -ms-animation-iteration-count: 1s;
-  -o-animation-iteration-count: 1s;
-  animation-iteration-count: 1s;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -ms-animation-delay: 0s;
-  -o-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-timing-function: ease;
-  -moz-animation-timing-function: ease;
-  -ms-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  font-size: 120%; }
 
 footer.verse1 {
   height: var(--quote-height);
@@ -15458,28 +15390,6 @@ a.btn span.sig {
 
 .summer-original body {
   background: none; }
-
-.summer-original canvas {
-  display: none; }
-
-.summer-solstice .cover {
-  display: block;
-  background-image: url(/images/summer-solstice/01.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  opacity: .7;
-  filter: "alpha(opacity=70)";
-  -khtml-opacity: .7;
-  -moz-opacity: .7;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.summer-solstice #slider {
-  display: none; }
 
 .test2 {
   --color-fg: white;

@@ -6,12 +6,12 @@
 	font-style: normal;
 }
 
+.cover {
+	display: none;
+}
 body {
 	font-family:  cm_sans_serif;
 	color:  var(--color-fg);
-		background-size: cover;
-	background-attachment: fixed;
-	background-position: center center;
 	svg path {
 		fill: var(--color-fg);
 	}
