@@ -102,7 +102,9 @@ html, body {
 	height: 100%;
 }
 .action a.btn {
+	background-color: rgba(255,255,255,.4);
 	&:hover {
+		background-color: rgba(255,255,255,.8);
 	.social {
 		background-position: top left;
 	}
