@@ -10,7 +10,7 @@
 
 
 .summer-solstice {
-	.cover {
+	.cover {z-index: -1;
 		@include fadeIn;
 		display: block;
 		background-image: url(/images/summer-solstice/01.jpg);

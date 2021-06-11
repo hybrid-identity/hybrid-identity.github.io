@@ -35,7 +35,7 @@
   }
 }
 
-@mixin fade($x: 0, $y: 0, $z: 0, $duration: $durationDefault, $function: $functionDefault, $delay: $delayDefault, $count: $countDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin frame($x: 0, $y: 0, $z: 0, $duration: $durationDefault, $function: $functionDefault, $delay: $delayDefault, $count: $countDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
   @include animation-name(fade);
   @include duration($duration);
   @include function($function);

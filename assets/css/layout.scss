@@ -144,24 +144,40 @@ background-position: bottom left;
      padding: var(--gap) !important;
     }
 }
+
+header.header {
+	@include fadeInRight($delay: calc(var(--delay) * 1));
+}
+footer {
+	@include fadeInLeft($delay: calc(var(--delay) * 1));
+}
 .content {
 	margin: var(--offset);
 	header {
-		@include fadeInUp($delay: calc(var(--delay) * 2));
-	}
-	.set:first-of-type {
 		@include fadeInUp($delay: calc(var(--delay) * 3));
 	}
-	.set:nth-of-type(2) {
+	.set:first-of-type {
 		@include fadeInUp($delay: calc(var(--delay) * 4));
 	}
-	.set:nth-of-type(3) {
+	.set:nth-of-type(2) {
 		@include fadeInUp($delay: calc(var(--delay) * 5));
 	}
-	.action {
+	.set:nth-of-type(3) {
 		@include fadeInUp($delay: calc(var(--delay) * 6));
 	}
+	.action {
+		@include fadeInUp($delay: calc(var(--delay) * 7));
+	}
 
+}
+
+footer a.social {
+	&:first-of-type {
+		@include fadeIn($delay: calc(var(--delay) * 8));
+	}
+		&:nth-of-type(2) {
+		@include fadeIn($delay: calc(var(--delay) * 9));
+	}
 }
 
 
@@ -196,7 +212,6 @@ background-position: bottom left;
 header.header {
 	height: var(--quote);
 	z-index: 50;
-	@include fadeIn;
 	position: absolute;
 	margin-left: calc(var(--offset) * -1px);
 	.hybrid {
@@ -205,7 +220,6 @@ header.header {
 }
 footer {
 	font-size: 120%;
-@include fadeIn;
 	&.verse1 {
 		height: var(--quote-height);
 		margin-top: var(--quote-height-neg);
@@ -217,7 +231,8 @@ footer {
 		}
 	}
 	&.verse2 {
-		text-orientation: mixed;
+		.rotate {
+			text-orientation: mixed;
 		writing-mode: vertical-rl;
 		height: var(--quote-width);
 		width: var(--quote-height);
@@ -231,6 +246,8 @@ footer {
 			margin-top: var(--gap-2);
 		}
 		}
+		}
+		
 	}
 }
 .flyer {
