@@ -11,6 +11,7 @@
 
 .summer-solstice {
 	.cover {
+		@include fadeIn;
 		display: block;
 		background-image: url(/images/summer-solstice/01.jpg);
 			background-size: cover;
