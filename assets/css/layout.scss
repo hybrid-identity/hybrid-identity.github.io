@@ -45,14 +45,7 @@ background-position: bottom left;
 background-image: url("../images/soundcloud.svg");
 
 }
-	&.ra {
-background-image: url("../images/ra.svg");
 
-}
-&.ra-2 {
-background-image: url("../images/ra-2.svg");
-
-}
 	&.location {
 background-image: url("../images/location.svg");
 
@@ -121,6 +114,12 @@ html, body {
 display: grid;
 grid-template-columns: 50px 1fr;
 grid-gap: var(--gap);
+@media screen and (max-width: 450px) {
+	display: block;
+	
+	text-align: left;
+			}
+
 .social {
 				width: 30px;
 heighT: 30px;
@@ -133,7 +132,6 @@ background-image: url("../images/ra.svg");
 background-position: bottom left;
 }
 .copy {
-	text-align: left;
 	p {
 		margin: 0;
 
