@@ -13,23 +13,29 @@
 		<div class="content">
 		<header>
 				<h1 class="title">{{ .Title }}</h1>
-			<p class="when">{{ .Params.When }}</p>
+			<p class="when">{{ .Params.When }} <sup>{{ .Params.Time }}</sup></p>
 		</header>
 			{{ .Content }}
 			{{ if in .Params.style "print"  }}
 			<div class="action print-CTA">Buy tickets at <a href="https://hybrididentity.nyc">HybridIdentity.nyc</a></div>
 			{{ else }}
 			<div class="action">
-   <a href="{{ .Params.CTAlink }}" class="btn btn-block">{{ .Params.CTA }}
-   </a>
-   <p class="price">{{ .Params.Price }}</p>
+   <a href="{{ .Params.CTAlink }}" class="btn btn-block">
+   	<span class="social ra"></span>
+   	<span class="copy">{{ .Params.CTA }} <sup>{{ .Params.Price1 }}</sup></a>
+   </span>
+   <p class="price">{{ .Params.Price2 }}</p>
 </div>
 {{ end }}
 		</div>
-			<footer class="verse1">{{ .Params.verse1 }}<div class="drop">{{ partial "drop.svg" . }} </div></footer>
+			<footer class="verse1">
+			
+				  {{ .Params.verse1 }}
+				<div class="drop">{{ partial "drop.svg" . }} </div></footer>
 			
 			<footer class="verse2">{{ .Params.verse2 }}
-<div class="social"><a class="icon" href="https://soundcloud.com/hybrididentity">{{ partial "social/soundcloud-circle.svg" . }}</a> <a class="icon" href="https://www.instagram.com/hybrididentity.nyc/">{{ partial "social/instagram.svg" . }}</a></div>
+				 <a target="_blank" href="https://soundcloud.com/hybrididentity" class="social soundcloud"></a>
+				  <a target="_blank" href="https://instagram.com/hybrididentity.nyc" class="social instagram"></a>
 			</footer>
 			
 	</div>

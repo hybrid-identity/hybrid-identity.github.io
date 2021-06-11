@@ -18,23 +18,60 @@ body {
 }
 
 .credits {
-	font-style: italic;
+	font-size: 80%;
+}
+
+h1 {
+	line-height: 100%;
+	margin-bottom: var(--gap);
+}
+
+a.social {
+	width: 20px;
+heighT: 20px;
+display: inline-block;
+@include transition;
+margin: 0 3px;
+@include translate(0, 3);
+background-position: bottom left;
+&:hover {
+	background-position: top left;
+	}
+	&.soundcloud {
+background-image: url("../images/soundcloud.svg");
+
+}
+	&.ra {
+background-image: url("../images/ra.svg");
+
+}
+	&.location {
+background-image: url("../images/location.svg");
+
+}
+&.globe {
+background-image: url("../images/globe.svg");
+
+}
+	&.soundcloud-2 {
+background-image: url("../images/soundcloud-2.svg");
+
+}
+&.bandcamp {
+background-image: url("../images/bandcamp.svg");
+
+}
+	&.instagram {
+background-image: url("../images/instagram.svg");
+
+}
 }
 
 
 
-	h1 {
-		font-size: 35px;
-	}
+
 	
 .lineup {
-	border-top: solid 1px var(--color-fg);
-	border-bottom: solid 1px var(--color-fg);
-	padding: var(--gap-3) 0;
-	margin: var(--gap-3) 0;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: var(--gap-2);
 
 	 @media screen and (max-width: 450px) {
 	 		padding: var(--gap-2) 0;
@@ -43,22 +80,58 @@ body {
 	 p.title {
 	 	text-transform: uppercase;
 	 	margin: 0;
-	 	font-size: 120%;
+	 	margin-top: 1px;
+	 }
+	 
+	 .set {
+	 	display: grid;
+	 	grid-template-columns: 70px 1fr;
+	 	grid-gap: var(--gap);
+	 	border-top: solid 1px var(--color-fg);
+	padding: var(--gap-2) 0;
 	 }
 	ul {
 		@include reset(list);
-		padding: var(--gap-2) 0;
+		padding: 0;
 		margin: 0;
-		&:last-of-type {
-			padding-bottom: 0;
-		}
-		& + ul {
-			padding-top: 0;
-		}
+		
+
 	}
 }
 html, body {
 	height: 100%;
+}
+.action a.btn {
+	&:hover {
+	.social {
+		background-position: top left;
+	}
+	}
+display: grid;
+grid-template-columns: 50px 1fr;
+grid-gap: var(--gap);
+.social {
+				width: 30px;
+heighT: 30px;
+background-size: 30px 60px;
+display: inline-block;
+@include transition;
+margin: 0 3px;
+@include translate(0, 3);
+background-image: url("../images/ra.svg");
+background-position: bottom left;
+	.ra {
+
+
+	}
+}
+.copy {
+	text-align: left;
+}
+	sup {
+		margin-top: 10px;
+	display: block;
+	}
 }
 .price {
 	margin-top: var(--gap-2);
@@ -79,14 +152,17 @@ html, body {
 	header {
 		@include fadeInUp($delay: calc(var(--delay) * 1));
 	}
-	.lineup {
+	.set:first-of-type {
 		@include fadeInUp($delay: calc(var(--delay) * 2));
 	}
-	.place {
+	.set:nth-of-type(2) {
 		@include fadeInUp($delay: calc(var(--delay) * 3));
 	}
-	.action {
+	.set:nth-of-type(3) {
 		@include fadeInUp($delay: calc(var(--delay) * 4));
+	}
+	.action {
+		@include fadeInUp($delay: calc(var(--delay) * 5));
 	}
 
 }
@@ -96,10 +172,9 @@ html, body {
 
 
 .print {
-	.verse2, .place {
-		a {
+
+		a.social {
 		display: none;
-	}
 	}
 	.action {
 	font-size: 120%;
@@ -110,7 +185,7 @@ html, body {
 		color: var(--color-fg) !important;
 		border-bottom: solid 1px var(--color-fg);
 
-	}
+}
 
 }
 }
@@ -130,7 +205,7 @@ header.header {
 	position: absolute;
 	margin-left: calc(var(--offset) * -1px);
 	.hybrid {
-		margin-top: 10px;
+		margin-top: 7px;
 	}
 }
 footer {
@@ -153,15 +228,11 @@ footer {
 		margin-top: var(--quote-width-neg);
 		@include rotate(180);
 		float: right;
-		.social {
-			displaY: inline-block;
-			margin-top: var(--gap);
-			a {
-				margin-top: 4px;
-			}
-			svg {
-				@include rotate(90);
-			}
+		a.social {
+		@include rotate(180);
+		&:first-of-type {
+			margin-top: var(--gap-2);
+		}
 		}
 	}
 }

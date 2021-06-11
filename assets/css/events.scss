@@ -3,6 +3,14 @@
 		background-image: url(/images/summer-solstice/01.jpg);
 	}
 }
+.summer-original {
+	body {
+		background: none;
+		#slider {
+			display: none;
+		}
+	}
+}
 
 .test2 {
 	--color-fg: white;
@@ -16,3 +24,5 @@
 		background: none !important;
 	}
 }
+
+
