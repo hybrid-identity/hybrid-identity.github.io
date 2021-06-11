@@ -15391,9 +15391,6 @@ a.btn span.sig {
 .summer-original body {
   background: none; }
 
-.summer-original canvas {
-  display: none; }
-
 .test2 {
   --color-fg: white;
   --color-accent: #ffff00; }
