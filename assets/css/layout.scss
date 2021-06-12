@@ -189,15 +189,18 @@ footer {
 	.action {
 		@include fadeInUp($delay: calc(var(--delay) * 7));
 	}
+		.credits {
+		@include fadeInUp($delay: calc(var(--delay) * 8));
+	}
 
 }
 
 footer a.social {
 	&:first-of-type {
-		@include fadeIn($delay: calc(var(--delay) * 8));
+		@include fadeIn($delay: calc(var(--delay) * 9));
 	}
 	&:nth-of-type(2) {
-		@include fadeIn($delay: calc(var(--delay) * 9));
+		@include fadeIn($delay: calc(var(--delay) * 10));
 	}
 }
 
