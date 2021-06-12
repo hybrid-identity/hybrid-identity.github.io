@@ -31,6 +31,9 @@ h1 {
 }
 
 .social {
+	@media screen and (max-width: 450px) {
+	 --social: 25px;
+			}
 	width: var(--social);
 		height: var(--social);
 		background-size: var(--social) calc(var(--social) * 2);
@@ -38,9 +41,9 @@ h1 {
 	@include transition;
 	margin: 0 3px;
 	@include translate(0, 3);
-	background-position: bottom left;
+	background-position: top left;
 	&:hover {
-		background-position: top left;
+		background-position: bottom left;
 	}
 	&.soundcloud {
 		background-image: url("../images/soundcloud.svg");
