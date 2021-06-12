@@ -2,46 +2,55 @@
 {{ partial "html.html" . }}
 {{ partial "head.html" . }}
 <body>
-<div class="cover"></div>
+	<div class="cover"></div>
 	<div class="container">
 		<div class="flyer">
-		<header class="header">
-			
-			<div class="identity">{{ partial "identity.svg" . }} </div>
-			<div class="hybrid">{{ partial "hybrid.svg" . }} </div>
-		</header>
-		<div class="content">
-		<header>
-				<h1 class="title">{{ .Title }}</h1>
-			<p class="when">{{ .Params.When }} <sup>{{ .Params.Time }}</sup></p>
-		</header>
-			{{ .Content }}
-			{{ if in .Params.style "print"  }}
-			<div class="action print-CTA">$20 presale tickets available at <a href="https://hybrididentity.nyc">hybridIdentity.nyc</a></div>
-			{{ else }}
-			<div class="action">
-   <a href="{{ .Params.CTAlink }}" class="btn btn-block">
-   	<span class="social ra-2"></span>
-   	<span class="copy"><p>{{ .Params.CTA }}</p><p>{{ .Params.Price1 }}</p></a>
-   </span>
-   <p class="price">{{ .Params.Price2 }}</p>
-</div>
-{{ end }}
-		</div>
-			<footer class="verse1">
-				  {{ .Params.verse1 }}
-				<div class="drop">{{ partial "drop.svg" . }} </div></footer>
-			
-			<footer class="verse2"><div class="rotate">{{ .Params.verse2 }}
-				 <a target="_blank" href="https://soundcloud.com/hybrididentity" class="social soundcloud"></a>
-				  <a target="_blank" href="https://instagram.com/hybrididentity.nyc" class="social instagram"></a></div>
-			</footer>
-			
-	</div>
-</div>
-	
-	{{ partial "scripts.html" . }} 
+			<header class="header">
 
-</body>
-</html>
+				<div class="identity">{{ partial "identity.svg" . }} </div>
+				<div class="hybrid">{{ partial "hybrid.svg" . }} </div>
+			</header>
+			<div class="content">
+				<header>
+					<h1 class="title">{{ .Title }}</h1>
+					<p class="when">{{ .Params.When }} <sup>{{ .Params.Time }}</sup></p>
+				</header>
+				{{ .Content }}
+				{{ if in .Params.style "print"  }}
+				<div class="action print-CTA">$20 presale tickets available at <a href="https://hybrididentity.nyc">hybridIdentity.nyc</a></div>
+				{{ else }}
+				<div class="action">
+					<a href="{{ .Params.CTAlink }}" class="btn btn-block">
+						<span class="social ra-2"></span>
+						<span class="copy"><p>{{ .Params.CTA }}</p><p>{{ .Params.Price1 }}</p></a>
+						</span>
+						<p class="price">{{ .Params.Price2 }}</p>
+					</div>
+					{{ end }}
+					<div class="credits">
+   Flyer art by <a href="https://www.instagram.com/meatyinterior/">Anika</a> / Design by <a href="https://www.instagram.com/nonlinear/">Nicholas</a>
+  
+</div>
+				</div>
+				
+				<footer class="verse1">
+					{{ .Params.verse1 }}
+					<div class="drop">{{ partial "drop.svg" . }} </div></footer>
+
+					<footer class="verse2"><div class="rotate">{{ .Params.verse2 }}
+						<a target="_blank" href="https://soundcloud.com/hybrididentity" class="social soundcloud"></a>
+						<a target="_blank" href="https://instagram.com/hybrididentity.nyc" class="social instagram"></a></div>
+					</footer>
+
+				</div>
+			</div>
+			<div id="content">
+				<div id="slider" data-images='[]'>
+			</div>
+		</div>
+
+		{{ partial "scripts.html" . }} 
+
+	</body>
+	</html>
 

@@ -18,7 +18,7 @@ body {
 	@media screen and (max-width: 450px) {
 		font-size: 110%;
 		
-			}
+	}
 }
 
 .credits {
@@ -30,76 +30,84 @@ h1 {
 	margin-bottom: var(--gap);
 }
 
-a.social {
-	width: 20px;
-heighT: 20px;
-display: inline-block;
-@include transition;
-margin: 0 3px;
-@include translate(0, 3);
-background-position: bottom left;
-&:hover {
-	background-position: top left;
+.social {
+	width: var(--social);
+		height: var(--social);
+		background-size: var(--social) calc(var(--social) * 2);
+	display: inline-block;
+	@include transition;
+	margin: 0 3px;
+	@include translate(0, 3);
+	background-position: bottom left;
+	&:hover {
+		background-position: top left;
 	}
 	&.soundcloud {
-background-image: url("../images/soundcloud.svg");
+		background-image: url("../images/soundcloud.svg");
 
-}
+	}
 
 	&.location {
-background-image: url("../images/location.svg");
+		background-image: url("../images/location.svg");
 
-}
-&.globe {
-background-image: url("../images/globe.svg");
+	}
+	&.globe {
+		background-image: url("../images/globe.svg");
 
-}
+	}
 	&.soundcloud-2 {
-background-image: url("../images/soundcloud-2.svg");
+		background-image: url("../images/soundcloud-2.svg");
 
-}
-&.bandcamp {
-background-image: url("../images/bandcamp.svg");
+	}
+	&.bandcamp {
+		background-image: url("../images/bandcamp.svg");
 
-}
+	}
 	&.instagram {
-background-image: url("../images/instagram.svg");
+		background-image: url("../images/instagram.svg");
 
+	}
 }
+
+
+@media screen and (max-width: 450px) {
+	body {
+		background-color: #F4EEDF;
+	}
+	.canvas {
+		@include opacity(80);
+		
+	}
 }
 
 
 
-
-	
-.lineup {
-
-	 p.title {
-	 	text-transform: uppercase;
-	 	margin: 0;
-	 	margin-top: 1px;
-	 }
-	 
-	 .set {
-	 	display: grid;
-	 	grid-template-columns: 70px 1fr;
-	 	grid-gap: var(--gap);
-	 	border-top: solid 1px var(--color-fg);
+.set {
+	display: grid;
+	grid-template-columns: 70px 1fr;
+	grid-gap: var(--gap);
+	border-top: solid 1px var(--color-fg);
 	padding: var(--gap-2) 0;
-	display: block;
-	 }
+	@media screen and (max-width: 450px) {
+		display: block;
+		p.title {
+			text-transform: uppercase;
+			margin: 0;
+			margin-top: 1px;
+		}
+	}
 	ul {
 		@include reset(list);
 		padding: 0;
 		margin: 0;
 		li {
 			line-height: 120%;
-		
-		}
-		
 
+		}
 	}
 }
+
+
 html, body {
 	height: 100%;
 }
@@ -107,45 +115,43 @@ html, body {
 	background-color: rgba(255,255,255,.4);
 	&:hover {
 		background-color: rgba(255,255,255,.8);
-	.social {
-		background-position: top left;
-	}
-	}
-display: grid;
-grid-template-columns: 50px 1fr;
-grid-gap: var(--gap);
-@media screen and (max-width: 450px) {
-	display: block;
-	
-	text-align: left;
-			}
-
-.social {
-				width: 30px;
-heighT: 30px;
-background-size: 30px 60px;
-display: inline-block;
-@include transition;
-margin: 0 3px;
-@include translate(0, 3);
-background-image: url("../images/ra.svg");
-background-position: bottom left;
-}
-.copy {
-	p {
-		margin: 0;
-
-			line-height: 110%;
-		&:last-of-type {
-			font-size: 75%;
+		.social {
+			background-position: top left;
 		}
 	}
-}
+	display: grid;
+	text-align: left;
+	grid-template-columns: 50px 1fr;
+	grid-gap: var(--gap);
+	@media screen and (max-width: 450px) {
+		display: block;
+	}
+
+	.social {
+		--social: 30px;
+		display: inline-block;
+		@include transition;
+		margin: 0 3px;
+		@include translate(0, 3);
+		background-image: url("../images/ra.svg");
+		background-position: bottom left;
+	}
+	.copy {
+		p {
+			margin: 0;
+
+			line-height: 110%;
+			&:last-of-type {
+				font-size: 75%;
+			}
+		}
+	}
 	sup {
 		margin-top: 10px;
-	display: block;
+		display: block;
 	}
 }
+
 .price {
 	margin-top: var(--gap-2);
 }
@@ -154,10 +160,10 @@ background-position: bottom left;
 	width: var(--flyer);
 	display: table;
 	padding: var(--gap-2);
-	    @media screen and (max-width: 450px) {
-     width: 100%;
-     padding: var(--gap) !important;
-    }
+	@media screen and (max-width: 450px) {
+		width: 100%;
+		padding: var(--gap) !important;
+	}
 }
 
 header.header {
@@ -190,7 +196,7 @@ footer a.social {
 	&:first-of-type {
 		@include fadeIn($delay: calc(var(--delay) * 8));
 	}
-		&:nth-of-type(2) {
+	&:nth-of-type(2) {
 		@include fadeIn($delay: calc(var(--delay) * 9));
 	}
 }
@@ -201,21 +207,21 @@ footer a.social {
 
 .print {
 
-		a.social {
+	a.social {
 		display: none;
 	}
 	.action {
-	font-size: 120%;
-	border-top: solid 1px var(--color-fg);
-	padding-top: var(--gap-4);
-	margin-top: var(--gap-4);
-	a {
-		color: var(--color-fg) !important;
-		border-bottom: solid 1px var(--color-fg);
+		font-size: 120%;
+		border-top: solid 1px var(--color-fg);
+		padding-top: var(--gap-4);
+		margin-top: var(--gap-4);
+		a {
+			color: var(--color-fg) !important;
+			border-bottom: solid 1px var(--color-fg);
 
-}
+		}
 
-}
+	}
 }
 
 
@@ -248,19 +254,19 @@ footer {
 	&.verse2 {
 		.rotate {
 			text-orientation: mixed;
-		writing-mode: vertical-rl;
-		height: var(--quote-width);
-		width: var(--quote-height);
-		padding-top: calc(var(--quote-height) + var(--gap));
-		margin-top: var(--quote-width-neg);
-		@include rotate(180);
-		float: right;
-		a.social {
-		@include rotate(180);
-		&:first-of-type {
-			margin-top: var(--gap-2);
-		}
-		}
+			writing-mode: vertical-rl;
+			height: var(--quote-width);
+			width: var(--quote-height);
+			padding-top: calc(var(--quote-height) + var(--gap));
+			margin-top: var(--quote-width-neg);
+			@include rotate(180);
+			float: right;
+			a.social {
+				@include rotate(180);
+				&:first-of-type {
+					margin-top: var(--gap-2);
+				}
+			}
 		}
 		
 	}
@@ -273,8 +279,8 @@ footer {
 }
 
 .sig {
-			font-size: 80%;
-		
+	font-size: 80%;
+
 }
 
 a {

@@ -14,6 +14,14 @@
 {{ $demo2 := resources.Get "js/demo2.js" }}
 <script src="{{ $demo2.Permalink }}"></script>
 
+<script>
+          var intervalId = window.setInterval(function(){
+            sketch.next()
+          }, 5000);
+
+        </script>
+
+
 {{ $popper := resources.Get "js/popper.min.js" }}
 <script src="{{ $popper.Permalink }}"></script>
 {{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
