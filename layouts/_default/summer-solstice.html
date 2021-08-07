@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{{ partial "html.html" . }}
+{{ partial "head.html" . }}
+<body>
+	<div class="cover"></div>
+	<div class="container">
+		<div class="flyer">
+			<header class="header">
+
+				<div class="identity">{{ partial "identity.svg" . }} </div>
+				<div class="hybrid">{{ partial "hybrid.svg" . }} </div>
+			</header>
+			<div class="content">
+				<header>
+					<h1 class="title">{{ .Title }}</h1>
+					<p class="when">{{ .Params.When }} <sup>{{ .Params.Time }}</sup></p>
+				</header>
+				   <div class="set">
+       <p class="title">Audio</p>
+       <ul>
+        <li>Dj Settle <a href="https://soundcloud.com/settletechno/settle-at-home-mini-mix" class="social soundcloud"></a>
+         <sup>4-6</sup></li>
+         <li>
+             Lychee
+             <a href="https://soundcloud.com/lycheefrut" class="social soundcloud"></a>
+             <sup>6-8</sup>
+         </li>
+         <li>
+             Dj Lostcat
+             <a href="https://djlostcat.bandcamp.com" class="social bandcamp"></a>
+             <sup>8-10</sup>
+         </li>
+         <li>
+            Iwaad vs. Vadyadya
+            <a href="https://soundcloud.com/subspace-podcast/subspace-podcast-16-tekhnotresk-11" class="social soundcloud"></a>
+            <sup>10-12</sup>
+        </li>
+    </ul>
+</div>
+<div class="set">
+  <p class="title">Visuals</p>
+  <ul>
+      <li>
+       Glow.gurl
+       <a href="https://www.carlisilverman.com/" class="social globe"></a>
+       <sup>4-12</sup>
+   </li>
+</ul>
+
+
+</div>
+<div class="set">
+  <p class="title">Place</p>
+  <ul>
+      <li>Magick City
+      </li>
+      <li>37 Box Street, Brooklyn, NY <a class="social location" href="https://www.google.com/maps/place/37+Box+St,+Brooklyn,+NY+11222,+USA/data=!4m2!3m1!1s0x89c2593c1540cd29:0x4f2a2ed1cdcd63f6?sa=X&ved=2ahUKEwjLxqP6wIPxAhWkr5UCHUX-ArYQ8gEwAHoECAUQAQ"></a>
+      </li>
+  </ul>
+  
+</div>
+
+
+<div id="slider" data-images='[
+    
+"/images/summer-solstice/01.jpeg",
+"/images/summer-solstice/02.jpeg",
+"/images/summer-solstice/03.jpeg"
+        ]'>
+</div>
+				{{ if in .Params.style "print"  }}
+				<div class="action print-CTA">$20 presale tickets available at <a href="https://hybrididentity.nyc">hybridIdentity.nyc</a></div>
+				{{ else }}
+				<div class="action">
+					<a href="{{ .Params.CTAlink }}" class="btn btn-block">
+						<span class="social ra-2"></span>
+						<span class="copy"><p>{{ .Params.CTA }}</p><p>{{ .Params.Price1 }}</p></a>
+						</span>
+						<p class="price">{{ .Params.Price2 }}</p>
+					</div>
+					{{ end }}
+					<div class="credits">
+   Flyer art by <a href="https://www.instagram.com/meatyinterior/">Anika</a>, design by <a href="https://praxis.nyc">Nicholas</a>
+  
+</div>
+				</div>
+				
+				<footer class="verse1">
+					{{ .Params.verse1 }}
+					<div class="drop">{{ partial "drop.svg" . }} </div></footer>
+
+					<footer class="verse2"><div class="rotate">{{ .Params.verse2 }}
+						<a href="https://soundcloud.com/hybrididentity" class="social soundcloud"></a>
+						<a href="https://instagram.com/hybrididentity.nyc" class="social instagram"></a></div>
+					</footer>
+
+				</div>
+			</div>
+			<div id="content">
+				<div id="slider" data-images='[]'>
+			</div>
+		</div>
+
+		{{ partial "scripts.html" . }} 
+
+	</body>
+	</html>
+

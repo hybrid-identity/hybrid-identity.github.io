@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/nonlinear/Documents/hybrid-identity/site",
+	"sourceRoot": "/Users/nonlinear/Documents/HI",
 	"sources": [
 		"assets/css/main.scss",
 		"assets/css/vendor/animatewithsass/animate.scss",
