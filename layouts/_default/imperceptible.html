@@ -5,17 +5,14 @@
 	<div class="cover"></div>
 	<div class="container">
 		<div class="flyer">
-			<header class="header">
-
-				<div class="identity">{{ partial "identity.svg" . }} </div>
-				<div class="hybrid">{{ partial "hybrid.svg" . }} </div>
+			<header class="logo">
+				<div>{{ partial "HI.svg" . }}</div>
 			</header>
-			<div class="content">
-				<header>
+			<header class="title">
 					<h1 class="title">{{ .Title }}</h1>
 					<p class="when">{{ .Params.When }} <sup>{{ .Params.Time }}</sup></p>
 				</header>
-				<div class="set">
+					<div class="set">
 					<p class="title">Place</p>
 					<ul>
 						<li>Magick City
@@ -24,12 +21,7 @@
 						</li>
 					</ul>
 				</div>
-				<div id="slider" data-images='[
-				"/images/one-way-mirror/2fa32b83da720632ad2e14.jpg",
-				"/images/one-way-mirror/2aba8722bd325d6c9ee723.jpg",
-				"/images/one-way-mirror/2f2cfaebb0495350d790f5.jpg"
-				]'>
-			</div>
+			<div class="content">
 			{{ if in .Params.style "print"  }}
 			<div class="action print-CTA">$20 presale tickets available at <a href="https://hybrididentity.nyc">hybridIdentity.nyc</a></div>
 			{{ else }}
@@ -41,22 +33,15 @@
 					<p class="price">{{ .Params.Price2 }}</p>
 				</div>
 				{{ end }}
-				<div class="credits">
-					Flyer art by <a href="https://www.instagram.com/meatyinterior/">Anika</a>, design by <a href="https://praxis.nyc">Nicholas</a>
-
-				</div>
 			</div>
-			<footer class="verse1">
-				{{ .Params.verse1 }}
-				<div class="drop">{{ partial "drop.svg" . }} </div></footer>
-				<footer class="verse2"><div class="rotate">{{ .Params.verse2 }}
-					<a href="https://soundcloud.com/hybrididentity" class="social soundcloud"></a>
-					<a href="https://instagram.com/hybrididentity.nyc" class="social instagram"></a></div>
-				</footer>
+
 			</div>
 		</div>
 		<div id="content">
-			<div id="slider" data-images='[]'>
+							<div id="slider" data-images='[
+				"/images/one-way-mirror/2aba8722bd325d6c9ee723.jpg",
+				"/images/one-way-mirror/2f2cfaebb0495350d790f5.jpg"
+				]'>
 			</div>
 		</div>
 		{{ partial "scripts.html" . }} 

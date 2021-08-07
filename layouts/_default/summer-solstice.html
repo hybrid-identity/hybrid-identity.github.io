@@ -5,8 +5,7 @@
 	<div class="cover"></div>
 	<div class="container">
 		<div class="flyer">
-			<header class="header">
-
+			<header class="crop">
 				<div class="identity">{{ partial "identity.svg" . }} </div>
 				<div class="hybrid">{{ partial "hybrid.svg" . }} </div>
 			</header>
@@ -61,13 +60,7 @@
 </div>
 
 
-<div id="slider" data-images='[
-    
-"/images/summer-solstice/01.jpeg",
-"/images/summer-solstice/02.jpeg",
-"/images/summer-solstice/03.jpeg"
-        ]'>
-</div>
+
 				{{ if in .Params.style "print"  }}
 				<div class="action print-CTA">$20 presale tickets available at <a href="https://hybrididentity.nyc">hybridIdentity.nyc</a></div>
 				{{ else }}
@@ -85,11 +78,11 @@
 </div>
 				</div>
 				
-				<footer class="verse1">
+				<footer class="crop verse1">
 					{{ .Params.verse1 }}
 					<div class="drop">{{ partial "drop.svg" . }} </div></footer>
 
-					<footer class="verse2"><div class="rotate">{{ .Params.verse2 }}
+					<footer class=" crop verse2"><div class="rotate">{{ .Params.verse2 }}
 						<a href="https://soundcloud.com/hybrididentity" class="social soundcloud"></a>
 						<a href="https://instagram.com/hybrididentity.nyc" class="social instagram"></a></div>
 					</footer>
@@ -97,8 +90,13 @@
 				</div>
 			</div>
 			<div id="content">
-				<div id="slider" data-images='[]'>
-			</div>
+			<div id="slider" data-images='[
+    
+"/images/summer-solstice/01.jpeg",
+"/images/summer-solstice/02.jpeg",
+"/images/summer-solstice/03.jpeg"
+        ]'>
+</div>
 		</div>
 
 		{{ partial "scripts.html" . }} 

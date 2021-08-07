@@ -6,6 +6,9 @@
 	font-style: normal;
 }
 
+	html, body {
+		height: 100%;
+	}
 .cover {
 	display: none;
 }
@@ -21,196 +24,36 @@ body {
 	}
 }
 
-.credits {
-	font-size: 80%;
-	line-height: 110%;
-}
 
-h1 {
-	line-height: 100%;
-	margin-bottom: var(--gap);
-}
-
-.social {
-	@media screen and (max-width: 450px) {
-	 --social: 25px;
-			}
-	width: var(--social);
-		height: var(--social);
-		background-size: var(--social) calc(var(--social) * 2);
-	display: inline-block;
-	@include transition;
-	margin: 0 3px;
-	@include translate(0, 3);
-	background-position: top left;
-	&:hover {
-		background-position: bottom left;
-	}
-	&.soundcloud {
-		background-image: url("../images/soundcloud.svg");
-
-	}
-
-	&.location {
-		background-image: url("../images/location.svg");
-
-	}
-	&.globe {
-		background-image: url("../images/globe.svg");
-
-	}
-	&.soundcloud-2 {
-		background-image: url("../images/soundcloud-2.svg");
-
-	}
-	&.bandcamp {
-		background-image: url("../images/bandcamp.svg");
-
-	}
-	&.instagram {
-		background-image: url("../images/instagram.svg");
-
-	}
-}
-
-
-@media screen and (max-width: 450px) {
-	body {
-		background-color: #F4EEDF;
-	}
-	.canvas {
-		@include opacity(80);
-		
-	}
-}
-
-
-
-.set {
-	display: grid;
-	grid-template-columns: 70px 1fr;
-	grid-gap: var(--gap);
-	border-top: solid 1px var(--color-fg);
-	padding: var(--gap-2) 0;
-		p.title {
-			text-transform: uppercase;
-			margin: 0;
-		}
-	@media screen and (max-width: 450px) {
-		display: block;
-	
-	}
-	ul {
-		@include reset(list);
-		padding: 0;
-		margin: 0;
-		li {
-			line-height: 120%;
-
-		}
-	}
-}
-
-
-html, body {
-	height: 100%;
-}
-.action a.btn {
-	background-color: rgba(255,255,255,.4);
-	&:hover {
-		background-color: rgba(255,255,255,.8);
-		.social {
-			background-position: top left;
-		}
-	}
-	display: grid;
-	text-align: left;
-	grid-template-columns: 50px 1fr;
-	grid-gap: var(--gap);
-	@media screen and (max-width: 450px) {
-		display: block;
-	}
-
-	.social {
-		--social: 30px;
-		display: inline-block;
-		@include transition;
-		margin: 0 3px;
-		@include translate(0, 3);
-		background-image: url("../images/ra.svg");
-		background-position: bottom left;
-	}
-	.copy {
-		p {
-			margin: 0;
-
-			line-height: 110%;
-			&:last-of-type {
-				font-size: 75%;
-			}
-		}
-	}
-	sup {
-		margin-top: 10px;
-		display: block;
-	}
-}
-
-.price {
-	margin-top: var(--gap-2);
-}
-.container {
-	height: 100%;
-	width: var(--flyer);
-	display: table;
-	padding: var(--gap-2);
-	@media screen and (max-width: 450px) {
-		width: 100%;
-		padding: var(--gap) !important;
-	}
-}
-
-header.header {
-	@include fadeInRight($delay: calc(var(--delay) * 1));
-}
-footer {
-	@include fadeInLeft($delay: calc(var(--delay) * 1));
-}
 .content {
-	margin: var(--offset);
-	header {
-		@include fadeInUp($delay: calc(var(--delay) * 3));
-	}
-	.set:first-of-type {
-		@include fadeInUp($delay: calc(var(--delay) * 4));
-	}
-	.set:nth-of-type(2) {
-		@include fadeInUp($delay: calc(var(--delay) * 5));
-	}
-	.set:nth-of-type(3) {
-		@include fadeInUp($delay: calc(var(--delay) * 6));
-	}
-	.action {
-		@include fadeInUp($delay: calc(var(--delay) * 7));
-	}
-		.credits {
-		@include fadeInUp($delay: calc(var(--delay) * 8));
-	}
+	z-index: 100;
 
 }
 
-footer a.social {
-	&:first-of-type {
-		@include fadeIn($delay: calc(var(--delay) * 9));
-	}
-	&:nth-of-type(2) {
-		@include fadeIn($delay: calc(var(--delay) * 10));
-	}
+
+.flyer {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+
+}
+
+.sig {
+	font-size: 80%;
+
 }
 
 
 
-
+header.crop {
+	height: var(--quote);
+	z-index: 50;
+	position: absolute;
+	margin-left: calc(var(--offset) * -1px);
+	.hybrid {
+		margin-top: 7px;
+	}
+}
 
 .print {
 	a.social {
@@ -230,23 +73,22 @@ footer a.social {
 	}
 }
 
-
-
-.content {
-	z-index: 100;
-
+header.crop {
+	@include fadeInRight($delay: calc(var(--delay) * 1));
 }
-header.header {
-	height: var(--quote);
-	z-index: 50;
-	position: absolute;
-	margin-left: calc(var(--offset) * -1px);
-	.hybrid {
-		margin-top: 7px;
-	}
+footer.crop {
+	@include fadeInLeft($delay: calc(var(--delay) * 1));
 }
-footer {
+footer.crop {
 	font-size: 120%;
+		a.social {
+		&:first-of-type {
+			@include fadeIn($delay: calc(var(--delay) * 9));
+		}
+		&:nth-of-type(2) {
+			@include fadeIn($delay: calc(var(--delay) * 10));
+		}
+	}
 	&.verse1 {
 		height: var(--quote-height);
 		margin-top: var(--quote-height-neg);
@@ -277,59 +119,3 @@ footer {
 		
 	}
 }
-.flyer {
-	display: table-cell;
-	height: 100%;
-	vertical-align: middle;
-
-}
-
-.sig {
-	font-size: 80%;
-
-}
-
-a {
-	@include transition;
-	&:not(.btn):not(.icon) {
-		color: var(--color-accent);
-		text-decoration: underline;
-
-		&:hover {
-			color: var(--color-fg);
-
-		}
-	}
-	&.icon {
-		text-decoration: none;
-		svg path {
-			@include transition;
-			fill: var(--color-accent);
-		}
-		&:hover {
-			svg path {
-				fill: var(--color-fg);
-			}
-		}
-	}
-	&.btn {
-		@include transition;
-		border: solid 2px var(--color-fg);
-		text-transform: uppercase;
-		@include radius(0);
-		@include shadow(box, 0 5px 0px rgba(0, 0, 0, 0.1));
-		padding: var(--gap-2);
-		color: var(--color-fg);
-
-		&:hover {
-			color: var(--color-accent);
-			border-color: var(--color-accent);
-			@include shadow(box, 0 0px 15px rgba(0, 0, 0, 0.3));
-		}
-		span.sig {
-			displaY: block;
-		}
-	}
-}
-
-
